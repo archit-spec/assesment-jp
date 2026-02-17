@@ -1,0 +1,33 @@
+{
+  "name": "httpx Text\u2013Code Retrieval Pairs (AST-generated)",
+  "version": "1.0",
+  "description": "Natural language query\u2013code pairs programmatically generated from encode/httpx using AST analysis. No external API calls used.",
+  "source_repo": "https://github.com/encode/httpx",
+  "generation_method": "Python ast module \u2014 deterministic, reproducible",
+  "total_pairs": 351,
+  "train_pairs": 280,
+  "test_pairs": 71,
+  "queries_per_function": 3,
+  "unique_functions": 117,
+  "query_styles": [
+    "action",
+    "keyword",
+    "question",
+    "natural"
+  ],
+  "query_construction": {
+    "action": "Function name converted to action phrase (snake_case \u2192 natural language)",
+    "docstring": "First line of docstring used as natural query",
+    "keyword": "Keywords extracted from arg names, type annotations, return types",
+    "signature": "Queries based on parameter types and return types",
+    "context": "File path context added to queries"
+  },
+  "filtering_rules": [
+    "Functions between 5\u201360 lines only",
+    "Excluded dunder methods (__init__, __repr__, etc.)",
+    "Excluded setUp/tearDown test methods",
+    "Queries between 5\u2013120 chars only"
+  ],
+  "random_seed": 42,
+  "reproducible": true
+}

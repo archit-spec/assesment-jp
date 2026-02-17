@@ -1,0 +1,10 @@
+./Juspay_Hiring_Assessment_Part_2.pdf
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/extracted_functions.json
+data/sft_*.json
+data/corpus_metadata.json
+results/
