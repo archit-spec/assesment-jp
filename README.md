@@ -8,9 +8,9 @@ This repository contains the solution for the 3 requested tracks.
 
 | Track | Description | Notebook |
 |-------|-------------|----------|
-| **A** | Extended Pre-Training | [`track_a_colab.ipynb`](./track_a_colab.ipynb) <br> [`track_a_unsloth.ipynb`](./track_a_unsloth.ipynb) (Low Memory) |
-| **B** | Instruction Tuning (SFT) | [`track_b_colab.ipynb`](./track_b_colab.ipynb) <br> [`track_b_unsloth.ipynb`](./track_b_unsloth.ipynb) (Low Memory) |
-| **C** | Embedding Fine-Tuning | [`track_c_colab.ipynb`](./track_c_colab.ipynb) |
+| **A** | Extended Pre-Training | [`track_a_unsloth.ipynb`](./track_a_unsloth.ipynb) (Unsloth) |
+| **B** | Instruction Tuning (SFT) | [`track_b_unsloth.ipynb`](./track_b_unsloth.ipynb) (Unsloth) |
+| **C** | Embedding Fine-Tuning | [`track_c_unsloth.ipynb`](./track_c_unsloth.ipynb) (Unsloth) |
 
 ---
 
@@ -46,7 +46,7 @@ Fine-tune `Qwen/Qwen2.5-Coder-1.5B` on synthetic Python instructions (Docstring,
 | **pass@1** | 0.565 | **0.804** | **+23.9%** \u2713 |
 | **pass@3** | 0.783 | 0.848 | +6.5% |
 
-### \ud83d\udce6 Artifacts
+### \ud83d\ud Artifacts
 | Type | Name | Link |
 |------|------|------|
 | **Model** | `archit11/track_b_sft_merged` | [Hugging Face](https://huggingface.co/archit11/track_b_sft_merged) |
@@ -83,8 +83,8 @@ Fine-tune `Qwen/Qwen3-Embedding-0.6B` on text\u2192code retrieval pairs.
 ---
 
 ## Directory Structure
-- `track_a_colab.ipynb`: Standalone notebook for Track A
-- `track_b_colab.ipynb`: Standalone notebook for Track B
-- `track_c_colab.ipynb`: Standalone notebook for Track C
+- `track_a_unsloth.ipynb`: Unsloth-optimized notebook for Track A
+- `track_b_unsloth.ipynb`: Unsloth-optimized notebook for Track B
+- `track_c_unsloth.ipynb`: Unsloth-optimized notebook for Track C
 - `data/`: Local data artifacts
 - `results/`: Local evaluation logs
