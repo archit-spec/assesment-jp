@@ -63,11 +63,12 @@ Fine-tune `Qwen/Qwen2.5-Coder-1.5B` on synthetic Python instructions (Docstring,
 
 Fine-tune `Qwen/Qwen3-Embedding-0.6B` on text\u2192code retrieval pairs.
 
-### Results (Training)
-| Metric | Value |
-|--------|-------|
-| **Final Loss** | 0.0380 |
-| **Eval Metrics** | MRR@10, nDCG@10 (Computed in notebook) |
+### \ud83d\udcca Results (Best Run - 3 Epochs)
+| Metric | Baseline | Fine-Tuned | \u0394 |
+|--------|----------|------------|---|
+| **MRR@10** | 0.8840 | **0.9617** | **+0.0777 \u2191** |
+| **nDCG@10** | 0.9093 | **0.9710** | **+0.0617 \u2191** |
+| **Recall@10** | 0.9870 | **1.0000** | **+0.0130 \u2191** |
 
 ### Artifacts
 | Type | Name | Link |
