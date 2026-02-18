@@ -19,9 +19,9 @@ This repository contains the solution for the 3 requested tracks.
 Continue pre-training `Qwen/Qwen2.5-Coder-3B` on a curated Rust code corpus extracted from `juspay/hyperswitch`.
 
 ### Results
-| Metric | Baseline | Post-Training | \u0394 |
-|--------|----------|---------------|---|
-| **Perplexity** | 2.2832 | **1.5429** | **\u221232.42%** \u2713 |
+| Metric | Baseline | Post-Training |  ^^ |
+|--------|----------|---------------|---| 
+| **Perplexity** | 2.2832 | **1.5429** | **32.42%**  |
 
 ### Artifacts
 | Type | Name | Link |
@@ -36,17 +36,17 @@ Continue pre-training `Qwen/Qwen2.5-Coder-3B` on a curated Rust code corpus extr
 
 ---
 
-## \ud83e\udde0 Track B: Instruction Tuning (SFT)
+## Track B: Instruction Tuning (SFT)
 
 Fine-tune `Qwen/Qwen2.5-Coder-1.5B` on synthetic Python instructions (Docstring, Explain, Bugfix, Complete, Unit Test).
 
-### \ud83d\udcca Results
-| Metric | Baseline | Post-SFT | \u0394 |
+### Results
+| Metric | Baseline | Post-SFT | ^ |
 |--------|----------|----------|---|
-| **pass@1** | 0.565 | **0.804** | **+23.9%** \u2713 |
+| **pass@1** | 0.565 | **0.804** | **+23.9%**  |
 | **pass@3** | 0.783 | 0.848 | +6.5% |
 
-### \ Artifacts
+### Artifacts
 | Type | Name | Link |
 |------|------|------|
 | **Model** | `archit11/track_b_sft_merged` | [Hugging Face](https://huggingface.co/archit11/track_b_sft_merged) |
