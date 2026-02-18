@@ -6,7 +6,7 @@ This repository contains the solution for the 3 requested tracks.
 
 # info
 
-each track has link to model with model card and dataset with dataset card
+each track has link to model with model card and dataset with dataset card.
 ## Notebooks
 
 | Track | Description | Notebook |
