@@ -1,0 +1,47 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "train_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_train.json",
+  "val_file": null,
+  "test_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_test.json",
+  "train_pairs": 1736,
+  "val_pairs": 0,
+  "test_pairs": 308,
+  "epochs": 3,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "baseline_test": {
+    "MRR@10": 0.884,
+    "nDCG@10": 0.9093,
+    "Recall@10": 0.987
+  },
+  "fine_tuned_test": {
+    "MRR@10": 0.9617,
+    "nDCG@10": 0.971,
+    "Recall@10": 1.0
+  },
+  "improvement_test": {
+    "MRR@10": 0.0777,
+    "nDCG@10": 0.0617,
+    "Recall@10": 0.013
+  },
+  "baseline_val": null,
+  "fine_tuned_val": null,
+  "improvement_val": null,
+  "baseline": {
+    "MRR@10": 0.884,
+    "nDCG@10": 0.9093,
+    "Recall@10": 0.987
+  },
+  "fine_tuned": {
+    "MRR@10": 0.9617,
+    "nDCG@10": 0.971,
+    "Recall@10": 1.0
+  },
+  "improvement": {
+    "MRR@10": 0.0777,
+    "nDCG@10": 0.0617,
+    "Recall@10": 0.013
+  },
+  "error_analysis": []
+}

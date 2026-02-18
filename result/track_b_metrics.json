@@ -1,0 +1,151 @@
+{
+  "track": "B \u2013 Instruction Tuning (SFT)",
+  "model": "Qwen/Qwen3-4B",
+  "train_samples": 425,
+  "test_samples": 75,
+  "epochs": 3,
+  "lora_r": 16,
+  "training_loss": 0.7214,
+  "baseline": {
+    "pass_at_1": 0.0,
+    "avg_style_score": 0.2583,
+    "hallucination_rate": 0.0,
+    "category_scores": {
+      "complete": {
+        "count": 4,
+        "syntax_ok": 0,
+        "style_sum": 0.5,
+        "syntax_rate": 0.0,
+        "avg_style": 0.125
+      },
+      "docstring": {
+        "count": 3,
+        "syntax_ok": 0,
+        "style_sum": 0.75,
+        "syntax_rate": 0.0,
+        "avg_style": 0.25
+      },
+      "bugfix": {
+        "count": 3,
+        "syntax_ok": 0,
+        "style_sum": 1.3333333333333333,
+        "syntax_rate": 0.0,
+        "avg_style": 0.4444444444444444
+      }
+    }
+  },
+  "post_training": {
+    "pass_at_1": 0.0,
+    "avg_style_score": 0.075,
+    "hallucination_rate": 0.0,
+    "category_scores": {
+      "complete": {
+        "count": 4,
+        "syntax_ok": 0,
+        "style_sum": 0.0,
+        "syntax_rate": 0.0,
+        "avg_style": 0.0
+      },
+      "docstring": {
+        "count": 3,
+        "syntax_ok": 0,
+        "style_sum": 0.75,
+        "syntax_rate": 0.0,
+        "avg_style": 0.25
+      },
+      "bugfix": {
+        "count": 3,
+        "syntax_ok": 0,
+        "style_sum": 0.0,
+        "syntax_rate": 0.0,
+        "avg_style": 0.0
+      }
+    }
+  },
+  "improvement": {
+    "pass_at_1_delta": 0.0,
+    "style_delta": -0.1833
+  },
+  "error_analysis": [
+    {
+      "category": "complete",
+      "instruction_preview": "Complete the implementation skeleton based on this snippet:\n\n```text\nuse common_utils::events::{ApiE",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "complete",
+      "instruction_preview": "Complete the implementation skeleton based on this snippet:\n\n```text\nuse api_models::{\n    payments ",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "complete",
+      "instruction_preview": "Complete the implementation skeleton based on this snippet:\n\n```text\nuse std::collections::HashMap;\n",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "docstring",
+      "instruction_preview": "Write concise documentation for this code snippet:\n\n```text\npub mod transformers;\n\nuse std::time::{D",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.25,
+      "hallucinations": []
+    },
+    {
+      "category": "docstring",
+      "instruction_preview": "Write concise documentation for this code snippet:\n\n```text\n//! Serde-related.\n\npub use erased_serde",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.25,
+      "hallucinations": []
+    },
+    {
+      "category": "bugfix",
+      "instruction_preview": "Find a likely bug-risk in this snippet and propose a safe fix:\n\n```text\npub mod transformers;\n\nuse c",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "docstring",
+      "instruction_preview": "Write concise documentation for this code snippet:\n\n```text\npub mod transformers;\nuse std::sync::Laz",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.25,
+      "hallucinations": []
+    },
+    {
+      "category": "complete",
+      "instruction_preview": "Complete the implementation skeleton based on this snippet:\n\n```text\npub mod transformers;\n\nuse std:",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "bugfix",
+      "instruction_preview": "Find a likely bug-risk in this snippet and propose a safe fix:\n\n```text\npub mod transformers;\nuse st",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "bugfix",
+      "instruction_preview": "Find a likely bug-risk in this snippet and propose a safe fix:\n\n```text\nuse std::fmt::Debug;\n\nuse co",
+      "generated_preview": "<think>useruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseruseru",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    }
+  ]
+}

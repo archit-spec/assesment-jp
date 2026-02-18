@@ -1,0 +1,94 @@
+{
+  "track": "A - Extended Pre-Training",
+  "repo_name": "verl",
+  "model": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-3B/snapshots/09d9bc5d376b0cfa0100a0694ea7de7232525803",
+  "corpus_dir": "data/code_corpus_verl",
+  "extensions": [
+    ".py"
+  ],
+  "split_mode": "file",
+  "eval_split": "test",
+  "eval_block_size": 2048,
+  "corpus_files": 214,
+  "train_files": 193,
+  "val_files": 17,
+  "test_files": 4,
+  "val_file_names": [
+    "verl__workers__rollout__sglang_rollout__http_server_engine.py",
+    "verl__utils__import_utils.py",
+    "verl__models__qwen2__megatron__layers__parallel_linear.py",
+    "verl__models__qwen2__megatron__layers__parallel_rmsnorm.py",
+    "verl__models__qwen2__megatron__checkpoint_utils__qwen2_saver.py",
+    "verl__workers__critic__dp_critic.py",
+    "verl__checkpoint_engine__nccl_checkpoint_engine.py",
+    "verl__utils__megatron__optimizer.py",
+    "verl__models__qwen2__megatron__layers__parallel_decoder.py",
+    "verl__models__llama__megatron__checkpoint_utils__llama_loader_depracated.py",
+    "verl__utils__logging_utils.py",
+    "verl__trainer__ppo__reward.py",
+    "verl__interactions__base.py",
+    "verl__models__mcore__bridge.py",
+    "verl__workers__config__actor.py",
+    "verl__single_controller__base__worker_group.py",
+    "verl__utils__memory_utils.py"
+  ],
+  "test_file_names": [
+    "verl__workers__rollout__tokenizer.py",
+    "verl__models__mcore__qwen2_5_vl__attention.py",
+    "verl__protocol.py",
+    "verl__utils__transformers_compat.py"
+  ],
+  "block_size": 2048,
+  "sequence_curriculum": [
+    1024,
+    1536,
+    2048
+  ],
+  "train_chunks": 308,
+  "val_chunks": 18,
+  "test_chunks": 7,
+  "epochs": 6.0,
+  "batch_size": 4,
+  "eval_batch_size": 4,
+  "grad_accum_steps": 2,
+  "learning_rate": 0.001,
+  "lora_r": 16,
+  "baseline_validation_perplexity": 2.3873,
+  "baseline_test_perplexity": 2.5984,
+  "baseline_perplexity": 2.5984,
+  "post_training_validation_perplexity": 1.9955,
+  "post_training_test_perplexity": 3.779,
+  "post_training_perplexity": 3.779,
+  "perplexity_reduction": -1.1806,
+  "improvement_percent": -45.4369,
+  "training_loss": 0.4677,
+  "stage_summaries": [
+    {
+      "stage": 1,
+      "block_size": 1024,
+      "epochs": 2.0,
+      "train_chunks": 617,
+      "val_chunks": 37,
+      "test_chunks": 0,
+      "training_loss": 0.7923
+    },
+    {
+      "stage": 2,
+      "block_size": 1536,
+      "epochs": 2.0,
+      "train_chunks": 411,
+      "val_chunks": 24,
+      "test_chunks": 0,
+      "training_loss": 0.4045
+    },
+    {
+      "stage": 3,
+      "block_size": 2048,
+      "epochs": 2.0,
+      "train_chunks": 308,
+      "val_chunks": 18,
+      "test_chunks": 0,
+      "training_loss": 0.2062
+    }
+  ]
+}

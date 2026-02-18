@@ -1,0 +1,208 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "BAAI/bge-small-en-v1.5",
+  "train_file": "data/hf_download/assesment_embeddings/retrieval_train.json",
+  "val_file": null,
+  "test_file": "data/hf_download/assesment_embeddings/retrieval_test.json",
+  "train_pairs": 848,
+  "val_pairs": 0,
+  "test_pairs": 152,
+  "epochs": 1,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "baseline_test": {
+    "MRR@10": 0.2772,
+    "nDCG@10": 0.3349,
+    "Recall@10": 0.5263
+  },
+  "fine_tuned_test": {
+    "MRR@10": 0.4646,
+    "nDCG@10": 0.5186,
+    "Recall@10": 0.6974
+  },
+  "improvement_test": {
+    "MRR@10": 0.1874,
+    "nDCG@10": 0.1837,
+    "Recall@10": 0.1711
+  },
+  "baseline_val": null,
+  "fine_tuned_val": null,
+  "improvement_val": null,
+  "baseline": {
+    "MRR@10": 0.2772,
+    "nDCG@10": 0.3349,
+    "Recall@10": 0.5263
+  },
+  "fine_tuned": {
+    "MRR@10": 0.4646,
+    "nDCG@10": 0.5186,
+    "Recall@10": 0.6974
+  },
+  "improvement": {
+    "MRR@10": 0.1874,
+    "nDCG@10": 0.1837,
+    "Recall@10": 0.1711
+  },
+  "error_analysis": [
+    {
+      "query": "Square payment integration implementation",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__square.rs",
+      "correct_rank": 17,
+      "correct_similarity": 0.5011903047561646,
+      "top_1_similarity": 0.5565816164016724,
+      "code_preview": "pub mod transformers;\n\nuse std::fmt::Debug;\n\nuse api_models::{\n    enums,\n    webhooks::{IncomingWebhookEvent, ObjectReferenceId},\n};\nuse base64::Engi"
+    },
+    {
+      "query": "Square connector API traits",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__square.rs",
+      "correct_rank": 11,
+      "correct_similarity": 0.48061367869377136,
+      "top_1_similarity": 0.5594016313552856,
+      "code_preview": "pub mod transformers;\n\nuse std::fmt::Debug;\n\nuse api_models::{\n    enums,\n    webhooks::{IncomingWebhookEvent, ObjectReferenceId},\n};\nuse base64::Engi"
+    },
+    {
+      "query": "Hyperswitch Square refund process",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__square.rs",
+      "correct_rank": 23,
+      "correct_similarity": 0.406246542930603,
+      "top_1_similarity": 0.49439385533332825,
+      "code_preview": "pub mod transformers;\n\nuse std::fmt::Debug;\n\nuse api_models::{\n    enums,\n    webhooks::{IncomingWebhookEvent, ObjectReferenceId},\n};\nuse base64::Engi"
+    },
+    {
+      "query": "Square webhook event handling",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__square.rs",
+      "correct_rank": 29,
+      "correct_similarity": 0.3287373185157776,
+      "top_1_similarity": 0.48129767179489136,
+      "code_preview": "pub mod transformers;\n\nuse std::fmt::Debug;\n\nuse api_models::{\n    enums,\n    webhooks::{IncomingWebhookEvent, ObjectReferenceId},\n};\nuse base64::Engi"
+    },
+    {
+      "query": "how to implement Worldpay Vantiv connector in Rust",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__worldpayvantiv.rs",
+      "correct_rank": 35,
+      "correct_similarity": 0.42261579632759094,
+      "top_1_similarity": 0.6484428644180298,
+      "code_preview": "pub mod transformers;\n\nuse std::sync::LazyLock;\n\nuse base64::Engine;\nuse common_utils::{\n    consts::BASE64_ENGINE,\n    errors::CustomResult,\n    ext_"
+    },
+    {
+      "query": "hyperswitch payment capture implementation",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__worldpayvantiv.rs",
+      "correct_rank": 18,
+      "correct_similarity": 0.5532030463218689,
+      "top_1_similarity": 0.6328598856925964,
+      "code_preview": "pub mod transformers;\n\nuse std::sync::LazyLock;\n\nuse base64::Engine;\nuse common_utils::{\n    consts::BASE64_ENGINE,\n    errors::CustomResult,\n    ext_"
+    },
+    {
+      "query": "Worldpay Vantiv refund API integration",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__worldpayvantiv.rs",
+      "correct_rank": 29,
+      "correct_similarity": 0.4324113726615906,
+      "top_1_similarity": 0.6287291049957275,
+      "code_preview": "pub mod transformers;\n\nuse std::sync::LazyLock;\n\nuse base64::Engine;\nuse common_utils::{\n    consts::BASE64_ENGINE,\n    errors::CustomResult,\n    ext_"
+    },
+    {
+      "query": "hyperswitch payment gateway connector",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__worldpaymodular.rs",
+      "correct_rank": 18,
+      "correct_similarity": 0.5863510370254517,
+      "top_1_similarity": 0.6964712738990784,
+      "code_preview": "pub mod transformers;\nuse std::sync::LazyLock;\n\nuse api_models::{\n    payments::PaymentIdType,\n    webhooks::{IncomingWebhookEvent, RefundIdType},\n};\n"
+    },
+    {
+      "query": "how to implement Wise connector",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__wise.rs",
+      "correct_rank": 37,
+      "correct_similarity": 0.35995355248451233,
+      "top_1_similarity": 0.5346373319625854,
+      "code_preview": "pub mod transformers;\n\nuse api_models::webhooks::IncomingWebhookEvent;\n#[cfg(feature = \"payouts\")]\nuse common_utils::request::{Method, RequestBuilder,"
+    },
+    {
+      "query": "Wise connector Rust implementation",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__wise.rs",
+      "correct_rank": 36,
+      "correct_similarity": 0.34634602069854736,
+      "top_1_similarity": 0.5213850140571594,
+      "code_preview": "pub mod transformers;\n\nuse api_models::webhooks::IncomingWebhookEvent;\n#[cfg(feature = \"payouts\")]\nuse common_utils::request::{Method, RequestBuilder,"
+    },
+    {
+      "query": "payment attempt revenue recovery metadata",
+      "function_name": "crates__hyperswitch_domain_models__src__payments__payment_attempt.rs",
+      "correct_rank": 14,
+      "correct_similarity": 0.5216604471206665,
+      "top_1_similarity": 0.5792192220687866,
+      "code_preview": "#[cfg(all(feature = \"v1\", feature = \"olap\"))]\nuse api_models::enums::Connector;\n#[cfg(feature = \"v2\")]\nuse api_models::payments::{additional_info::Upi"
+    },
+    {
+      "query": "WorldPay XML to HyperSwitch model conversion",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__worldpayxml__transformers.rs",
+      "correct_rank": 20,
+      "correct_similarity": 0.44783592224121094,
+      "top_1_similarity": 0.6326828002929688,
+      "code_preview": "#[cfg(feature = \"payouts\")]\nuse api_models::payouts::{ApplePayDecrypt, CardPayout};\nuse base64::Engine;\nuse common_enums::enums;\n#[cfg(feature = \"payo"
+    },
+    {
+      "query": "how to implement WorldPay XML connector",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__worldpayxml__transformers.rs",
+      "correct_rank": 21,
+      "correct_similarity": 0.48589637875556946,
+      "top_1_similarity": 0.7194210886955261,
+      "code_preview": "#[cfg(feature = \"payouts\")]\nuse api_models::payouts::{ApplePayDecrypt, CardPayout};\nuse base64::Engine;\nuse common_enums::enums;\n#[cfg(feature = \"payo"
+    },
+    {
+      "query": "Deutsche Bank payment connector implementation",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__deutschebank.rs",
+      "correct_rank": 16,
+      "correct_similarity": 0.5551641583442688,
+      "top_1_similarity": 0.6264867782592773,
+      "code_preview": "pub mod transformers;\n\nuse std::{sync::LazyLock, time::SystemTime};\n\nuse actix_web::http::header::Date;\nuse base64::Engine;\nuse common_enums::enums;\nu"
+    },
+    {
+      "query": "Deutschebank struct definition",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__deutschebank.rs",
+      "correct_rank": 26,
+      "correct_similarity": 0.3406725823879242,
+      "top_1_similarity": 0.415079802274704,
+      "code_preview": "pub mod transformers;\n\nuse std::{sync::LazyLock, time::SystemTime};\n\nuse actix_web::http::header::Date;\nuse base64::Engine;\nuse common_enums::enums;\nu"
+    },
+    {
+      "query": "hyperswitch bank acquirer integration",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__deutschebank.rs",
+      "correct_rank": 13,
+      "correct_similarity": 0.4587665796279907,
+      "top_1_similarity": 0.508246898651123,
+      "code_preview": "pub mod transformers;\n\nuse std::{sync::LazyLock, time::SystemTime};\n\nuse actix_web::http::header::Date;\nuse base64::Engine;\nuse common_enums::enums;\nu"
+    },
+    {
+      "query": "how to integrate GlobePay with Hyperswitch",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__globepay.rs",
+      "correct_rank": 26,
+      "correct_similarity": 0.4458562731742859,
+      "top_1_similarity": 0.5893178582191467,
+      "code_preview": "pub mod transformers;\nuse std::sync::LazyLock;\n\nuse common_enums::enums;\nuse common_utils::{\n    crypto::{self, GenerateDigest},\n    errors::CustomRes"
+    },
+    {
+      "query": "Globepay authorize payment method",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__globepay.rs",
+      "correct_rank": 26,
+      "correct_similarity": 0.49144890904426575,
+      "top_1_similarity": 0.5809847116470337,
+      "code_preview": "pub mod transformers;\nuse std::sync::LazyLock;\n\nuse common_enums::enums;\nuse common_utils::{\n    crypto::{self, GenerateDigest},\n    errors::CustomRes"
+    },
+    {
+      "query": "Globepay WeChat Pay Alipay integration",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__globepay.rs",
+      "correct_rank": 22,
+      "correct_similarity": 0.47080349922180176,
+      "top_1_similarity": 0.5309174060821533,
+      "code_preview": "pub mod transformers;\nuse std::sync::LazyLock;\n\nuse common_enums::enums;\nuse common_utils::{\n    crypto::{self, GenerateDigest},\n    errors::CustomRes"
+    },
+    {
+      "query": "paysafe payment transformation rust",
+      "function_name": "crates__hyperswitch_connectors__src__connectors__paysafe__transformers.rs",
+      "correct_rank": 12,
+      "correct_similarity": 0.532935380935669,
+      "top_1_similarity": 0.5712702870368958,
+      "code_preview": "use std::collections::HashMap;\n\nuse base64::Engine;\nuse cards::CardNumber;\nuse common_enums::{enums, Currency};\nuse common_types::payments::{ApplePayP"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "BAAI/bge-small-en-v1.5",
+  "train_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_train.json",
+  "test_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_test.json",
+  "train_pairs": 1736,
+  "test_pairs": 308,
+  "epochs": 1,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "baseline": {
+    "MRR@10": 0.8465,
+    "nDCG@10": 0.8756,
+    "Recall@10": 0.9643
+  },
+  "fine_tuned": {
+    "MRR@10": 0.9411,
+    "nDCG@10": 0.9547,
+    "Recall@10": 0.9968
+  },
+  "improvement": {
+    "MRR@10": 0.0946,
+    "nDCG@10": 0.0791,
+    "Recall@10": 0.0325
+  },
+  "error_analysis": [
+    {
+      "query": "rust error_stack change_context parse_struct example",
+      "function_name": "get_response_inner",
+      "correct_rank": 24,
+      "correct_similarity": 0.2318040281534195,
+      "top_1_similarity": 0.3654792010784149,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__utils.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__utils.rs\n// SYMBOL:"
+    }
+  ]
+}

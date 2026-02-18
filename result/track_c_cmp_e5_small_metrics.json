@@ -1,0 +1,64 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "intfloat/e5-small-v2",
+  "train_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_train.json",
+  "val_file": null,
+  "test_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_test.json",
+  "train_pairs": 1736,
+  "val_pairs": 0,
+  "test_pairs": 308,
+  "epochs": 1,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "baseline_test": {
+    "MRR@10": 0.8367,
+    "nDCG@10": 0.8686,
+    "Recall@10": 0.9675
+  },
+  "fine_tuned_test": {
+    "MRR@10": 0.9173,
+    "nDCG@10": 0.936,
+    "Recall@10": 0.9935
+  },
+  "improvement_test": {
+    "MRR@10": 0.0806,
+    "nDCG@10": 0.0674,
+    "Recall@10": 0.026
+  },
+  "baseline_val": null,
+  "fine_tuned_val": null,
+  "improvement_val": null,
+  "baseline": {
+    "MRR@10": 0.8367,
+    "nDCG@10": 0.8686,
+    "Recall@10": 0.9675
+  },
+  "fine_tuned": {
+    "MRR@10": 0.9173,
+    "nDCG@10": 0.936,
+    "Recall@10": 0.9935
+  },
+  "improvement": {
+    "MRR@10": 0.0806,
+    "nDCG@10": 0.0674,
+    "Recall@10": 0.026
+  },
+  "error_analysis": [
+    {
+      "query": "How to get merchant connector account from payment intent id in hyperswitch router",
+      "function_name": "get_mca_from_object_reference_id",
+      "correct_rank": 23,
+      "correct_similarity": 0.12738460302352905,
+      "top_1_similarity": 0.5904948115348816,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__utils.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__utils.rs\n// SYMBOL:"
+    },
+    {
+      "query": "find merchant connector account by profile id and connector name",
+      "function_name": "get_mca_from_payment_intent",
+      "correct_rank": 11,
+      "correct_similarity": 0.18764281272888184,
+      "top_1_similarity": 0.7403790354728699,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__utils.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__utils.rs\n// SYMBOL:"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "jinaai/jina-code-embeddings-0.5b",
+  "train_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_train.json",
+  "val_file": null,
+  "test_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_test.json",
+  "train_pairs": 1736,
+  "val_pairs": 0,
+  "test_pairs": 308,
+  "epochs": 1,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "baseline_test": {
+    "MRR@10": 0.8618,
+    "nDCG@10": 0.8856,
+    "Recall@10": 0.961
+  },
+  "fine_tuned_test": {
+    "MRR@10": 0.9527,
+    "nDCG@10": 0.9643,
+    "Recall@10": 1.0
+  },
+  "improvement_test": {
+    "MRR@10": 0.0909,
+    "nDCG@10": 0.0787,
+    "Recall@10": 0.039
+  },
+  "baseline_val": null,
+  "fine_tuned_val": null,
+  "improvement_val": null,
+  "baseline": {
+    "MRR@10": 0.8618,
+    "nDCG@10": 0.8856,
+    "Recall@10": 0.961
+  },
+  "fine_tuned": {
+    "MRR@10": 0.9527,
+    "nDCG@10": 0.9643,
+    "Recall@10": 1.0
+  },
+  "improvement": {
+    "MRR@10": 0.0909,
+    "nDCG@10": 0.0787,
+    "Recall@10": 0.039
+  },
+  "error_analysis": []
+}

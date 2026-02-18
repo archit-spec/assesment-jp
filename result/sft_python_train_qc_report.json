@@ -1,0 +1,34 @@
+{
+  "input_rows": 350,
+  "kept_rows": 12,
+  "rejected_rows": 338,
+  "dropped_by_response_reuse": 266,
+  "keep_rate": 0.0343,
+  "min_score": 0.68,
+  "max_same_response": 3,
+  "categories_allowed": [
+    "bugfix",
+    "complete",
+    "docstring",
+    "improve",
+    "unit_test"
+  ],
+  "kept_by_category": {
+    "complete": 3,
+    "improve": 3,
+    "docstring": 3,
+    "bugfix": 3
+  },
+  "reject_top_reasons": {
+    "response_reuse_cap": 266,
+    "template_or_placeholder_response": 71,
+    "response_python_not_compilable": 1
+  },
+  "avg_score_by_category": {
+    "improve": 0.86,
+    "unit_test": 0.76,
+    "bugfix": 0.68,
+    "docstring": 0.86,
+    "complete": 0.9934
+  }
+}

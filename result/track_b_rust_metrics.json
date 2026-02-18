@@ -1,0 +1,123 @@
+{
+  "track": "B \u2013 Instruction Tuning (SFT)",
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "train_samples": 868,
+  "test_samples": 154,
+  "epochs": 1,
+  "lora_r": 16,
+  "training_loss": 1.3711,
+  "baseline": {
+    "pass_at_1": 0.0,
+    "avg_style_score": 1.0,
+    "hallucination_rate": 0.0,
+    "category_scores": {
+      "explain": {
+        "count": 10,
+        "syntax_ok": 0,
+        "style_sum": 10.0,
+        "syntax_rate": 0.0,
+        "avg_style": 1.0
+      }
+    }
+  },
+  "post_training": {
+    "pass_at_1": 0.0,
+    "avg_style_score": 0.2333,
+    "hallucination_rate": 0.0,
+    "category_scores": {
+      "explain": {
+        "count": 10,
+        "syntax_ok": 0,
+        "style_sum": 2.333333333333333,
+        "syntax_rate": 0.0,
+        "avg_style": 0.2333333333333333
+      }
+    }
+  },
+  "improvement": {
+    "pass_at_1_delta": 0.0,
+    "style_delta": -0.7667
+  },
+  "error_analysis": [
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: how to build request for Wells F",
+      "generated_preview": "This is a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a ",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: how to generate signature for cy",
+      "generated_preview": "This is a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a ",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: hyperswitch signifyd address str",
+      "generated_preview": "The following the 1999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999. The following the 19999",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: rust from trait implementation f",
+      "generated_preview": "This is a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a ",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: hyperswitch router get_total_cou",
+      "generated_preview": "This paper and the 19999999999. The following the 199999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: Implement get_request_body for R",
+      "generated_preview": "This is a new user will be a new user will be a 1999999999999999999999999999999999999999999999999999999999999. The following the 199999999999999999999999999. The 19999999999999999999999999999999999999",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: how to configure merchant connec",
+      "generated_preview": "This is a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a 199. The following the 199999999999999",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: rust function to convert  to url",
+      "generated_preview": "This paper and the 199999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999. The following the 19999999999",
+      "syntax_ok": false,
+      "style_score": 0.0,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: rust hypersift connector error r",
+      "generated_preview": "This is a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a ",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    },
+    {
+      "category": "explain",
+      "instruction_preview": "You are a Rust maintainer for the Hyperswitch codebase.\nUser query: rust connector handle_response p",
+      "generated_preview": "This is a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a new user will be a ",
+      "syntax_ok": false,
+      "style_score": 0.3333333333333333,
+      "hallucinations": []
+    }
+  ]
+}

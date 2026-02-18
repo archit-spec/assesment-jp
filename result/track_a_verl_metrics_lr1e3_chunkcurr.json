@@ -1,0 +1,71 @@
+{
+  "track": "A - Extended Pre-Training",
+  "repo_name": "verl",
+  "model": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-3B/snapshots/09d9bc5d376b0cfa0100a0694ea7de7232525803",
+  "corpus_dir": "data/code_corpus_verl",
+  "extensions": [
+    ".py"
+  ],
+  "split_mode": "chunk",
+  "eval_split": "val",
+  "eval_block_size": 2048,
+  "corpus_files": 214,
+  "train_files": 214,
+  "val_files": 0,
+  "test_files": 0,
+  "val_file_names": [],
+  "test_file_names": [],
+  "block_size": 2048,
+  "sequence_curriculum": [
+    1024,
+    1536,
+    2048
+  ],
+  "train_chunks": 302,
+  "val_chunks": 26,
+  "test_chunks": 6,
+  "epochs": 6.0,
+  "batch_size": 4,
+  "eval_batch_size": 4,
+  "grad_accum_steps": 2,
+  "learning_rate": 0.001,
+  "lora_r": 16,
+  "baseline_validation_perplexity": 2.6072,
+  "baseline_test_perplexity": 2.7633,
+  "baseline_perplexity": 2.6072,
+  "post_training_validation_perplexity": 1.1172,
+  "post_training_test_perplexity": 1.1926,
+  "post_training_perplexity": 1.1172,
+  "perplexity_reduction": 1.49,
+  "improvement_percent": 57.1504,
+  "training_loss": 0.4839,
+  "stage_summaries": [
+    {
+      "stage": 1,
+      "block_size": 1024,
+      "epochs": 2.0,
+      "train_chunks": 603,
+      "val_chunks": 53,
+      "test_chunks": 13,
+      "training_loss": 0.785
+    },
+    {
+      "stage": 2,
+      "block_size": 1536,
+      "epochs": 2.0,
+      "train_chunks": 403,
+      "val_chunks": 35,
+      "test_chunks": 8,
+      "training_loss": 0.4316
+    },
+    {
+      "stage": 3,
+      "block_size": 2048,
+      "epochs": 2.0,
+      "train_chunks": 302,
+      "val_chunks": 26,
+      "test_chunks": 6,
+      "training_loss": 0.2352
+    }
+  ]
+}

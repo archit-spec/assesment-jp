@@ -1,0 +1,208 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "thenlper/gte-small",
+  "train_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_train.json",
+  "val_file": null,
+  "test_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_test.json",
+  "train_pairs": 1736,
+  "val_pairs": 0,
+  "test_pairs": 308,
+  "epochs": 1,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "baseline_test": {
+    "MRR@10": 0.8149,
+    "nDCG@10": 0.8477,
+    "Recall@10": 0.9481
+  },
+  "fine_tuned_test": {
+    "MRR@10": 0.038,
+    "nDCG@10": 0.059,
+    "Recall@10": 0.1299
+  },
+  "improvement_test": {
+    "MRR@10": -0.7769,
+    "nDCG@10": -0.7887,
+    "Recall@10": -0.8182
+  },
+  "baseline_val": null,
+  "fine_tuned_val": null,
+  "improvement_val": null,
+  "baseline": {
+    "MRR@10": 0.8149,
+    "nDCG@10": 0.8477,
+    "Recall@10": 0.9481
+  },
+  "fine_tuned": {
+    "MRR@10": 0.038,
+    "nDCG@10": 0.059,
+    "Recall@10": 0.1299
+  },
+  "improvement": {
+    "MRR@10": -0.7769,
+    "nDCG@10": -0.7887,
+    "Recall@10": -0.8182
+  },
+  "error_analysis": [
+    {
+      "query": "rust hyperswitch find payment intent by merchant reference id and profile id",
+      "function_name": "find_payment_intent_by_merchant_reference_id_profile_id",
+      "correct_rank": 77,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_domain_models__src__payments__payment_intent.rs\n// MODULE: data::code_corpus_hyperswitch::cr"
+    },
+    {
+      "query": "hyperswitch domain models how to get payment intent by merchant reference",
+      "function_name": "find_payment_intent_by_merchant_reference_id_profile_id",
+      "correct_rank": 77,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_domain_models__src__payments__payment_intent.rs\n// MODULE: data::code_corpus_hyperswitch::cr"
+    },
+    {
+      "query": "rust hyperswitch payment intent lookup function signature merchant reference",
+      "function_name": "find_payment_intent_by_merchant_reference_id_profile_id",
+      "correct_rank": 77,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_domain_models__src__payments__payment_intent.rs\n// MODULE: data::code_corpus_hyperswitch::cr"
+    },
+    {
+      "query": "hyperswitch domain models retrieve payment intent by profile id reference",
+      "function_name": "find_payment_intent_by_merchant_reference_id_profile_id",
+      "correct_rank": 77,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_domain_models__src__payments__payment_intent.rs\n// MODULE: data::code_corpus_hyperswitch::cr"
+    },
+    {
+      "query": "how to configure tokenex connector authentication headers in hyperswitch",
+      "function_name": "get_headers",
+      "correct_rank": 23,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__tokenex.rs\n// MODULE: data::code_corpus_hyperswitch::crates__hy"
+    },
+    {
+      "query": "tokenex get_headers function implementation rust hyperswitch",
+      "function_name": "get_headers",
+      "correct_rank": 23,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__tokenex.rs\n// MODULE: data::code_corpus_hyperswitch::crates__hy"
+    },
+    {
+      "query": "hyperswitch tokenex connector header generation build_headers",
+      "function_name": "get_headers",
+      "correct_rank": 23,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__tokenex.rs\n// MODULE: data::code_corpus_hyperswitch::crates__hy"
+    },
+    {
+      "query": "configure tokenex api keys hyperswitch tokenex connector",
+      "function_name": "get_headers",
+      "correct_rank": 23,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__tokenex.rs\n// MODULE: data::code_corpus_hyperswitch::crates__hy"
+    },
+    {
+      "query": "how to get refund status counts for a specific merchant",
+      "function_name": "get_refund_status_with_count",
+      "correct_rank": 24,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__db__refund.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__db__refund.rs\n"
+    },
+    {
+      "query": "rust function to count refunds by status hyperswitch",
+      "function_name": "get_refund_status_with_count",
+      "correct_rank": 24,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__db__refund.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__db__refund.rs\n"
+    },
+    {
+      "query": "get_refund_status_with_count implementation details",
+      "function_name": "get_refund_status_with_count",
+      "correct_rank": 24,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__db__refund.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__db__refund.rs\n"
+    },
+    {
+      "query": "hyperswitch router refund status aggregation query",
+      "function_name": "get_refund_status_with_count",
+      "correct_rank": 24,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__router__src__db__refund.rs\n// MODULE: data::code_corpus_hyperswitch::crates__router__src__db__refund.rs\n"
+    },
+    {
+      "query": "how to generate signature for cybersource api request",
+      "function_name": "build_headers",
+      "correct_rank": 25,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__cybersource.rs\n// MODULE: data::code_corpus_hyperswitch::crates"
+    },
+    {
+      "query": "rust hyperswitch cybersource build_headers function implementation",
+      "function_name": "build_headers",
+      "correct_rank": 25,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__cybersource.rs\n// MODULE: data::code_corpus_hyperswitch::crates"
+    },
+    {
+      "query": "cybersource authentication header generation hyperswitch",
+      "function_name": "build_headers",
+      "correct_rank": 25,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__cybersource.rs\n// MODULE: data::code_corpus_hyperswitch::crates"
+    },
+    {
+      "query": "hyperswitch connector cybersource signature calculation",
+      "function_name": "build_headers",
+      "correct_rank": 25,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__cybersource.rs\n// MODULE: data::code_corpus_hyperswitch::crates"
+    },
+    {
+      "query": "how to build gpayments endpoint url rust hyperswitch",
+      "function_name": "build_endpoint",
+      "correct_rank": 26,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__gpayments.rs\n// MODULE: data::code_corpus_hyperswitch::crates__"
+    },
+    {
+      "query": "gpayments connector metadata endpoint_prefix hyperswitch rust",
+      "function_name": "build_endpoint",
+      "correct_rank": 26,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__gpayments.rs\n// MODULE: data::code_corpus_hyperswitch::crates__"
+    },
+    {
+      "query": "hyperswitch gpayments build_endpoint function implementation",
+      "function_name": "build_endpoint",
+      "correct_rank": 26,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__gpayments.rs\n// MODULE: data::code_corpus_hyperswitch::crates__"
+    },
+    {
+      "query": "rust hyperswitch gpayments connector url construction",
+      "function_name": "build_endpoint",
+      "correct_rank": 26,
+      "correct_similarity": NaN,
+      "top_1_similarity": NaN,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__gpayments.rs\n// MODULE: data::code_corpus_hyperswitch::crates__"
+    }
+  ]
+}

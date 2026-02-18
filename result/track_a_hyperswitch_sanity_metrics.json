@@ -1,0 +1,56 @@
+{
+  "track": "A - Extended Pre-Training",
+  "repo_name": "hyperswitch-sanity",
+  "model": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-3B/snapshots/09d9bc5d376b0cfa0100a0694ea7de7232525803",
+  "corpus_dir": "data/code_corpus_hyperswitch",
+  "extensions": [
+    ".rs"
+  ],
+  "split_mode": "file",
+  "eval_split": "val",
+  "eval_block_size": 512,
+  "corpus_files": 12,
+  "train_files": 10,
+  "val_files": 1,
+  "test_files": 1,
+  "val_file_names": [
+    "crates__api_models__src__authentication.rs"
+  ],
+  "test_file_names": [
+    "crates__api_models__src__events__routing.rs"
+  ],
+  "block_size": 512,
+  "sequence_curriculum": [
+    512
+  ],
+  "train_chunks": 32,
+  "val_chunks": 8,
+  "test_chunks": 2,
+  "epochs": 0.05,
+  "batch_size": 1,
+  "eval_batch_size": 1,
+  "grad_accum_steps": 8,
+  "learning_rate": 0.0001,
+  "lora_r": 16,
+  "baseline_validation_perplexity": 3.2299,
+  "baseline_test_perplexity": 2.2834,
+  "baseline_perplexity": 3.2299,
+  "post_training_validation_perplexity": 3.2299,
+  "post_training_test_perplexity": 2.2834,
+  "post_training_perplexity": 3.2299,
+  "perplexity_reduction": 0.0,
+  "improvement_percent": 0.0,
+  "training_loss": 0.9349,
+  "stage_summaries": [
+    {
+      "stage": 1,
+      "block_size": 512,
+      "epochs": 0.05,
+      "train_chunks": 32,
+      "val_chunks": 8,
+      "test_chunks": 0,
+      "training_loss": 0.9349,
+      "validation_loss": 1.2316
+    }
+  ]
+}

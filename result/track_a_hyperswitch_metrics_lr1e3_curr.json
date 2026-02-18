@@ -1,0 +1,88 @@
+{
+  "track": "A - Extended Pre-Training",
+  "repo_name": "hyperswitch",
+  "model": "/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-Coder-3B/snapshots/09d9bc5d376b0cfa0100a0694ea7de7232525803",
+  "corpus_dir": "data/code_corpus_hyperswitch",
+  "extensions": [
+    ".rs"
+  ],
+  "corpus_files": 300,
+  "train_files": 270,
+  "val_files": 30,
+  "val_file_names": [
+    "crates__hyperswitch_connectors__src__connectors__gpayments.rs",
+    "crates__hyperswitch_connectors__src__connectors__zift.rs",
+    "crates__hyperswitch_connectors__src__connectors__archipel__transformers.rs",
+    "crates__hyperswitch_connectors__src__connectors__finix.rs",
+    "crates__hyperswitch_connectors__src__connectors__airwallex.rs",
+    "crates__hyperswitch_domain_models__src__payments__payment_intent.rs",
+    "crates__hyperswitch_connectors__src__connectors__signifyd__transformers__api.rs",
+    "crates__hyperswitch_connectors__src__connectors__juspaythreedsserver.rs",
+    "crates__common_utils__src__new_type.rs",
+    "crates__hyperswitch_connectors__src__connectors__worldline.rs",
+    "crates__euclid__src__dssa__graph.rs",
+    "crates__router__src__utils.rs",
+    "crates__hyperswitch_connectors__src__connectors__globepay.rs",
+    "crates__hyperswitch_connectors__src__connectors__wellsfargo.rs",
+    "crates__hyperswitch_connectors__src__connectors__thunes.rs",
+    "crates__storage_impl__src__merchant_connector_account.rs",
+    "crates__router__src__types__domain__user.rs",
+    "crates__hyperswitch_connectors__src__connectors__authipay.rs",
+    "crates__hyperswitch_connectors__src__connectors__payme__transformers.rs",
+    "crates__hyperswitch_connectors__src__connectors__powertranz.rs",
+    "crates__hyperswitch_domain_models__src__merchant_connector_account.rs",
+    "crates__analytics__src__query.rs",
+    "crates__hyperswitch_connectors__src__connectors__wise__transformers.rs",
+    "crates__hyperswitch_domain_models__src__router_data.rs",
+    "crates__hyperswitch_connectors__src__connectors__nordea.rs",
+    "crates__hyperswitch_connectors__src__connectors__netcetera.rs",
+    "crates__hyperswitch_domain_models__src__payment_method_data.rs",
+    "crates__hyperswitch_connectors__src__connectors__tokenex.rs",
+    "crates__hyperswitch_connectors__src__connectors__elavon__transformers.rs",
+    "crates__api_models__src__authentication.rs"
+  ],
+  "block_size": 1536,
+  "sequence_curriculum": [
+    768,
+    1024,
+    1536
+  ],
+  "train_chunks": 900,
+  "val_chunks": 160,
+  "epochs": 3.0,
+  "batch_size": 1,
+  "grad_accum_steps": 8,
+  "learning_rate": 0.001,
+  "lora_r": 16,
+  "baseline_perplexity": 2.2832,
+  "post_training_perplexity": 1.5429,
+  "perplexity_reduction": 0.7403,
+  "improvement_percent": 32.4233,
+  "training_loss": 0.5316,
+  "stage_summaries": [
+    {
+      "stage": 1,
+      "block_size": 768,
+      "epochs": 1.0,
+      "train_chunks": 900,
+      "val_chunks": 160,
+      "training_loss": 0.6801
+    },
+    {
+      "stage": 2,
+      "block_size": 1024,
+      "epochs": 1.0,
+      "train_chunks": 900,
+      "val_chunks": 160,
+      "training_loss": 0.514
+    },
+    {
+      "stage": 3,
+      "block_size": 1536,
+      "epochs": 1.0,
+      "train_chunks": 900,
+      "val_chunks": 160,
+      "training_loss": 0.4006
+    }
+  ]
+}

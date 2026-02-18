@@ -1,0 +1,56 @@
+{
+  "track": "C \u2013 Embedding Fine-Tuning",
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "train_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_train.json",
+  "val_file": null,
+  "test_file": "data/hf_download/assesment_embeddings_new_clean/retrieval_test.json",
+  "train_pairs": 1736,
+  "val_pairs": 0,
+  "test_pairs": 308,
+  "epochs": 1,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "baseline_test": {
+    "MRR@10": 0.884,
+    "nDCG@10": 0.9093,
+    "Recall@10": 0.987
+  },
+  "fine_tuned_test": {
+    "MRR@10": 0.962,
+    "nDCG@10": 0.9704,
+    "Recall@10": 0.9968
+  },
+  "improvement_test": {
+    "MRR@10": 0.078,
+    "nDCG@10": 0.0611,
+    "Recall@10": 0.0098
+  },
+  "baseline_val": null,
+  "fine_tuned_val": null,
+  "improvement_val": null,
+  "baseline": {
+    "MRR@10": 0.884,
+    "nDCG@10": 0.9093,
+    "Recall@10": 0.987
+  },
+  "fine_tuned": {
+    "MRR@10": 0.962,
+    "nDCG@10": 0.9704,
+    "Recall@10": 0.9968
+  },
+  "improvement": {
+    "MRR@10": 0.078,
+    "nDCG@10": 0.0611,
+    "Recall@10": 0.0098
+  },
+  "error_analysis": [
+    {
+      "query": "hyperswitch connector error handling pattern",
+      "function_name": "build_error_response",
+      "correct_rank": 11,
+      "correct_similarity": 0.19569939374923706,
+      "top_1_similarity": 0.39104408025741577,
+      "code_preview": "// PATH: data/code_corpus_hyperswitch/crates__hyperswitch_connectors__src__connectors__amazonpay.rs\n// MODULE: data::code_corpus_hyperswitch::crates__"
+    }
+  ]
+}
