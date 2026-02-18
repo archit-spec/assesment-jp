@@ -13,6 +13,7 @@ import random
 import re
 import subprocess
 import tempfile
+import inspect
 from typing import List, Dict, Optional
 
 import torch
@@ -23,26 +24,33 @@ from transformers import (
     TrainingArguments,
 )
 from peft import LoraConfig, get_peft_model, TaskType
-from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
+try:
+    from trl import SFTTrainer, SFTConfig, DataCollatorForCompletionOnlyLM
+except ImportError:
+    from trl import SFTTrainer, SFTConfig
+    DataCollatorForCompletionOnlyLM = None
 
 # ── Config ──────────────────────────────────────────────────────────
-MODEL_NAME = "Qwen/Qwen2.5-Coder-3B"
-SFT_TRAIN_FILE = "data/sft_train.json"
-SFT_TEST_FILE = "data/sft_test.json"
-OUTPUT_DIR = "results/track_b"
-METRICS_FILE = "results/track_b_metrics.json"
+MODEL_NAME = "Qwen/Qwen3-4B-Instruct-2507"
+SFT_TRAIN_FILE = "data/sft_rust_embed_train.json"
+SFT_TEST_FILE = "data/sft_rust_embed_test.json"
+OUTPUT_DIR = "results/track_b_rust"
+METRICS_FILE = "results/track_b_rust_metrics.json"
 
 MAX_SEQ_LENGTH = 1024
 RANDOM_SEED = 42
 
 # Training hyperparameters
-NUM_EPOCHS = 3
+NUM_EPOCHS = 1
 BATCH_SIZE = 1
 GRAD_ACCUM_STEPS = 16       # effective batch size = 16
-LEARNING_RATE = 2e-4
+LEARNING_RATE = 5e-5
 WARMUP_RATIO = 0.05
 WEIGHT_DECAY = 0.01
 FP16 = True
+EVAL_SAMPLES = 10
+GEN_MAX_NEW_TOKENS = 256
+MAX_GRAD_NORM = 0.5
 
 # LoRA config
 LORA_R = 16
@@ -72,21 +80,28 @@ def format_chat_template(example: Dict, tokenizer) -> str:
 
 
 def prepare_dataset(data_file: str, tokenizer) -> Dataset:
-    """Load and format SFT data."""
+    """Load and format SFT data as conversational messages."""
     with open(data_file) as f:
         data = json.load(f)
 
     formatted = []
     for item in data:
-        text = format_chat_template(item, tokenizer)
-        formatted.append({"text": text, "category": item.get("category", "unknown")})
+        formatted.append(
+            {
+                "messages": [
+                    {"role": "user", "content": item["instruction"]},
+                    {"role": "assistant", "content": item["response"]},
+                ],
+                "category": item.get("category", "unknown"),
+            }
+        )
 
     return Dataset.from_list(formatted)
 
 
 # ── Evaluation Functions ───────────────────────────────────────────
 
-def generate_response(model, tokenizer, instruction: str, max_new_tokens: int = 512) -> str:
+def generate_response(model, tokenizer, instruction: str, max_new_tokens: int = GEN_MAX_NEW_TOKENS) -> str:
     """Generate a response from the model given an instruction."""
     messages = [{"role": "user", "content": instruction}]
     try:
@@ -99,8 +114,7 @@ def generate_response(model, tokenizer, instruction: str, max_new_tokens: int = 
         outputs = model.generate(
             **inputs,
             max_new_tokens=max_new_tokens,
-            temperature=0.2,
-            do_sample=True,
+            do_sample=False,
             pad_token_id=tokenizer.eos_token_id,
         )
     # Decode only the new tokens
@@ -214,33 +228,31 @@ def score_style(response: str, category: str) -> float:
 
 
 def detect_hallucinations(response: str) -> List[str]:
-    """Detect potential hallucinations in generated code."""
+    """Detect potential hallucinations in generated output."""
     hallucinations = []
 
-    # Check for made-up imports
-    fake_import_patterns = [
-        r"from\s+httpx\.(\w+)\s+import",
-        r"import\s+httpx\.(\w+)",
+    # Placeholder artifacts that often indicate fabricated/incomplete output
+    placeholder_patterns = [
+        r"<\s*insert.*?>",
+        r"\bTODO\b",
+        r"\bTBD\b",
+        r"\byour_[a-zA-Z_]+\b",
+        r"\bsome_module\b",
+        r"\byour_module\b",
+        r"\bmock_api\b",
     ]
-    known_modules = {"_client", "_models", "_urls", "_content", "_config", "_types",
-                     "_transports", "_auth", "_status_codes", "_decoders", "_multipart",
-                     "_utils", "_exceptions"}
 
-    for pattern in fake_import_patterns:
-        matches = re.findall(pattern, response)
-        for match in matches:
-            if match not in known_modules:
-                hallucinations.append(f"Possibly fabricated module: httpx.{match}")
+    for pattern in placeholder_patterns:
+        if re.search(pattern, response, flags=re.IGNORECASE):
+            hallucinations.append(f"Placeholder or unresolved reference matched: {pattern}")
 
-    # Check for fabricated function calls
-    if "httpx." in response:
-        func_calls = re.findall(r"httpx\.(\w+)\(", response)
-        known_funcs = {"get", "post", "put", "delete", "patch", "head", "options",
-                       "request", "stream", "Client", "AsyncClient", "Request", "Response",
-                       "URL", "Headers", "QueryParams", "Timeout", "Limits", "Proxy"}
-        for func in func_calls:
-            if func not in known_funcs and not func.startswith("_"):
-                hallucinations.append(f"Possibly fabricated function: httpx.{func}")
+    # Suspicious imports with generic placeholder names
+    generic_imports = re.findall(r"(?m)^\s*(?:from|import)\s+([a-zA-Z_][\w\.]*)", response)
+    banned_prefixes = ("foo", "bar", "baz", "example", "sample", "dummy")
+    for module_name in generic_imports:
+        lower = module_name.lower()
+        if lower.startswith(banned_prefixes):
+            hallucinations.append(f"Possibly fabricated import/module: {module_name}")
 
     return hallucinations
 
@@ -379,50 +391,65 @@ def main():
     # 5. Baseline evaluation (before fine-tuning)
     print("\n[INFO] Running baseline evaluation...")
     model.to(device)
-    baseline_results = evaluate_model(model, tokenizer, test_data, num_samples=min(30, len(test_data)))
+    baseline_results = evaluate_model(model, tokenizer, test_data, num_samples=min(EVAL_SAMPLES, len(test_data)))
     print(f"[RESULT] Baseline pass@1: {baseline_results['pass_at_1']:.3f}")
     print(f"[RESULT] Baseline style:  {baseline_results['avg_style_score']:.3f}")
 
     # 6. Training
     print("\n[INFO] Starting SFT training...")
-    sft_config = SFTConfig(
-        output_dir=OUTPUT_DIR,
-        overwrite_output_dir=True,
-        num_train_epochs=NUM_EPOCHS,
-        per_device_train_batch_size=BATCH_SIZE,
-        gradient_accumulation_steps=GRAD_ACCUM_STEPS,
-        learning_rate=LEARNING_RATE,
-        warmup_ratio=WARMUP_RATIO,
-        weight_decay=WEIGHT_DECAY,
-        fp16=FP16 and device == "cuda",
-        logging_steps=10,
-        save_strategy="epoch",
-        save_total_limit=2,
-        report_to="none",
-        seed=RANDOM_SEED,
-        max_seq_length=MAX_SEQ_LENGTH,
-        dataset_text_field="text",
-    )
+    config_kwargs = {
+        "output_dir": OUTPUT_DIR,
+        "num_train_epochs": NUM_EPOCHS,
+        "per_device_train_batch_size": BATCH_SIZE,
+        "gradient_accumulation_steps": GRAD_ACCUM_STEPS,
+        "learning_rate": LEARNING_RATE,
+        "warmup_ratio": WARMUP_RATIO,
+        "weight_decay": WEIGHT_DECAY,
+        "max_grad_norm": MAX_GRAD_NORM,
+        "fp16": FP16 and device == "cuda",
+        "logging_steps": 10,
+        "save_strategy": "epoch",
+        "save_total_limit": 2,
+        "report_to": "none",
+        "seed": RANDOM_SEED,
+        "max_seq_length": MAX_SEQ_LENGTH,  # Older TRL
+        "max_length": MAX_SEQ_LENGTH,      # Newer TRL
+        "dataset_text_field": "messages",
+        "do_train": True,
+    }
+    sft_config_params = inspect.signature(SFTConfig.__init__).parameters
+    filtered_kwargs = {k: v for k, v in config_kwargs.items() if k in sft_config_params}
+    sft_config = SFTConfig(**filtered_kwargs)
 
-    # Create collator for instruction masking
-    # Mask everything up to the start of the assistant's response
-    response_template = "<|im_start|>assistant\n"
-    collator = DataCollatorForCompletionOnlyLM(response_template=response_template, tokenizer=tokenizer)
+    trainer_kwargs = {
+        "model": model,
+        "args": sft_config,
+        "train_dataset": train_dataset,
+    }
 
-    trainer = SFTTrainer(
-        model=model,
-        args=sft_config,
-        train_dataset=train_dataset,
-        data_collator=collator,
-        tokenizer=tokenizer,
-    )
+    # Newer TRL uses `processing_class`, older versions use `tokenizer`.
+    sft_init_params = inspect.signature(SFTTrainer.__init__).parameters
+    if "processing_class" in sft_init_params:
+        trainer_kwargs["processing_class"] = tokenizer
+    else:
+        trainer_kwargs["tokenizer"] = tokenizer
+
+    # Completion-only masking is optional across TRL versions.
+    if DataCollatorForCompletionOnlyLM is not None:
+        response_template = "<|im_start|>assistant\n"
+        trainer_kwargs["data_collator"] = DataCollatorForCompletionOnlyLM(
+            response_template=response_template,
+            tokenizer=tokenizer,
+        )
+
+    trainer = SFTTrainer(**trainer_kwargs)
 
     train_result = trainer.train()
     print(f"[INFO] Training complete. Loss: {train_result.training_loss:.4f}")
 
     # 7. Post-training evaluation
     print("\n[INFO] Running post-training evaluation...")
-    post_results = evaluate_model(model, tokenizer, test_data, num_samples=min(30, len(test_data)))
+    post_results = evaluate_model(model, tokenizer, test_data, num_samples=min(EVAL_SAMPLES, len(test_data)))
     print(f"[RESULT] Post-training pass@1: {post_results['pass_at_1']:.3f}")
     print(f"[RESULT] Post-training style:  {post_results['avg_style_score']:.3f}")
 

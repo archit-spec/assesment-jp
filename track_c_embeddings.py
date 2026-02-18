@@ -11,16 +11,12 @@ import os
 import json
 import random
 import math
+import argparse
 import numpy as np
-from typing import List, Dict, Tuple
+from typing import Any, List, Dict, Tuple
+from pathlib import Path
 
 import torch
-from sentence_transformers import (
-    SentenceTransformer,
-    InputExample,
-    losses,
-    evaluation,
-)
 from torch.utils.data import DataLoader
 
 # ── Config ──────────────────────────────────────────────────────────
@@ -39,31 +35,150 @@ WARMUP_RATIO = 0.1
 LEARNING_RATE = 2e-5
 
 
+# ── Dependency Loading ───────────────────────────────────────────────
+
+def import_sentence_transformers():
+    try:
+        from sentence_transformers import SentenceTransformer, InputExample, losses
+    except ImportError as exc:
+        raise RuntimeError(
+            "Missing dependency: sentence-transformers. Install with: "
+            "pip install sentence-transformers"
+        ) from exc
+    return SentenceTransformer, InputExample, losses
+
+
+def load_sentence_transformer(
+    SentenceTransformer,
+    model_name_or_path: str,
+    device: str,
+    trust_remote_code: bool = False,
+):
+    if trust_remote_code:
+        # Compatibility shim for some remote model files expecting older transformers layout.
+        try:
+            import transformers.modeling_utils as modeling_utils
+            if not hasattr(modeling_utils, "Conv1D"):
+                from transformers.pytorch_utils import Conv1D
+                modeling_utils.Conv1D = Conv1D
+        except Exception:
+            pass
+
+    kwargs = {"device": device}
+    if trust_remote_code:
+        kwargs["trust_remote_code"] = True
+    try:
+        return SentenceTransformer(model_name_or_path, **kwargs)
+    except TypeError:
+        # Some sentence-transformers versions only pass this via model_kwargs.
+        if trust_remote_code:
+            kwargs.pop("trust_remote_code", None)
+            kwargs["model_kwargs"] = {"trust_remote_code": True}
+        return SentenceTransformer(model_name_or_path, **kwargs)
+
+
 # ── Data Loading ────────────────────────────────────────────────────
 
+def format_query_for_model(query: str, model_name: str) -> str:
+    m = model_name.lower()
+    q = query.strip()
+    if "e5" in m:
+        return f"query: {q}"
+    if "bge" in m:
+        return f"Represent this sentence for searching relevant code: {q}"
+    return q
+
+
+def format_code_for_model(code: str, model_name: str) -> str:
+    m = model_name.lower()
+    c = code.strip()
+    if "e5" in m:
+        return f"passage: {c}"
+    return c
+
 def load_retrieval_data(filepath: str) -> List[Dict]:
-    """Load retrieval data."""
-    with open(filepath) as f:
-        return json.load(f)
+    """Load retrieval data from JSON or JSONL and normalize to {query, code, ...} rows."""
+    p = Path(filepath)
+    if not p.exists():
+        raise FileNotFoundError(f"Retrieval file not found: {filepath}")
+
+    rows: List[Dict] = []
+
+    if p.suffix == ".jsonl":
+        for line in p.read_text().splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                item = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if "query" in item and "code" in item:
+                rows.append(item)
+                continue
+            if "queries" in item and "anchor" in item:
+                for q in item.get("queries", []):
+                    if isinstance(q, str) and q.strip():
+                        rows.append(
+                            {
+                                "query": q.strip(),
+                                "code": item.get("anchor", ""),
+                                "function_name": item.get("symbol") or item.get("filename"),
+                                "filename": item.get("filename"),
+                                "path": item.get("path"),
+                                "label": item.get("label"),
+                                "language": item.get("language"),
+                                "repo": item.get("repo"),
+                            }
+                        )
+        return rows
+
+    data = json.loads(p.read_text())
+    if not isinstance(data, list):
+        return rows
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        if "query" in item and "code" in item:
+            rows.append(item)
+            continue
+        if "queries" in item and "anchor" in item:
+            for q in item.get("queries", []):
+                if isinstance(q, str) and q.strip():
+                    rows.append(
+                        {
+                            "query": q.strip(),
+                            "code": item.get("anchor", ""),
+                            "function_name": item.get("symbol") or item.get("filename"),
+                            "filename": item.get("filename"),
+                            "path": item.get("path"),
+                            "label": item.get("label"),
+                            "language": item.get("language"),
+                            "repo": item.get("repo"),
+                        }
+                    )
+    return rows
 
 
-def create_training_examples(data: List[Dict]) -> List[InputExample]:
+def create_training_examples(data: List[Dict], model_name: str) -> List[Any]:
     """Convert data to SentenceTransformer InputExamples (query, positive_code)."""
+    _, InputExample, _ = import_sentence_transformers()
     examples = []
     for item in data:
         query = item["query"]
         code = item["code"]
-        # For BGE models, prepend instruction for queries
-        query_with_instruction = f"Represent this sentence for searching relevant code: {query}"
-        examples.append(InputExample(texts=[query_with_instruction, code]))
+        query_text = format_query_for_model(query, model_name)
+        code_text = format_code_for_model(code, model_name)
+        examples.append(InputExample(texts=[query_text, code_text]))
     return examples
 
 
 # ── Retrieval Evaluation ───────────────────────────────────────────
 
 def compute_retrieval_metrics(
-    model: SentenceTransformer,
+    model: Any,
     test_data: List[Dict],
+    model_name: str,
     k: int = 10,
 ) -> Dict:
     """
@@ -81,11 +196,11 @@ def compute_retrieval_metrics(
         code = item["code"]
         if code not in code_set:
             code_set[code] = len(codes)
-            codes.append(code)
+            codes.append(format_code_for_model(code, model_name))
 
     # Map queries to their correct code
     for i, item in enumerate(test_data):
-        query = f"Represent this sentence for searching relevant code: {item['query']}"
+        query = format_query_for_model(item["query"], model_name)
         queries.append(query)
         query_to_code_idx[i] = code_set[item["code"]]
 
@@ -105,6 +220,7 @@ def compute_retrieval_metrics(
     mrr_scores = []
     ndcg_scores = []
     recall_scores = []
+    acc1_scores = []
 
     for i in range(len(queries)):
         correct_idx = query_to_code_idx[i]
@@ -123,6 +239,7 @@ def compute_retrieval_metrics(
 
         # Recall@k
         recall_scores.append(1.0 if correct_idx in top_k_indices else 0.0)
+        acc1_scores.append(1.0 if top_k_indices[0] == correct_idx else 0.0)
 
         # nDCG@k
         dcg = 0.0
@@ -133,6 +250,7 @@ def compute_retrieval_metrics(
         ndcg_scores.append(dcg / idcg if idcg > 0 else 0.0)
 
     return {
+        "Accuracy@1": round(float(np.mean(acc1_scores)), 4),
         f"MRR@{k}": round(float(np.mean(mrr_scores)), 4),
         f"nDCG@{k}": round(float(np.mean(ndcg_scores)), 4),
         f"Recall@{k}": round(float(np.mean(recall_scores)), 4),
@@ -140,8 +258,9 @@ def compute_retrieval_metrics(
 
 
 def run_error_analysis(
-    model: SentenceTransformer,
+    model: Any,
     test_data: List[Dict],
+    model_name: str,
     k: int = 10,
     num_failures: int = 20,
 ) -> List[Dict]:
@@ -154,11 +273,11 @@ def run_error_analysis(
         code = item["code"]
         if code not in code_set:
             code_set[code] = len(codes)
-            codes.append(code)
+            codes.append(format_code_for_model(code, model_name))
 
     query_to_code_idx = {}
     for i, item in enumerate(test_data):
-        query = f"Represent this sentence for searching relevant code: {item['query']}"
+        query = format_query_for_model(item["query"], model_name)
         queries.append(query)
         query_to_code_idx[i] = code_set[item["code"]]
 
@@ -195,104 +314,201 @@ def run_error_analysis(
     return failures
 
 
+# ── CLI ─────────────────────────────────────────────────────────────
+
+def parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="Track C embedding fine-tuning")
+    p.add_argument("--model-name", default=MODEL_NAME)
+    p.add_argument("--train-file", default=RETRIEVAL_TRAIN_FILE)
+    p.add_argument("--test-file", default=RETRIEVAL_TEST_FILE)
+    p.add_argument("--val-file", default=None, help="Optional validation retrieval JSON")
+    p.add_argument("--output-dir", default=OUTPUT_DIR)
+    p.add_argument("--metrics-file", default=METRICS_FILE)
+    p.add_argument("--epochs", type=int, default=NUM_EPOCHS)
+    p.add_argument("--batch-size", type=int, default=BATCH_SIZE)
+    p.add_argument("--warmup-ratio", type=float, default=WARMUP_RATIO)
+    p.add_argument("--learning-rate", type=float, default=LEARNING_RATE)
+    p.add_argument("--seed", type=int, default=RANDOM_SEED)
+    p.add_argument("--trust-remote-code", action="store_true")
+    p.add_argument("--max-seq-length", type=int, default=0, help="0 = model default")
+    return p.parse_args()
+
+
 # ── Main ────────────────────────────────────────────────────────────
 
 def main():
-    random.seed(RANDOM_SEED)
-    torch.manual_seed(RANDOM_SEED)
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    args = parse_args()
+    SentenceTransformer, _, losses = import_sentence_transformers()
+
+    random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    os.makedirs(args.output_dir, exist_ok=True)
+    metrics_parent = Path(args.metrics_file).parent
+    if str(metrics_parent) not in ("", "."):
+        os.makedirs(metrics_parent, exist_ok=True)
 
     device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"[INFO] Device: {device}")
 
     # 1. Load data
     print("[INFO] Loading retrieval data...")
-    train_data = load_retrieval_data(RETRIEVAL_TRAIN_FILE)
-    test_data = load_retrieval_data(RETRIEVAL_TEST_FILE)
-    print(f"[INFO] Train: {len(train_data)} pairs, Test: {len(test_data)} pairs")
+    train_data = load_retrieval_data(args.train_file)
+    test_data = load_retrieval_data(args.test_file)
+    val_data = load_retrieval_data(args.val_file) if args.val_file else None
+    if val_data is not None:
+        print(
+            f"[INFO] Train: {len(train_data)} pairs, "
+            f"Val: {len(val_data)} pairs, Test: {len(test_data)} pairs"
+        )
+    else:
+        print(f"[INFO] Train: {len(train_data)} pairs, Test: {len(test_data)} pairs")
 
     # 2. Load baseline model
     print("[INFO] Loading baseline model...")
-    baseline_model = SentenceTransformer(MODEL_NAME, device=device)
+    baseline_model = load_sentence_transformer(
+        SentenceTransformer,
+        args.model_name,
+        device=device,
+        trust_remote_code=args.trust_remote_code,
+    )
+    if args.max_seq_length and args.max_seq_length > 0:
+        baseline_model.max_seq_length = args.max_seq_length
 
     # 3. Baseline evaluation
     print("\n[INFO] Baseline evaluation...")
-    baseline_metrics = compute_retrieval_metrics(baseline_model, test_data)
-    print(f"[RESULT] Baseline: {baseline_metrics}")
+    baseline_metrics_test = compute_retrieval_metrics(baseline_model, test_data, args.model_name)
+    print(f"[RESULT] Baseline (test): {baseline_metrics_test}")
+    baseline_metrics_val = None
+    if val_data is not None:
+        baseline_metrics_val = compute_retrieval_metrics(baseline_model, val_data, args.model_name)
+        print(f"[RESULT] Baseline (val):  {baseline_metrics_val}")
 
     # 4. Prepare training data
     print("\n[INFO] Preparing training data...")
-    train_examples = create_training_examples(train_data)
-    train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=BATCH_SIZE)
+    train_examples = create_training_examples(train_data, args.model_name)
+    train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=args.batch_size)
 
     # 5. Fine-tune
     print("[INFO] Starting fine-tuning...")
-    ft_model = SentenceTransformer(MODEL_NAME, device=device)
+    ft_model = load_sentence_transformer(
+        SentenceTransformer,
+        args.model_name,
+        device=device,
+        trust_remote_code=args.trust_remote_code,
+    )
+    if args.max_seq_length and args.max_seq_length > 0:
+        ft_model.max_seq_length = args.max_seq_length
 
     # Use MultipleNegativesRankingLoss (in-batch negatives)
     train_loss = losses.MultipleNegativesRankingLoss(ft_model)
 
-    warmup_steps = int(len(train_dataloader) * NUM_EPOCHS * WARMUP_RATIO)
+    warmup_steps = int(len(train_dataloader) * args.epochs * args.warmup_ratio)
 
     ft_model.fit(
         train_objectives=[(train_dataloader, train_loss)],
-        epochs=NUM_EPOCHS,
+        epochs=args.epochs,
         warmup_steps=warmup_steps,
-        output_path=os.path.join(OUTPUT_DIR, "model"),
+        output_path=os.path.join(args.output_dir, "model"),
         show_progress_bar=True,
-        optimizer_params={"lr": LEARNING_RATE},
+        optimizer_params={"lr": args.learning_rate},
     )
 
     # 6. Post-training evaluation
     print("\n[INFO] Post-training evaluation...")
-    ft_model = SentenceTransformer(os.path.join(OUTPUT_DIR, "model"), device=device)
-    post_metrics = compute_retrieval_metrics(ft_model, test_data)
-    print(f"[RESULT] Fine-tuned: {post_metrics}")
+    ft_model = load_sentence_transformer(
+        SentenceTransformer,
+        os.path.join(args.output_dir, "model"),
+        device=device,
+        trust_remote_code=args.trust_remote_code,
+    )
+    if args.max_seq_length and args.max_seq_length > 0:
+        ft_model.max_seq_length = args.max_seq_length
+    post_metrics_test = compute_retrieval_metrics(ft_model, test_data, args.model_name)
+    print(f"[RESULT] Fine-tuned (test): {post_metrics_test}")
+    post_metrics_val = None
+    if val_data is not None:
+        post_metrics_val = compute_retrieval_metrics(ft_model, val_data, args.model_name)
+        print(f"[RESULT] Fine-tuned (val):  {post_metrics_val}")
 
     # 7. Error analysis
     print("\n[INFO] Running error analysis...")
-    failures = run_error_analysis(ft_model, test_data)
+    failures = run_error_analysis(ft_model, test_data, args.model_name)
     print(f"[INFO] Found {len(failures)} failure cases.")
 
     # 8. Save metrics
     metrics = {
         "track": "C – Embedding Fine-Tuning",
-        "model": MODEL_NAME,
+        "model": args.model_name,
+        "train_file": args.train_file,
+        "val_file": args.val_file,
+        "test_file": args.test_file,
         "train_pairs": len(train_data),
+        "val_pairs": len(val_data) if val_data is not None else 0,
         "test_pairs": len(test_data),
-        "epochs": NUM_EPOCHS,
-        "batch_size": BATCH_SIZE,
-        "learning_rate": LEARNING_RATE,
-        "baseline": baseline_metrics,
-        "fine_tuned": post_metrics,
+        "epochs": args.epochs,
+        "batch_size": args.batch_size,
+        "learning_rate": args.learning_rate,
+        "baseline_test": baseline_metrics_test,
+        "fine_tuned_test": post_metrics_test,
+        "improvement_test": {
+            k: round(post_metrics_test[k] - baseline_metrics_test[k], 4)
+            for k in baseline_metrics_test
+        },
+        "baseline_val": baseline_metrics_val,
+        "fine_tuned_val": post_metrics_val,
+        "improvement_val": (
+            {
+                k: round(post_metrics_val[k] - baseline_metrics_val[k], 4)
+                for k in baseline_metrics_val
+            }
+            if baseline_metrics_val is not None and post_metrics_val is not None
+            else None
+        ),
+        # Kept for backward compatibility with older consumers.
+        "baseline": baseline_metrics_test,
+        "fine_tuned": post_metrics_test,
         "improvement": {
-            k: round(post_metrics[k] - baseline_metrics[k], 4)
-            for k in baseline_metrics
+            k: round(post_metrics_test[k] - baseline_metrics_test[k], 4)
+            for k in baseline_metrics_test
         },
         "error_analysis": failures,
     }
 
-    with open(METRICS_FILE, "w") as f:
+    with open(args.metrics_file, "w") as f:
         json.dump(metrics, f, indent=2)
 
     # 9. Print summary
     print("\n" + "=" * 60)
     print("TRACK C – EMBEDDING FINE-TUNING RESULTS")
     print("=" * 60)
-    print(f"  Model:          {MODEL_NAME}")
+    print(f"  Model:          {args.model_name}")
     print(f"  Train pairs:    {len(train_data)}")
-    print(f"  Epochs:         {NUM_EPOCHS}")
+    if val_data is not None:
+        print(f"  Val pairs:      {len(val_data)}")
+    print(f"  Test pairs:     {len(test_data)}")
+    print(f"  Epochs:         {args.epochs}")
     print()
+    print("  Test Metrics")
     print(f"  {'Metric':<15} {'Baseline':>10} {'Fine-tuned':>12} {'Delta':>10}")
     print(f"  {'-'*47}")
-    for key in baseline_metrics:
-        b = baseline_metrics[key]
-        p = post_metrics[key]
+    for key in baseline_metrics_test:
+        b = baseline_metrics_test[key]
+        p = post_metrics_test[key]
         d = p - b
         print(f"  {key:<15} {b:>10.4f} {p:>12.4f} {d:>+10.4f}")
+    if baseline_metrics_val is not None and post_metrics_val is not None:
+        print()
+        print("  Val Metrics")
+        print(f"  {'Metric':<15} {'Baseline':>10} {'Fine-tuned':>12} {'Delta':>10}")
+        print(f"  {'-'*47}")
+        for key in baseline_metrics_val:
+            b = baseline_metrics_val[key]
+            p = post_metrics_val[key]
+            d = p - b
+            print(f"  {key:<15} {b:>10.4f} {p:>12.4f} {d:>+10.4f}")
     print("=" * 60)
     print(f"  Error cases: {len(failures)}")
-    print(f"  Metrics saved to {METRICS_FILE}")
+    print(f"  Metrics saved to {args.metrics_file}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,3014 @@
+{
+  "repo_name": "hyperswitch",
+  "repo_url": "https://github.com/juspay/hyperswitch.git",
+  "repo_dir": "data/hyperswitch_repo",
+  "corpus_dir": "data/code_corpus_hyperswitch",
+  "language": "rust",
+  "extension": ".rs",
+  "total_files": 300,
+  "total_lines": 370212,
+  "total_functions": 14560,
+  "total_types": 11856,
+  "files": [
+    {
+      "rel_path": "crates/analytics/src/clickhouse.rs",
+      "abs_path": "data/hyperswitch_repo/crates/analytics/src/clickhouse.rs",
+      "num_lines": 648,
+      "num_functions": 35,
+      "num_types": 60,
+      "size_bytes": 24449,
+      "quality_score": 381,
+      "corpus_filename": "crates__analytics__src__clickhouse.rs"
+    },
+    {
+      "rel_path": "crates/analytics/src/query.rs",
+      "abs_path": "data/hyperswitch_repo/crates/analytics/src/query.rs",
+      "num_lines": 981,
+      "num_functions": 54,
+      "num_types": 22,
+      "size_bytes": 30461,
+      "quality_score": 299,
+      "corpus_filename": "crates__analytics__src__query.rs"
+    },
+    {
+      "rel_path": "crates/analytics/src/sqlx.rs",
+      "abs_path": "data/hyperswitch_repo/crates/analytics/src/sqlx.rs",
+      "num_lines": 1614,
+      "num_functions": 30,
+      "num_types": 24,
+      "size_bytes": 65901,
+      "quality_score": 266,
+      "corpus_filename": "crates__analytics__src__sqlx.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/admin.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/admin.rs",
+      "num_lines": 3580,
+      "num_functions": 47,
+      "num_types": 98,
+      "size_bytes": 159707,
+      "quality_score": 613,
+      "corpus_filename": "crates__api_models__src__admin.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/analytics.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/analytics.rs",
+      "num_lines": 549,
+      "num_functions": 3,
+      "num_types": 63,
+      "size_bytes": 16808,
+      "quality_score": 288,
+      "corpus_filename": "crates__api_models__src__analytics.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/authentication.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/authentication.rs",
+      "num_lines": 950,
+      "num_functions": 21,
+      "num_types": 51,
+      "size_bytes": 36304,
+      "quality_score": 320,
+      "corpus_filename": "crates__api_models__src__authentication.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/events/payment.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/events/payment.rs",
+      "num_lines": 616,
+      "num_functions": 62,
+      "num_types": 70,
+      "size_bytes": 18703,
+      "quality_score": 496,
+      "corpus_filename": "crates__api_models__src__events__payment.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/events/routing.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/events/routing.rs",
+      "num_lines": 210,
+      "num_functions": 33,
+      "num_types": 33,
+      "size_bytes": 6166,
+      "quality_score": 241,
+      "corpus_filename": "crates__api_models__src__events__routing.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/payment_methods.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/payment_methods.rs",
+      "num_lines": 3878,
+      "num_functions": 60,
+      "num_types": 190,
+      "size_bytes": 147895,
+      "quality_score": 1020,
+      "corpus_filename": "crates__api_models__src__payment_methods.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/payouts.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/payouts.rs",
+      "num_lines": 1178,
+      "num_functions": 8,
+      "num_types": 49,
+      "size_bytes": 49680,
+      "quality_score": 289,
+      "corpus_filename": "crates__api_models__src__payouts.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/routing.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/routing.rs",
+      "num_lines": 1693,
+      "num_functions": 69,
+      "num_types": 139,
+      "size_bytes": 58584,
+      "quality_score": 843,
+      "corpus_filename": "crates__api_models__src__routing.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/subscription.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/subscription.rs",
+      "num_lines": 797,
+      "num_functions": 13,
+      "num_types": 65,
+      "size_bytes": 28086,
+      "quality_score": 341,
+      "corpus_filename": "crates__api_models__src__subscription.rs"
+    },
+    {
+      "rel_path": "crates/api_models/src/user.rs",
+      "abs_path": "data/hyperswitch_repo/crates/api_models/src/user.rs",
+      "num_lines": 486,
+      "num_functions": 0,
+      "num_types": 68,
+      "size_bytes": 13990,
+      "quality_score": 295,
+      "corpus_filename": "crates__api_models__src__user.rs"
+    },
+    {
+      "rel_path": "crates/common_enums/src/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_enums/src/transformers.rs",
+      "num_lines": 2420,
+      "num_functions": 35,
+      "num_types": 32,
+      "size_bytes": 108236,
+      "quality_score": 313,
+      "corpus_filename": "crates__common_enums__src__transformers.rs"
+    },
+    {
+      "rel_path": "crates/common_types/src/payments.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_types/src/payments.rs",
+      "num_lines": 1197,
+      "num_functions": 32,
+      "num_types": 50,
+      "size_bytes": 41944,
+      "quality_score": 359,
+      "corpus_filename": "crates__common_types__src__payments.rs"
+    },
+    {
+      "rel_path": "crates/common_types/src/primitive_wrappers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_types/src/primitive_wrappers.rs",
+      "num_lines": 598,
+      "num_functions": 56,
+      "num_types": 42,
+      "size_bytes": 19345,
+      "quality_score": 366,
+      "corpus_filename": "crates__common_types__src__primitive_wrappers.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/crypto.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/crypto.rs",
+      "num_lines": 1073,
+      "num_functions": 60,
+      "num_types": 50,
+      "size_bytes": 36486,
+      "quality_score": 436,
+      "corpus_filename": "crates__common_utils__src__crypto.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/ext_traits.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/ext_traits.rs",
+      "num_lines": 631,
+      "num_functions": 58,
+      "num_types": 15,
+      "size_bytes": 20961,
+      "quality_score": 266,
+      "corpus_filename": "crates__common_utils__src__ext_traits.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/macros.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/macros.rs",
+      "num_lines": 859,
+      "num_functions": 36,
+      "num_types": 17,
+      "size_bytes": 32620,
+      "quality_score": 224,
+      "corpus_filename": "crates__common_utils__src__macros.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/new_type.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/new_type.rs",
+      "num_lines": 310,
+      "num_functions": 23,
+      "num_types": 31,
+      "size_bytes": 10865,
+      "quality_score": 209,
+      "corpus_filename": "crates__common_utils__src__new_type.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/pii.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/pii.rs",
+      "num_lines": 487,
+      "num_functions": 37,
+      "num_types": 19,
+      "size_bytes": 13860,
+      "quality_score": 210,
+      "corpus_filename": "crates__common_utils__src__pii.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/types.rs",
+      "num_lines": 1468,
+      "num_functions": 110,
+      "num_types": 54,
+      "size_bytes": 45461,
+      "quality_score": 619,
+      "corpus_filename": "crates__common_utils__src__types.rs"
+    },
+    {
+      "rel_path": "crates/common_utils/src/types/keymanager.rs",
+      "abs_path": "data/hyperswitch_repo/crates/common_utils/src/types/keymanager.rs",
+      "num_lines": 551,
+      "num_functions": 32,
+      "num_types": 33,
+      "size_bytes": 16552,
+      "quality_score": 254,
+      "corpus_filename": "crates__common_utils__src__types__keymanager.rs"
+    },
+    {
+      "rel_path": "crates/diesel_models/src/payment_method.rs",
+      "abs_path": "data/hyperswitch_repo/crates/diesel_models/src/payment_method.rs",
+      "num_lines": 1385,
+      "num_functions": 24,
+      "num_types": 35,
+      "size_bytes": 57209,
+      "quality_score": 286,
+      "corpus_filename": "crates__diesel_models__src__payment_method.rs"
+    },
+    {
+      "rel_path": "crates/euclid/src/dssa/graph.rs",
+      "abs_path": "data/hyperswitch_repo/crates/euclid/src/dssa/graph.rs",
+      "num_lines": 1131,
+      "num_functions": 42,
+      "num_types": 10,
+      "size_bytes": 37212,
+      "quality_score": 225,
+      "corpus_filename": "crates__euclid__src__dssa__graph.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/aci.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/aci.rs",
+      "num_lines": 1193,
+      "num_functions": 62,
+      "num_types": 28,
+      "size_bytes": 44958,
+      "quality_score": 364,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__aci.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/aci/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/aci/transformers.rs",
+      "num_lines": 1618,
+      "num_functions": 37,
+      "num_types": 70,
+      "size_bytes": 57096,
+      "quality_score": 471,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__aci__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/adyen.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/adyen.rs",
+      "num_lines": 3488,
+      "num_functions": 146,
+      "num_types": 57,
+      "size_bytes": 130365,
+      "quality_score": 746,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__adyen.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/adyenplatform.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/adyenplatform.rs",
+      "num_lines": 506,
+      "num_functions": 23,
+      "num_types": 31,
+      "size_bytes": 18423,
+      "quality_score": 220,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__adyenplatform.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/adyenplatform/transformers/payouts.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/adyenplatform/transformers/payouts.rs",
+      "num_lines": 817,
+      "num_functions": 15,
+      "num_types": 41,
+      "size_bytes": 28494,
+      "quality_score": 252,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__adyenplatform__transformers__payouts.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/affirm.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/affirm.rs",
+      "num_lines": 846,
+      "num_functions": 63,
+      "num_types": 30,
+      "size_bytes": 28799,
+      "quality_score": 353,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__affirm.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/affirm/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/affirm/transformers.rs",
+      "num_lines": 822,
+      "num_functions": 17,
+      "num_types": 44,
+      "size_bytes": 29065,
+      "quality_score": 271,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__affirm__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/airwallex.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/airwallex.rs",
+      "num_lines": 1447,
+      "num_functions": 86,
+      "num_types": 35,
+      "size_bytes": 52099,
+      "quality_score": 474,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__airwallex.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/airwallex/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/airwallex/transformers.rs",
+      "num_lines": 1974,
+      "num_functions": 32,
+      "num_types": 95,
+      "size_bytes": 76393,
+      "quality_score": 556,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__airwallex__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/amazonpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/amazonpay.rs",
+      "num_lines": 789,
+      "num_functions": 47,
+      "num_types": 28,
+      "size_bytes": 27795,
+      "quality_score": 295,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__amazonpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/amazonpay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/amazonpay/transformers.rs",
+      "num_lines": 622,
+      "num_functions": 12,
+      "num_types": 39,
+      "size_bytes": 22820,
+      "quality_score": 226,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__amazonpay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/archipel.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/archipel.rs",
+      "num_lines": 1160,
+      "num_functions": 77,
+      "num_types": 30,
+      "size_bytes": 40361,
+      "quality_score": 413,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__archipel.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/archipel/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/archipel/transformers.rs",
+      "num_lines": 1447,
+      "num_functions": 39,
+      "num_types": 75,
+      "size_bytes": 50279,
+      "quality_score": 493,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__archipel__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/authipay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/authipay.rs",
+      "num_lines": 851,
+      "num_functions": 58,
+      "num_types": 28,
+      "size_bytes": 29788,
+      "quality_score": 331,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__authipay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/authipay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/authipay/transformers.rs",
+      "num_lines": 622,
+      "num_functions": 15,
+      "num_types": 36,
+      "size_bytes": 22819,
+      "quality_score": 223,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__authipay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/authorizedotnet.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/authorizedotnet.rs",
+      "num_lines": 1316,
+      "num_functions": 82,
+      "num_types": 33,
+      "size_bytes": 49029,
+      "quality_score": 450,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__authorizedotnet.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/authorizedotnet/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/authorizedotnet/transformers.rs",
+      "num_lines": 2422,
+      "num_functions": 43,
+      "num_types": 105,
+      "size_bytes": 92223,
+      "quality_score": 629,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__authorizedotnet__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bambora.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bambora.rs",
+      "num_lines": 898,
+      "num_functions": 63,
+      "num_types": 31,
+      "size_bytes": 30932,
+      "quality_score": 360,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bambora.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bambora/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bambora/transformers.rs",
+      "num_lines": 809,
+      "num_functions": 17,
+      "num_types": 41,
+      "size_bytes": 28013,
+      "quality_score": 258,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bambora__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bamboraapac.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bamboraapac.rs",
+      "num_lines": 827,
+      "num_functions": 56,
+      "num_types": 28,
+      "size_bytes": 28952,
+      "quality_score": 324,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bamboraapac.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bamboraapac/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bamboraapac/transformers.rs",
+      "num_lines": 1029,
+      "num_functions": 19,
+      "num_types": 34,
+      "size_bytes": 36390,
+      "quality_score": 248,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bamboraapac__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bankofamerica.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bankofamerica.rs",
+      "num_lines": 1212,
+      "num_functions": 69,
+      "num_types": 29,
+      "size_bytes": 44647,
+      "quality_score": 390,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bankofamerica.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bankofamerica/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bankofamerica/transformers.rs",
+      "num_lines": 2744,
+      "num_functions": 48,
+      "num_types": 120,
+      "size_bytes": 103978,
+      "quality_score": 704,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bankofamerica__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/barclaycard.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/barclaycard.rs",
+      "num_lines": 1711,
+      "num_functions": 100,
+      "num_types": 39,
+      "size_bytes": 63951,
+      "quality_score": 536,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__barclaycard.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/barclaycard/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/barclaycard/transformers.rs",
+      "num_lines": 3708,
+      "num_functions": 57,
+      "num_types": 132,
+      "size_bytes": 146723,
+      "quality_score": 779,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__barclaycard__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/billwerk.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/billwerk.rs",
+      "num_lines": 899,
+      "num_functions": 67,
+      "num_types": 28,
+      "size_bytes": 31113,
+      "quality_score": 360,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__billwerk.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bitpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bitpay.rs",
+      "num_lines": 470,
+      "num_functions": 30,
+      "num_types": 28,
+      "size_bytes": 16338,
+      "quality_score": 226,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bitpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/blackhawknetwork.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/blackhawknetwork.rs",
+      "num_lines": 679,
+      "num_functions": 41,
+      "num_types": 32,
+      "size_bytes": 24073,
+      "quality_score": 287,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__blackhawknetwork.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bluesnap.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bluesnap.rs",
+      "num_lines": 1513,
+      "num_functions": 80,
+      "num_types": 32,
+      "size_bytes": 62230,
+      "quality_score": 445,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bluesnap.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/bluesnap/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/bluesnap/transformers.rs",
+      "num_lines": 1177,
+      "num_functions": 22,
+      "num_types": 65,
+      "size_bytes": 43746,
+      "quality_score": 391,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__bluesnap__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/boku.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/boku.rs",
+      "num_lines": 799,
+      "num_functions": 51,
+      "num_types": 28,
+      "size_bytes": 27559,
+      "quality_score": 306,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__boku.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/boku/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/boku/transformers.rs",
+      "num_lines": 516,
+      "num_functions": 19,
+      "num_types": 33,
+      "size_bytes": 17351,
+      "quality_score": 215,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__boku__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/braintree.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/braintree.rs",
+      "num_lines": 1467,
+      "num_functions": 94,
+      "num_types": 33,
+      "size_bytes": 55031,
+      "quality_score": 490,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__braintree.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/braintree/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/braintree/transformers.rs",
+      "num_lines": 2930,
+      "num_functions": 38,
+      "num_types": 149,
+      "size_bytes": 122576,
+      "quality_score": 790,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__braintree__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/breadpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/breadpay.rs",
+      "num_lines": 867,
+      "num_functions": 62,
+      "num_types": 31,
+      "size_bytes": 29707,
+      "quality_score": 355,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__breadpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/calida.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/calida.rs",
+      "num_lines": 766,
+      "num_functions": 52,
+      "num_types": 28,
+      "size_bytes": 26405,
+      "quality_score": 309,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__calida.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/cashtocode.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/cashtocode.rs",
+      "num_lines": 512,
+      "num_functions": 29,
+      "num_types": 28,
+      "size_bytes": 18922,
+      "quality_score": 226,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__cashtocode.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/celero.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/celero.rs",
+      "num_lines": 801,
+      "num_functions": 56,
+      "num_types": 28,
+      "size_bytes": 27940,
+      "quality_score": 323,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__celero.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/celero/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/celero/transformers.rs",
+      "num_lines": 1044,
+      "num_functions": 24,
+      "num_types": 45,
+      "size_bytes": 41601,
+      "quality_score": 312,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__celero__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/chargebee.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/chargebee.rs",
+      "num_lines": 896,
+      "num_functions": 39,
+      "num_types": 41,
+      "size_bytes": 34275,
+      "quality_score": 331,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__chargebee.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/chargebee/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/chargebee/transformers.rs",
+      "num_lines": 1513,
+      "num_functions": 34,
+      "num_types": 98,
+      "size_bytes": 54934,
+      "quality_score": 571,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__chargebee__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/checkbook.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/checkbook.rs",
+      "num_lines": 662,
+      "num_functions": 48,
+      "num_types": 28,
+      "size_bytes": 23186,
+      "quality_score": 291,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__checkbook.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/checkout.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/checkout.rs",
+      "num_lines": 1668,
+      "num_functions": 95,
+      "num_types": 42,
+      "size_bytes": 64607,
+      "quality_score": 533,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__checkout.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/checkout/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/checkout/transformers.rs",
+      "num_lines": 2212,
+      "num_functions": 50,
+      "num_types": 92,
+      "size_bytes": 82719,
+      "quality_score": 598,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__checkout__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/coinbase.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/coinbase.rs",
+      "num_lines": 507,
+      "num_functions": 32,
+      "num_types": 28,
+      "size_bytes": 18090,
+      "quality_score": 235,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__coinbase.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/coingate.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/coingate.rs",
+      "num_lines": 664,
+      "num_functions": 45,
+      "num_types": 28,
+      "size_bytes": 23688,
+      "quality_score": 282,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__coingate.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/cryptopay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/cryptopay.rs",
+      "num_lines": 555,
+      "num_functions": 33,
+      "num_types": 28,
+      "size_bytes": 20245,
+      "quality_score": 240,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__cryptopay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/custombilling.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/custombilling.rs",
+      "num_lines": 576,
+      "num_functions": 44,
+      "num_types": 28,
+      "size_bytes": 19934,
+      "quality_score": 274,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__custombilling.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/cybersource.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/cybersource.rs",
+      "num_lines": 2405,
+      "num_functions": 141,
+      "num_types": 48,
+      "size_bytes": 91076,
+      "quality_score": 695,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__cybersource.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/cybersourcedecisionmanager.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/cybersourcedecisionmanager.rs",
+      "num_lines": 681,
+      "num_functions": 30,
+      "num_types": 33,
+      "size_bytes": 25291,
+      "quality_score": 260,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__cybersourcedecisionmanager.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/cybersourcedecisionmanager/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/cybersourcedecisionmanager/transformers.rs",
+      "num_lines": 512,
+      "num_functions": 16,
+      "num_types": 38,
+      "size_bytes": 17469,
+      "quality_score": 226,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__cybersourcedecisionmanager__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/datatrans.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/datatrans.rs",
+      "num_lines": 886,
+      "num_functions": 60,
+      "num_types": 28,
+      "size_bytes": 32057,
+      "quality_score": 340,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__datatrans.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/datatrans/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/datatrans/transformers.rs",
+      "num_lines": 943,
+      "num_functions": 18,
+      "num_types": 41,
+      "size_bytes": 36291,
+      "quality_score": 271,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__datatrans__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/deutschebank.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/deutschebank.rs",
+      "num_lines": 1101,
+      "num_functions": 67,
+      "num_types": 30,
+      "size_bytes": 39745,
+      "quality_score": 381,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__deutschebank.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/deutschebank/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/deutschebank/transformers.rs",
+      "num_lines": 1261,
+      "num_functions": 20,
+      "num_types": 57,
+      "size_bytes": 49097,
+      "quality_score": 359,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__deutschebank__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/digitalvirgo.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/digitalvirgo.rs",
+      "num_lines": 579,
+      "num_functions": 39,
+      "num_types": 31,
+      "size_bytes": 20131,
+      "quality_score": 271,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__digitalvirgo.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/dlocal.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/dlocal.rs",
+      "num_lines": 819,
+      "num_functions": 53,
+      "num_types": 28,
+      "size_bytes": 28865,
+      "quality_score": 315,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__dlocal.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/dwolla.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/dwolla.rs",
+      "num_lines": 1014,
+      "num_functions": 62,
+      "num_types": 30,
+      "size_bytes": 35584,
+      "quality_score": 360,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__dwolla.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/dwolla/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/dwolla/transformers.rs",
+      "num_lines": 604,
+      "num_functions": 15,
+      "num_types": 32,
+      "size_bytes": 22012,
+      "quality_score": 206,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__dwolla__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/ebanx.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/ebanx.rs",
+      "num_lines": 475,
+      "num_functions": 31,
+      "num_types": 41,
+      "size_bytes": 16114,
+      "quality_score": 281,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__ebanx.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/elavon.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/elavon.rs",
+      "num_lines": 683,
+      "num_functions": 50,
+      "num_types": 28,
+      "size_bytes": 23805,
+      "quality_score": 298,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__elavon.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/elavon/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/elavon/transformers.rs",
+      "num_lines": 697,
+      "num_functions": 21,
+      "num_types": 33,
+      "size_bytes": 26765,
+      "quality_score": 234,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__elavon__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/envoy.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/envoy.rs",
+      "num_lines": 623,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 21145,
+      "quality_score": 291,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__envoy.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/facilitapay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/facilitapay.rs",
+      "num_lines": 972,
+      "num_functions": 68,
+      "num_types": 30,
+      "size_bytes": 33864,
+      "quality_score": 376,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__facilitapay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/finix.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/finix.rs",
+      "num_lines": 1221,
+      "num_functions": 85,
+      "num_types": 30,
+      "size_bytes": 43947,
+      "quality_score": 441,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__finix.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/fiserv.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/fiserv.rs",
+      "num_lines": 1042,
+      "num_functions": 58,
+      "num_types": 28,
+      "size_bytes": 36504,
+      "quality_score": 342,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__fiserv.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/fiserv/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/fiserv/transformers.rs",
+      "num_lines": 1344,
+      "num_functions": 17,
+      "num_types": 78,
+      "size_bytes": 50874,
+      "quality_score": 436,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__fiserv__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/fiservemea.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/fiservemea.rs",
+      "num_lines": 877,
+      "num_functions": 57,
+      "num_types": 28,
+      "size_bytes": 31603,
+      "quality_score": 330,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__fiservemea.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/fiuu.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/fiuu.rs",
+      "num_lines": 1135,
+      "num_functions": 52,
+      "num_types": 28,
+      "size_bytes": 43923,
+      "quality_score": 332,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__fiuu.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/fiuu/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/fiuu/transformers.rs",
+      "num_lines": 2078,
+      "num_functions": 36,
+      "num_types": 93,
+      "size_bytes": 80666,
+      "quality_score": 560,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__fiuu__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/flexiti.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/flexiti.rs",
+      "num_lines": 772,
+      "num_functions": 58,
+      "num_types": 29,
+      "size_bytes": 26314,
+      "quality_score": 330,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__flexiti.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/forte.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/forte.rs",
+      "num_lines": 806,
+      "num_functions": 54,
+      "num_types": 28,
+      "size_bytes": 27956,
+      "quality_score": 317,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__forte.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/forte/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/forte/transformers.rs",
+      "num_lines": 640,
+      "num_functions": 18,
+      "num_types": 39,
+      "size_bytes": 21806,
+      "quality_score": 244,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__forte__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/getnet.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/getnet.rs",
+      "num_lines": 888,
+      "num_functions": 60,
+      "num_types": 28,
+      "size_bytes": 31519,
+      "quality_score": 340,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__getnet.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/getnet/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/getnet/transformers.rs",
+      "num_lines": 1142,
+      "num_functions": 23,
+      "num_types": 54,
+      "size_bytes": 42950,
+      "quality_score": 348,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__getnet__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/gigadat.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/gigadat.rs",
+      "num_lines": 1073,
+      "num_functions": 66,
+      "num_types": 37,
+      "size_bytes": 37417,
+      "quality_score": 403,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__gigadat.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/gigadat/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/gigadat/transformers.rs",
+      "num_lines": 685,
+      "num_functions": 19,
+      "num_types": 35,
+      "size_bytes": 24549,
+      "quality_score": 234,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__gigadat__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/globalpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/globalpay.rs",
+      "num_lines": 1250,
+      "num_functions": 81,
+      "num_types": 31,
+      "size_bytes": 44260,
+      "quality_score": 434,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__globalpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/globepay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/globepay.rs",
+      "num_lines": 625,
+      "num_functions": 42,
+      "num_types": 28,
+      "size_bytes": 21749,
+      "quality_score": 271,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__globepay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/gocardless.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/gocardless.rs",
+      "num_lines": 959,
+      "num_functions": 58,
+      "num_types": 32,
+      "size_bytes": 34679,
+      "quality_score": 353,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__gocardless.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/gocardless/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/gocardless/transformers.rs",
+      "num_lines": 949,
+      "num_functions": 22,
+      "num_types": 65,
+      "size_bytes": 31274,
+      "quality_score": 375,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__gocardless__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/gpayments.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/gpayments.rs",
+      "num_lines": 615,
+      "num_functions": 42,
+      "num_types": 37,
+      "size_bytes": 21950,
+      "quality_score": 307,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__gpayments.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/helcim.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/helcim.rs",
+      "num_lines": 966,
+      "num_functions": 64,
+      "num_types": 30,
+      "size_bytes": 33547,
+      "quality_score": 363,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__helcim.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/helcim/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/helcim/transformers.rs",
+      "num_lines": 733,
+      "num_functions": 19,
+      "num_types": 35,
+      "size_bytes": 26364,
+      "quality_score": 236,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__helcim__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/hipay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/hipay.rs",
+      "num_lines": 833,
+      "num_functions": 53,
+      "num_types": 28,
+      "size_bytes": 30125,
+      "quality_score": 316,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__hipay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/hipay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/hipay/transformers.rs",
+      "num_lines": 781,
+      "num_functions": 19,
+      "num_types": 33,
+      "size_bytes": 30803,
+      "quality_score": 233,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__hipay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/hyperpg.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/hyperpg.rs",
+      "num_lines": 676,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 23808,
+      "quality_score": 294,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__hyperpg.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/hyperswitch_vault.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/hyperswitch_vault.rs",
+      "num_lines": 501,
+      "num_functions": 35,
+      "num_types": 31,
+      "size_bytes": 16991,
+      "quality_score": 255,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__hyperswitch_vault.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/hyperwallet.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/hyperwallet.rs",
+      "num_lines": 628,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 21565,
+      "quality_score": 291,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__hyperwallet.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/iatapay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/iatapay.rs",
+      "num_lines": 890,
+      "num_functions": 52,
+      "num_types": 28,
+      "size_bytes": 32379,
+      "quality_score": 316,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__iatapay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/iatapay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/iatapay/transformers.rs",
+      "num_lines": 710,
+      "num_functions": 14,
+      "num_types": 30,
+      "size_bytes": 25808,
+      "quality_score": 200,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__iatapay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/inespay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/inespay.rs",
+      "num_lines": 764,
+      "num_functions": 52,
+      "num_types": 28,
+      "size_bytes": 27162,
+      "quality_score": 309,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__inespay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/itaubank.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/itaubank.rs",
+      "num_lines": 843,
+      "num_functions": 55,
+      "num_types": 28,
+      "size_bytes": 29904,
+      "quality_score": 322,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__itaubank.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/jpmorgan.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/jpmorgan.rs",
+      "num_lines": 911,
+      "num_functions": 62,
+      "num_types": 28,
+      "size_bytes": 31712,
+      "quality_score": 346,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__jpmorgan.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/jpmorgan/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/jpmorgan/transformers.rs",
+      "num_lines": 784,
+      "num_functions": 19,
+      "num_types": 51,
+      "size_bytes": 27193,
+      "quality_score": 302,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__jpmorgan__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/juspaythreedsserver.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/juspaythreedsserver.rs",
+      "num_lines": 667,
+      "num_functions": 47,
+      "num_types": 39,
+      "size_bytes": 23088,
+      "quality_score": 332,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__juspaythreedsserver.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/katapult.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/katapult.rs",
+      "num_lines": 629,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 21673,
+      "quality_score": 292,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__katapult.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/klarna.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/klarna.rs",
+      "num_lines": 1476,
+      "num_functions": 60,
+      "num_types": 28,
+      "size_bytes": 69472,
+      "quality_score": 368,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__klarna.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/klarna/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/klarna/transformers.rs",
+      "num_lines": 753,
+      "num_functions": 19,
+      "num_types": 44,
+      "size_bytes": 27856,
+      "quality_score": 274,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__klarna__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/loonio.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/loonio.rs",
+      "num_lines": 872,
+      "num_functions": 62,
+      "num_types": 33,
+      "size_bytes": 30293,
+      "quality_score": 364,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__loonio.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/loonio/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/loonio/transformers.rs",
+      "num_lines": 693,
+      "num_functions": 17,
+      "num_types": 33,
+      "size_bytes": 25829,
+      "quality_score": 221,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__loonio__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/mifinity.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/mifinity.rs",
+      "num_lines": 562,
+      "num_functions": 36,
+      "num_types": 28,
+      "size_bytes": 19730,
+      "quality_score": 250,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__mifinity.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/mollie.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/mollie.rs",
+      "num_lines": 1084,
+      "num_functions": 66,
+      "num_types": 33,
+      "size_bytes": 38459,
+      "quality_score": 389,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__mollie.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/mollie/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/mollie/transformers.rs",
+      "num_lines": 1017,
+      "num_functions": 23,
+      "num_types": 47,
+      "size_bytes": 35448,
+      "quality_score": 311,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__mollie__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/moneris.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/moneris.rs",
+      "num_lines": 897,
+      "num_functions": 62,
+      "num_types": 28,
+      "size_bytes": 31586,
+      "quality_score": 346,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__moneris.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/mpgs.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/mpgs.rs",
+      "num_lines": 626,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 21412,
+      "quality_score": 291,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__mpgs.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/multisafepay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/multisafepay.rs",
+      "num_lines": 758,
+      "num_functions": 42,
+      "num_types": 28,
+      "size_bytes": 27537,
+      "quality_score": 278,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__multisafepay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/multisafepay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/multisafepay/transformers.rs",
+      "num_lines": 1335,
+      "num_functions": 13,
+      "num_types": 53,
+      "size_bytes": 51400,
+      "quality_score": 324,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__multisafepay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/netcetera.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/netcetera.rs",
+      "num_lines": 490,
+      "num_functions": 29,
+      "num_types": 36,
+      "size_bytes": 16966,
+      "quality_score": 257,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__netcetera.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/netcetera/netcetera_types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/netcetera/netcetera_types.rs",
+      "num_lines": 1777,
+      "num_functions": 14,
+      "num_types": 42,
+      "size_bytes": 83571,
+      "quality_score": 290,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__netcetera__netcetera_types.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nexinets.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nexinets.rs",
+      "num_lines": 936,
+      "num_functions": 58,
+      "num_types": 29,
+      "size_bytes": 33575,
+      "quality_score": 340,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nexinets.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nexinets/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nexinets/transformers.rs",
+      "num_lines": 784,
+      "num_functions": 19,
+      "num_types": 39,
+      "size_bytes": 27138,
+      "quality_score": 254,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nexinets__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nexixpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nexixpay.rs",
+      "num_lines": 1386,
+      "num_functions": 94,
+      "num_types": 36,
+      "size_bytes": 49113,
+      "quality_score": 500,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nexixpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nexixpay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nexixpay/transformers.rs",
+      "num_lines": 2069,
+      "num_functions": 38,
+      "num_types": 75,
+      "size_bytes": 79398,
+      "quality_score": 494,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nexixpay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nmi.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nmi.rs",
+      "num_lines": 1223,
+      "num_functions": 81,
+      "num_types": 35,
+      "size_bytes": 43588,
+      "quality_score": 449,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nmi.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nmi/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nmi/transformers.rs",
+      "num_lines": 1785,
+      "num_functions": 47,
+      "num_types": 81,
+      "size_bytes": 65171,
+      "quality_score": 545,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nmi__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nomupay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nomupay.rs",
+      "num_lines": 796,
+      "num_functions": 42,
+      "num_types": 47,
+      "size_bytes": 28889,
+      "quality_score": 357,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nomupay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/noon.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/noon.rs",
+      "num_lines": 1030,
+      "num_functions": 67,
+      "num_types": 31,
+      "size_bytes": 36821,
+      "quality_score": 380,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__noon.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/noon/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/noon/transformers.rs",
+      "num_lines": 1009,
+      "num_functions": 16,
+      "num_types": 63,
+      "size_bytes": 35153,
+      "quality_score": 354,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__noon__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nordea.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nordea.rs",
+      "num_lines": 1294,
+      "num_functions": 64,
+      "num_types": 35,
+      "size_bytes": 45672,
+      "quality_score": 402,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nordea.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/novalnet.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/novalnet.rs",
+      "num_lines": 1156,
+      "num_functions": 71,
+      "num_types": 29,
+      "size_bytes": 42514,
+      "quality_score": 392,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__novalnet.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/novalnet/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/novalnet/transformers.rs",
+      "num_lines": 1838,
+      "num_functions": 27,
+      "num_types": 73,
+      "size_bytes": 71719,
+      "quality_score": 453,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__novalnet__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/nuvei.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/nuvei.rs",
+      "num_lines": 1724,
+      "num_functions": 106,
+      "num_types": 42,
+      "size_bytes": 63448,
+      "quality_score": 566,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__nuvei.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/opayo.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/opayo.rs",
+      "num_lines": 591,
+      "num_functions": 45,
+      "num_types": 28,
+      "size_bytes": 20140,
+      "quality_score": 277,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__opayo.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/opennode.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/opennode.rs",
+      "num_lines": 506,
+      "num_functions": 33,
+      "num_types": 28,
+      "size_bytes": 17796,
+      "quality_score": 237,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__opennode.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paybox.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paybox.rs",
+      "num_lines": 783,
+      "num_functions": 58,
+      "num_types": 31,
+      "size_bytes": 27204,
+      "quality_score": 339,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paybox.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paybox/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paybox/transformers.rs",
+      "num_lines": 1244,
+      "num_functions": 23,
+      "num_types": 29,
+      "size_bytes": 47581,
+      "quality_score": 255,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paybox__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payeezy.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payeezy.rs",
+      "num_lines": 645,
+      "num_functions": 41,
+      "num_types": 27,
+      "size_bytes": 22484,
+      "quality_score": 265,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payeezy.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payjustnow.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payjustnow.rs",
+      "num_lines": 861,
+      "num_functions": 62,
+      "num_types": 28,
+      "size_bytes": 30760,
+      "quality_score": 344,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payjustnow.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payjustnow/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payjustnow/transformers.rs",
+      "num_lines": 532,
+      "num_functions": 16,
+      "num_types": 33,
+      "size_bytes": 17983,
+      "quality_score": 207,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payjustnow__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payjustnowinstore.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payjustnowinstore.rs",
+      "num_lines": 664,
+      "num_functions": 39,
+      "num_types": 28,
+      "size_bytes": 24570,
+      "quality_score": 265,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payjustnowinstore.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payload.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payload.rs",
+      "num_lines": 1165,
+      "num_functions": 72,
+      "num_types": 30,
+      "size_bytes": 42587,
+      "quality_score": 400,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payload.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payme.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payme.rs",
+      "num_lines": 1485,
+      "num_functions": 101,
+      "num_types": 36,
+      "size_bytes": 53835,
+      "quality_score": 524,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payme.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payme/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payme/transformers.rs",
+      "num_lines": 1524,
+      "num_functions": 36,
+      "num_types": 61,
+      "size_bytes": 60034,
+      "quality_score": 430,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payme__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payone.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payone.rs",
+      "num_lines": 459,
+      "num_functions": 22,
+      "num_types": 32,
+      "size_bytes": 16852,
+      "quality_score": 219,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payone.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paypal.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paypal.rs",
+      "num_lines": 2598,
+      "num_functions": 138,
+      "num_types": 54,
+      "size_bytes": 99762,
+      "quality_score": 710,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paypal.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paysafe.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paysafe.rs",
+      "num_lines": 1344,
+      "num_functions": 85,
+      "num_types": 34,
+      "size_bytes": 48165,
+      "quality_score": 464,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paysafe.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paysafe/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paysafe/transformers.rs",
+      "num_lines": 2230,
+      "num_functions": 42,
+      "num_types": 91,
+      "size_bytes": 85123,
+      "quality_score": 570,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paysafe__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paystack.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paystack.rs",
+      "num_lines": 708,
+      "num_functions": 50,
+      "num_types": 28,
+      "size_bytes": 24884,
+      "quality_score": 299,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paystack.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/paytm.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/paytm.rs",
+      "num_lines": 652,
+      "num_functions": 50,
+      "num_types": 28,
+      "size_bytes": 22552,
+      "quality_score": 296,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__paytm.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payu.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payu.rs",
+      "num_lines": 907,
+      "num_functions": 60,
+      "num_types": 28,
+      "size_bytes": 30942,
+      "quality_score": 339,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payu.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/payu/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/payu/transformers.rs",
+      "num_lines": 661,
+      "num_functions": 16,
+      "num_types": 41,
+      "size_bytes": 22713,
+      "quality_score": 246,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__payu__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/peachpayments.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/peachpayments.rs",
+      "num_lines": 913,
+      "num_functions": 55,
+      "num_types": 28,
+      "size_bytes": 33698,
+      "quality_score": 327,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__peachpayments.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/peachpayments/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/peachpayments/transformers.rs",
+      "num_lines": 1186,
+      "num_functions": 26,
+      "num_types": 61,
+      "size_bytes": 41008,
+      "quality_score": 385,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__peachpayments__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/phonepe.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/phonepe.rs",
+      "num_lines": 648,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 22569,
+      "quality_score": 293,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__phonepe.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/placetopay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/placetopay.rs",
+      "num_lines": 752,
+      "num_functions": 56,
+      "num_types": 28,
+      "size_bytes": 26086,
+      "quality_score": 319,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__placetopay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/placetopay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/placetopay/transformers.rs",
+      "num_lines": 542,
+      "num_functions": 14,
+      "num_types": 34,
+      "size_bytes": 17883,
+      "quality_score": 205,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__placetopay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/plaid.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/plaid.rs",
+      "num_lines": 496,
+      "num_functions": 35,
+      "num_types": 30,
+      "size_bytes": 16886,
+      "quality_score": 251,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__plaid.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/powertranz.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/powertranz.rs",
+      "num_lines": 727,
+      "num_functions": 48,
+      "num_types": 30,
+      "size_bytes": 25932,
+      "quality_score": 303,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__powertranz.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/prophetpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/prophetpay.rs",
+      "num_lines": 769,
+      "num_functions": 56,
+      "num_types": 29,
+      "size_bytes": 26023,
+      "quality_score": 324,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__prophetpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/prophetpay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/prophetpay/transformers.rs",
+      "num_lines": 720,
+      "num_functions": 20,
+      "num_types": 31,
+      "size_bytes": 25648,
+      "quality_score": 223,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__prophetpay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/rapyd.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/rapyd.rs",
+      "num_lines": 1063,
+      "num_functions": 54,
+      "num_types": 29,
+      "size_bytes": 41021,
+      "quality_score": 338,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__rapyd.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/rapyd/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/rapyd/transformers.rs",
+      "num_lines": 628,
+      "num_functions": 13,
+      "num_types": 32,
+      "size_bytes": 21919,
+      "quality_score": 200,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__rapyd__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/razorpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/razorpay.rs",
+      "num_lines": 853,
+      "num_functions": 55,
+      "num_types": 30,
+      "size_bytes": 31028,
+      "quality_score": 331,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__razorpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/razorpay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/razorpay/transformers.rs",
+      "num_lines": 656,
+      "num_functions": 13,
+      "num_types": 32,
+      "size_bytes": 22628,
+      "quality_score": 201,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__razorpay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/recurly.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/recurly.rs",
+      "num_lines": 723,
+      "num_functions": 31,
+      "num_types": 44,
+      "size_bytes": 25713,
+      "quality_score": 308,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__recurly.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/redsys.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/redsys.rs",
+      "num_lines": 1147,
+      "num_functions": 80,
+      "num_types": 36,
+      "size_bytes": 41759,
+      "quality_score": 446,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__redsys.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/redsys/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/redsys/transformers.rs",
+      "num_lines": 2374,
+      "num_functions": 58,
+      "num_types": 62,
+      "size_bytes": 96506,
+      "quality_score": 502,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__redsys__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/riskified.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/riskified.rs",
+      "num_lines": 675,
+      "num_functions": 39,
+      "num_types": 39,
+      "size_bytes": 23530,
+      "quality_score": 308,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__riskified.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/riskified/transformers/api.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/riskified/transformers/api.rs",
+      "num_lines": 658,
+      "num_functions": 12,
+      "num_types": 46,
+      "size_bytes": 22159,
+      "quality_score": 254,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__riskified__transformers__api.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/santander.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/santander.rs",
+      "num_lines": 1601,
+      "num_functions": 75,
+      "num_types": 31,
+      "size_bytes": 61713,
+      "quality_score": 429,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__santander.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/santander/responses.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/santander/responses.rs",
+      "num_lines": 739,
+      "num_functions": 0,
+      "num_types": 58,
+      "size_bytes": 23125,
+      "quality_score": 269,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__santander__responses.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/santander/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/santander/transformers.rs",
+      "num_lines": 1429,
+      "num_functions": 42,
+      "num_types": 24,
+      "size_bytes": 54519,
+      "quality_score": 297,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__santander__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/shift4.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/shift4.rs",
+      "num_lines": 1113,
+      "num_functions": 69,
+      "num_types": 34,
+      "size_bytes": 39206,
+      "quality_score": 402,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__shift4.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/shift4/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/shift4/transformers.rs",
+      "num_lines": 1236,
+      "num_functions": 60,
+      "num_types": 58,
+      "size_bytes": 41660,
+      "quality_score": 476,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__shift4__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/sift.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/sift.rs",
+      "num_lines": 626,
+      "num_functions": 49,
+      "num_types": 28,
+      "size_bytes": 21419,
+      "quality_score": 291,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__sift.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/signifyd.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/signifyd.rs",
+      "num_lines": 748,
+      "num_functions": 52,
+      "num_types": 38,
+      "size_bytes": 25759,
+      "quality_score": 347,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__signifyd.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/signifyd/transformers/api.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/signifyd/transformers/api.rs",
+      "num_lines": 721,
+      "num_functions": 15,
+      "num_types": 42,
+      "size_bytes": 25127,
+      "quality_score": 251,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__signifyd__transformers__api.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/silverflow.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/silverflow.rs",
+      "num_lines": 983,
+      "num_functions": 65,
+      "num_types": 28,
+      "size_bytes": 36786,
+      "quality_score": 361,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__silverflow.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/silverflow/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/silverflow/transformers.rs",
+      "num_lines": 815,
+      "num_functions": 18,
+      "num_types": 53,
+      "size_bytes": 28160,
+      "quality_score": 309,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__silverflow__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/square.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/square.rs",
+      "num_lines": 1008,
+      "num_functions": 68,
+      "num_types": 29,
+      "size_bytes": 34578,
+      "quality_score": 373,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__square.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/square/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/square/transformers.rs",
+      "num_lines": 561,
+      "num_functions": 16,
+      "num_types": 33,
+      "size_bytes": 21236,
+      "quality_score": 211,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__square__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/stax.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/stax.rs",
+      "num_lines": 1033,
+      "num_functions": 70,
+      "num_types": 29,
+      "size_bytes": 35374,
+      "quality_score": 380,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__stax.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/stripe.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/stripe.rs",
+      "num_lines": 3345,
+      "num_functions": 152,
+      "num_types": 53,
+      "size_bytes": 122357,
+      "quality_score": 748,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__stripe.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/stripebilling.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/stripebilling.rs",
+      "num_lines": 1009,
+      "num_functions": 67,
+      "num_types": 49,
+      "size_bytes": 37027,
+      "quality_score": 452,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__stripebilling.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/stripebilling/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/stripebilling/transformers.rs",
+      "num_lines": 686,
+      "num_functions": 20,
+      "num_types": 46,
+      "size_bytes": 24511,
+      "quality_score": 281,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__stripebilling__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/taxjar.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/taxjar.rs",
+      "num_lines": 325,
+      "num_functions": 21,
+      "num_types": 30,
+      "size_bytes": 11266,
+      "quality_score": 200,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__taxjar.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tesouro.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tesouro.rs",
+      "num_lines": 1035,
+      "num_functions": 75,
+      "num_types": 28,
+      "size_bytes": 36680,
+      "quality_score": 392,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tesouro.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tesouro/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tesouro/transformers.rs",
+      "num_lines": 2176,
+      "num_functions": 30,
+      "num_types": 83,
+      "size_bytes": 91737,
+      "quality_score": 502,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tesouro__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/threedsecureio.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/threedsecureio.rs",
+      "num_lines": 537,
+      "num_functions": 34,
+      "num_types": 36,
+      "size_bytes": 18787,
+      "quality_score": 274,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__threedsecureio.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/thunes.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/thunes.rs",
+      "num_lines": 595,
+      "num_functions": 47,
+      "num_types": 28,
+      "size_bytes": 20714,
+      "quality_score": 284,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__thunes.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tokenex.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tokenex.rs",
+      "num_lines": 402,
+      "num_functions": 25,
+      "num_types": 32,
+      "size_bytes": 13975,
+      "quality_score": 224,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tokenex.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tokenio.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tokenio.rs",
+      "num_lines": 793,
+      "num_functions": 37,
+      "num_types": 28,
+      "size_bytes": 29547,
+      "quality_score": 266,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tokenio.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tokenio/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tokenio/transformers.rs",
+      "num_lines": 669,
+      "num_functions": 13,
+      "num_types": 33,
+      "size_bytes": 23513,
+      "quality_score": 206,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tokenio__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/trustpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/trustpay.rs",
+      "num_lines": 1487,
+      "num_functions": 70,
+      "num_types": 34,
+      "size_bytes": 60099,
+      "quality_score": 423,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__trustpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/trustpay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/trustpay/transformers.rs",
+      "num_lines": 2200,
+      "num_functions": 52,
+      "num_types": 90,
+      "size_bytes": 83017,
+      "quality_score": 596,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__trustpay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/trustpayments.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/trustpayments.rs",
+      "num_lines": 863,
+      "num_functions": 65,
+      "num_types": 28,
+      "size_bytes": 30592,
+      "quality_score": 353,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__trustpayments.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/trustpayments/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/trustpayments/transformers.rs",
+      "num_lines": 1355,
+      "num_functions": 33,
+      "num_types": 49,
+      "size_bytes": 51865,
+      "quality_score": 368,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__trustpayments__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tsys.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tsys.rs",
+      "num_lines": 730,
+      "num_functions": 54,
+      "num_types": 28,
+      "size_bytes": 24752,
+      "quality_score": 312,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tsys.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/tsys/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/tsys/transformers.rs",
+      "num_lines": 608,
+      "num_functions": 18,
+      "num_types": 34,
+      "size_bytes": 22378,
+      "quality_score": 223,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__tsys__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/unified_authentication_service.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/unified_authentication_service.rs",
+      "num_lines": 786,
+      "num_functions": 46,
+      "num_types": 39,
+      "size_bytes": 27784,
+      "quality_score": 336,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__unified_authentication_service.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/unified_authentication_service/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/unified_authentication_service/transformers.rs",
+      "num_lines": 1185,
+      "num_functions": 15,
+      "num_types": 55,
+      "size_bytes": 46847,
+      "quality_score": 333,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__unified_authentication_service__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/vgs.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/vgs.rs",
+      "num_lines": 458,
+      "num_functions": 29,
+      "num_types": 32,
+      "size_bytes": 15880,
+      "quality_score": 239,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__vgs.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/volt.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/volt.rs",
+      "num_lines": 824,
+      "num_functions": 52,
+      "num_types": 28,
+      "size_bytes": 28716,
+      "quality_score": 311,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__volt.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/volt/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/volt/transformers.rs",
+      "num_lines": 793,
+      "num_functions": 13,
+      "num_types": 46,
+      "size_bytes": 28512,
+      "quality_score": 265,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__volt__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/wellsfargo.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/wellsfargo.rs",
+      "num_lines": 1450,
+      "num_functions": 84,
+      "num_types": 32,
+      "size_bytes": 54042,
+      "quality_score": 456,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__wellsfargo.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/wellsfargo/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/wellsfargo/transformers.rs",
+      "num_lines": 2458,
+      "num_functions": 38,
+      "num_types": 97,
+      "size_bytes": 94736,
+      "quality_score": 582,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__wellsfargo__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/wellsfargopayout.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/wellsfargopayout.rs",
+      "num_lines": 599,
+      "num_functions": 47,
+      "num_types": 28,
+      "size_bytes": 20704,
+      "quality_score": 284,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__wellsfargopayout.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/wise.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/wise.rs",
+      "num_lines": 910,
+      "num_functions": 52,
+      "num_types": 43,
+      "size_bytes": 31642,
+      "quality_score": 376,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__wise.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/wise/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/wise/transformers.rs",
+      "num_lines": 791,
+      "num_functions": 21,
+      "num_types": 36,
+      "size_bytes": 25832,
+      "quality_score": 247,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__wise__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldline.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldline.rs",
+      "num_lines": 930,
+      "num_functions": 56,
+      "num_types": 28,
+      "size_bytes": 34707,
+      "quality_score": 331,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldline.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldline/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldline/transformers.rs",
+      "num_lines": 776,
+      "num_functions": 19,
+      "num_types": 45,
+      "size_bytes": 26018,
+      "quality_score": 277,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldline__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpay.rs",
+      "num_lines": 1537,
+      "num_functions": 88,
+      "num_types": 34,
+      "size_bytes": 56997,
+      "quality_score": 478,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpay.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpay/response.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpay/response.rs",
+      "num_lines": 454,
+      "num_functions": 6,
+      "num_types": 43,
+      "size_bytes": 13471,
+      "quality_score": 212,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpay__response.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpay/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpay/transformers.rs",
+      "num_lines": 932,
+      "num_functions": 63,
+      "num_types": 18,
+      "size_bytes": 37346,
+      "quality_score": 315,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpay__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpaymodular.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpaymodular.rs",
+      "num_lines": 841,
+      "num_functions": 57,
+      "num_types": 28,
+      "size_bytes": 29012,
+      "quality_score": 328,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpaymodular.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpaymodular/transformers/response.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpaymodular/transformers/response.rs",
+      "num_lines": 444,
+      "num_functions": 15,
+      "num_types": 37,
+      "size_bytes": 13203,
+      "quality_score": 215,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpaymodular__transformers__response.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpayvantiv.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpayvantiv.rs",
+      "num_lines": 1748,
+      "num_functions": 108,
+      "num_types": 44,
+      "size_bytes": 63257,
+      "quality_score": 580,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpayvantiv.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpayxml.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpayxml.rs",
+      "num_lines": 1455,
+      "num_functions": 95,
+      "num_types": 37,
+      "size_bytes": 52518,
+      "quality_score": 509,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpayxml.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/worldpayxml/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/worldpayxml/transformers.rs",
+      "num_lines": 3056,
+      "num_functions": 50,
+      "num_types": 98,
+      "size_bytes": 113907,
+      "quality_score": 622,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__worldpayxml__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/xendit.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/xendit.rs",
+      "num_lines": 1208,
+      "num_functions": 67,
+      "num_types": 33,
+      "size_bytes": 45142,
+      "quality_score": 400,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__xendit.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/xendit/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/xendit/transformers.rs",
+      "num_lines": 1096,
+      "num_functions": 19,
+      "num_types": 53,
+      "size_bytes": 42101,
+      "quality_score": 331,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__xendit__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/zen.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/zen.rs",
+      "num_lines": 892,
+      "num_functions": 50,
+      "num_types": 29,
+      "size_bytes": 32632,
+      "quality_score": 315,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__zen.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/zen/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/zen/transformers.rs",
+      "num_lines": 1197,
+      "num_functions": 29,
+      "num_types": 50,
+      "size_bytes": 44170,
+      "quality_score": 352,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__zen__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/zift.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/zift.rs",
+      "num_lines": 825,
+      "num_functions": 59,
+      "num_types": 28,
+      "size_bytes": 28687,
+      "quality_score": 332,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__zift.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/zift/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/zift/transformers.rs",
+      "num_lines": 1034,
+      "num_functions": 21,
+      "num_types": 42,
+      "size_bytes": 39806,
+      "quality_score": 289,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__zift__transformers.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_connectors/src/connectors/zsl.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_connectors/src/connectors/zsl.rs",
+      "num_lines": 500,
+      "num_functions": 33,
+      "num_types": 27,
+      "size_bytes": 17220,
+      "quality_score": 233,
+      "corpus_filename": "crates__hyperswitch_connectors__src__connectors__zsl.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/business_profile.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/business_profile.rs",
+      "num_lines": 2639,
+      "num_functions": 41,
+      "num_types": 23,
+      "size_bytes": 130329,
+      "quality_score": 295,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__business_profile.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/lib.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/lib.rs",
+      "num_lines": 854,
+      "num_functions": 44,
+      "num_types": 27,
+      "size_bytes": 30972,
+      "quality_score": 286,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__lib.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/mandates.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/mandates.rs",
+      "num_lines": 538,
+      "num_functions": 35,
+      "num_types": 45,
+      "size_bytes": 18220,
+      "quality_score": 313,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__mandates.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/merchant_connector_account.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/merchant_connector_account.rs",
+      "num_lines": 1164,
+      "num_functions": 59,
+      "num_types": 23,
+      "size_bytes": 46184,
+      "quality_score": 336,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__merchant_connector_account.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/payment_method_data.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/payment_method_data.rs",
+      "num_lines": 3711,
+      "num_functions": 123,
+      "num_types": 204,
+      "size_bytes": 145321,
+      "quality_score": 1265,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__payment_method_data.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/payment_methods.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/payment_methods.rs",
+      "num_lines": 1595,
+      "num_functions": 59,
+      "num_types": 26,
+      "size_bytes": 64105,
+      "quality_score": 360,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__payment_methods.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/payments.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/payments.rs",
+      "num_lines": 1506,
+      "num_functions": 45,
+      "num_types": 27,
+      "size_bytes": 65595,
+      "quality_score": 320,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__payments.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/payments/payment_attempt.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/payments/payment_attempt.rs",
+      "num_lines": 3932,
+      "num_functions": 103,
+      "num_types": 48,
+      "size_bytes": 164478,
+      "quality_score": 581,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__payments__payment_attempt.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/payments/payment_intent.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/payments/payment_intent.rs",
+      "num_lines": 2638,
+      "num_functions": 32,
+      "num_types": 26,
+      "size_bytes": 111307,
+      "quality_score": 280,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__payments__payment_intent.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/router_data.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/router_data.rs",
+      "num_lines": 2466,
+      "num_functions": 90,
+      "num_types": 45,
+      "size_bytes": 104556,
+      "quality_score": 530,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__router_data.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/router_request_types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/router_request_types.rs",
+      "num_lines": 1720,
+      "num_functions": 36,
+      "num_types": 94,
+      "size_bytes": 67898,
+      "quality_score": 564,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__router_request_types.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/router_response_types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/router_response_types.rs",
+      "num_lines": 842,
+      "num_functions": 19,
+      "num_types": 32,
+      "size_bytes": 28615,
+      "quality_score": 229,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__router_response_types.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_domain_models/src/type_encryption.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_domain_models/src/type_encryption.rs",
+      "num_lines": 1618,
+      "num_functions": 82,
+      "num_types": 6,
+      "size_bytes": 62560,
+      "quality_score": 350,
+      "corpus_filename": "crates__hyperswitch_domain_models__src__type_encryption.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_interfaces/src/api.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_interfaces/src/api.rs",
+      "num_lines": 1034,
+      "num_functions": 59,
+      "num_types": 43,
+      "size_bytes": 32458,
+      "quality_score": 401,
+      "corpus_filename": "crates__hyperswitch_interfaces__src__api.rs"
+    },
+    {
+      "rel_path": "crates/hyperswitch_interfaces/src/connector_integration_interface.rs",
+      "abs_path": "data/hyperswitch_repo/crates/hyperswitch_interfaces/src/connector_integration_interface.rs",
+      "num_lines": 1027,
+      "num_functions": 74,
+      "num_types": 12,
+      "size_bytes": 38296,
+      "quality_score": 326,
+      "corpus_filename": "crates__hyperswitch_interfaces__src__connector_integration_interface.rs"
+    },
+    {
+      "rel_path": "crates/masking/src/serde.rs",
+      "abs_path": "data/hyperswitch_repo/crates/masking/src/serde.rs",
+      "num_lines": 564,
+      "num_functions": 56,
+      "num_types": 14,
+      "size_bytes": 16925,
+      "quality_score": 252,
+      "corpus_filename": "crates__masking__src__serde.rs"
+    },
+    {
+      "rel_path": "crates/redis_interface/src/commands.rs",
+      "abs_path": "data/hyperswitch_repo/crates/redis_interface/src/commands.rs",
+      "num_lines": 1692,
+      "num_functions": 68,
+      "num_types": 2,
+      "size_bytes": 55753,
+      "quality_score": 292,
+      "corpus_filename": "crates__redis_interface__src__commands.rs"
+    },
+    {
+      "rel_path": "crates/router/src/analytics.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/analytics.rs",
+      "num_lines": 3462,
+      "num_functions": 66,
+      "num_types": 2,
+      "size_bytes": 143104,
+      "quality_score": 286,
+      "corpus_filename": "crates__router__src__analytics.rs"
+    },
+    {
+      "rel_path": "crates/router/src/compatibility/stripe/payment_intents/types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/compatibility/stripe/payment_intents/types.rs",
+      "num_lines": 1008,
+      "num_functions": 19,
+      "num_types": 46,
+      "size_bytes": 37362,
+      "quality_score": 297,
+      "corpus_filename": "crates__router__src__compatibility__stripe__payment_intents__types.rs"
+    },
+    {
+      "rel_path": "crates/router/src/configs/settings.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/configs/settings.rs",
+      "num_lines": 1732,
+      "num_functions": 41,
+      "num_types": 109,
+      "size_bytes": 57427,
+      "quality_score": 639,
+      "corpus_filename": "crates__router__src__configs__settings.rs"
+    },
+    {
+      "rel_path": "crates/router/src/connector/utils.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/connector/utils.rs",
+      "num_lines": 2984,
+      "num_functions": 422,
+      "num_types": 84,
+      "size_bytes": 116213,
+      "quality_score": 1682,
+      "corpus_filename": "crates__router__src__connector__utils.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/customers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/customers.rs",
+      "num_lines": 1553,
+      "num_functions": 33,
+      "num_types": 19,
+      "size_bytes": 59481,
+      "quality_score": 253,
+      "corpus_filename": "crates__router__src__core__customers.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payment_methods/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payment_methods/transformers.rs",
+      "num_lines": 1756,
+      "num_functions": 38,
+      "num_types": 29,
+      "size_bytes": 65635,
+      "quality_score": 310,
+      "corpus_filename": "crates__router__src__core__payment_methods__transformers.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payment_methods/vault.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payment_methods/vault.rs",
+      "num_lines": 2507,
+      "num_functions": 77,
+      "num_types": 28,
+      "size_bytes": 93784,
+      "quality_score": 423,
+      "corpus_filename": "crates__router__src__core__payment_methods__vault.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payments/flows/authorize_flow.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payments/flows/authorize_flow.rs",
+      "num_lines": 1519,
+      "num_functions": 35,
+      "num_types": 6,
+      "size_bytes": 62053,
+      "quality_score": 206,
+      "corpus_filename": "crates__router__src__core__payments__flows__authorize_flow.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payments/operations.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payments/operations.rs",
+      "num_lines": 990,
+      "num_functions": 60,
+      "num_types": 14,
+      "size_bytes": 32741,
+      "quality_score": 287,
+      "corpus_filename": "crates__router__src__core__payments__operations.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payments/operations/payment_response.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payments/operations/payment_response.rs",
+      "num_lines": 3812,
+      "num_functions": 53,
+      "num_types": 5,
+      "size_bytes": 162008,
+      "quality_score": 259,
+      "corpus_filename": "crates__router__src__core__payments__operations__payment_response.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payments/routing.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payments/routing.rs",
+      "num_lines": 2975,
+      "num_functions": 34,
+      "num_types": 8,
+      "size_bytes": 116203,
+      "quality_score": 214,
+      "corpus_filename": "crates__router__src__core__payments__routing.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payments/routing/utils.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payments/routing/utils.rs",
+      "num_lines": 2298,
+      "num_functions": 75,
+      "num_types": 89,
+      "size_bytes": 78836,
+      "quality_score": 661,
+      "corpus_filename": "crates__router__src__core__payments__routing__utils.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/payouts.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/payouts.rs",
+      "num_lines": 3609,
+      "num_functions": 46,
+      "num_types": 1,
+      "size_bytes": 137579,
+      "quality_score": 222,
+      "corpus_filename": "crates__router__src__core__payouts.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/relay.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/relay.rs",
+      "num_lines": 992,
+      "num_functions": 31,
+      "num_types": 19,
+      "size_bytes": 35442,
+      "quality_score": 222,
+      "corpus_filename": "crates__router__src__core__relay.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/routing.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/routing.rs",
+      "num_lines": 2740,
+      "num_functions": 37,
+      "num_types": 11,
+      "size_bytes": 105428,
+      "quality_score": 235,
+      "corpus_filename": "crates__router__src__core__routing.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/routing/helpers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/routing/helpers.rs",
+      "num_lines": 2795,
+      "num_functions": 46,
+      "num_types": 15,
+      "size_bytes": 118344,
+      "quality_score": 278,
+      "corpus_filename": "crates__router__src__core__routing__helpers.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/unified_authentication_service.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/unified_authentication_service.rs",
+      "num_lines": 2403,
+      "num_functions": 33,
+      "num_types": 12,
+      "size_bytes": 93354,
+      "quality_score": 227,
+      "corpus_filename": "crates__router__src__core__unified_authentication_service.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/unified_connector_service.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/unified_connector_service.rs",
+      "num_lines": 2543,
+      "num_functions": 45,
+      "num_types": 1,
+      "size_bytes": 108608,
+      "quality_score": 219,
+      "corpus_filename": "crates__router__src__core__unified_connector_service.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/user.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/user.rs",
+      "num_lines": 3974,
+      "num_functions": 52,
+      "num_types": 0,
+      "size_bytes": 137864,
+      "quality_score": 236,
+      "corpus_filename": "crates__router__src__core__user.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/utils.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/utils.rs",
+      "num_lines": 2768,
+      "num_functions": 72,
+      "num_types": 14,
+      "size_bytes": 107648,
+      "quality_score": 352,
+      "corpus_filename": "crates__router__src__core__utils.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/webhooks/incoming.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/webhooks/incoming.rs",
+      "num_lines": 3466,
+      "num_functions": 38,
+      "num_types": 7,
+      "size_bytes": 139069,
+      "quality_score": 222,
+      "corpus_filename": "crates__router__src__core__webhooks__incoming.rs"
+    },
+    {
+      "rel_path": "crates/router/src/core/webhooks/recovery_incoming.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/core/webhooks/recovery_incoming.rs",
+      "num_lines": 1573,
+      "num_functions": 30,
+      "num_types": 16,
+      "size_bytes": 68608,
+      "quality_score": 233,
+      "corpus_filename": "crates__router__src__core__webhooks__recovery_incoming.rs"
+    },
+    {
+      "rel_path": "crates/router/src/db.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/db.rs",
+      "num_lines": 436,
+      "num_functions": 40,
+      "num_types": 19,
+      "size_bytes": 14028,
+      "quality_score": 217,
+      "corpus_filename": "crates__router__src__db.rs"
+    },
+    {
+      "rel_path": "crates/router/src/db/events.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/db/events.rs",
+      "num_lines": 1617,
+      "num_functions": 39,
+      "num_types": 3,
+      "size_bytes": 62690,
+      "quality_score": 209,
+      "corpus_filename": "crates__router__src__db__events.rs"
+    },
+    {
+      "rel_path": "crates/router/src/db/refund.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/db/refund.rs",
+      "num_lines": 1874,
+      "num_functions": 62,
+      "num_types": 4,
+      "size_bytes": 77165,
+      "quality_score": 282,
+      "corpus_filename": "crates__router__src__db__refund.rs"
+    },
+    {
+      "rel_path": "crates/router/src/routes/app.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/routes/app.rs",
+      "num_lines": 3321,
+      "num_functions": 124,
+      "num_types": 136,
+      "size_bytes": 131988,
+      "quality_score": 996,
+      "corpus_filename": "crates__router__src__routes__app.rs"
+    },
+    {
+      "rel_path": "crates/router/src/routes/dummy_connector/types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/routes/dummy_connector/types.rs",
+      "num_lines": 421,
+      "num_functions": 17,
+      "num_types": 38,
+      "size_bytes": 13266,
+      "quality_score": 224,
+      "corpus_filename": "crates__router__src__routes__dummy_connector__types.rs"
+    },
+    {
+      "rel_path": "crates/router/src/routes/payment_methods.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/routes/payment_methods.rs",
+      "num_lines": 1873,
+      "num_functions": 50,
+      "num_types": 6,
+      "size_bytes": 62291,
+      "quality_score": 254,
+      "corpus_filename": "crates__router__src__routes__payment_methods.rs"
+    },
+    {
+      "rel_path": "crates/router/src/routes/payments.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/routes/payments.rs",
+      "num_lines": 3930,
+      "num_functions": 84,
+      "num_types": 23,
+      "size_bytes": 131943,
+      "quality_score": 424,
+      "corpus_filename": "crates__router__src__routes__payments.rs"
+    },
+    {
+      "rel_path": "crates/router/src/routes/user.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/routes/user.rs",
+      "num_lines": 1119,
+      "num_functions": 53,
+      "num_types": 0,
+      "size_bytes": 31942,
+      "quality_score": 212,
+      "corpus_filename": "crates__router__src__routes__user.rs"
+    },
+    {
+      "rel_path": "crates/router/src/services/api.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/services/api.rs",
+      "num_lines": 1813,
+      "num_functions": 38,
+      "num_types": 20,
+      "size_bytes": 124649,
+      "quality_score": 274,
+      "corpus_filename": "crates__router__src__services__api.rs"
+    },
+    {
+      "rel_path": "crates/router/src/types.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/types.rs",
+      "num_lines": 1551,
+      "num_functions": 43,
+      "num_types": 58,
+      "size_bytes": 60206,
+      "quality_score": 439,
+      "corpus_filename": "crates__router__src__types.rs"
+    },
+    {
+      "rel_path": "crates/router/src/types/domain/user.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/types/domain/user.rs",
+      "num_lines": 1558,
+      "num_functions": 92,
+      "num_types": 69,
+      "size_bytes": 51640,
+      "quality_score": 630,
+      "corpus_filename": "crates__router__src__types__domain__user.rs"
+    },
+    {
+      "rel_path": "crates/router/src/types/payment_methods.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/types/payment_methods.rs",
+      "num_lines": 452,
+      "num_functions": 11,
+      "num_types": 53,
+      "size_bytes": 12848,
+      "quality_score": 266,
+      "corpus_filename": "crates__router__src__types__payment_methods.rs"
+    },
+    {
+      "rel_path": "crates/router/src/types/storage/revenue_recovery_redis_operation.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/types/storage/revenue_recovery_redis_operation.rs",
+      "num_lines": 1448,
+      "num_functions": 29,
+      "num_types": 9,
+      "size_bytes": 57674,
+      "quality_score": 199,
+      "corpus_filename": "crates__router__src__types__storage__revenue_recovery_redis_operation.rs"
+    },
+    {
+      "rel_path": "crates/router/src/types/transformers.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/types/transformers.rs",
+      "num_lines": 2501,
+      "num_functions": 95,
+      "num_types": 93,
+      "size_bytes": 105235,
+      "quality_score": 737,
+      "corpus_filename": "crates__router__src__types__transformers.rs"
+    },
+    {
+      "rel_path": "crates/router/src/utils.rs",
+      "abs_path": "data/hyperswitch_repo/crates/router/src/utils.rs",
+      "num_lines": 1452,
+      "num_functions": 41,
+      "num_types": 7,
+      "size_bytes": 57221,
+      "quality_score": 227,
+      "corpus_filename": "crates__router__src__utils.rs"
+    },
+    {
+      "rel_path": "crates/storage_impl/src/lib.rs",
+      "abs_path": "data/hyperswitch_repo/crates/storage_impl/src/lib.rs",
+      "num_lines": 556,
+      "num_functions": 53,
+      "num_types": 19,
+      "size_bytes": 16868,
+      "quality_score": 262,
+      "corpus_filename": "crates__storage_impl__src__lib.rs"
+    },
+    {
+      "rel_path": "crates/storage_impl/src/merchant_connector_account.rs",
+      "abs_path": "data/hyperswitch_repo/crates/storage_impl/src/merchant_connector_account.rs",
+      "num_lines": 1520,
+      "num_functions": 44,
+      "num_types": 1,
+      "size_bytes": 57104,
+      "quality_score": 214,
+      "corpus_filename": "crates__storage_impl__src__merchant_connector_account.rs"
+    },
+    {
+      "rel_path": "crates/storage_impl/src/payment_method.rs",
+      "abs_path": "data/hyperswitch_repo/crates/storage_impl/src/payment_method.rs",
+      "num_lines": 992,
+      "num_functions": 48,
+      "num_types": 2,
+      "size_bytes": 34918,
+      "quality_score": 205,
+      "corpus_filename": "crates__storage_impl__src__payment_method.rs"
+    },
+    {
+      "rel_path": "crates/storage_impl/src/payments/payment_attempt.rs",
+      "abs_path": "data/hyperswitch_repo/crates/storage_impl/src/payments/payment_attempt.rs",
+      "num_lines": 2180,
+      "num_functions": 46,
+      "num_types": 3,
+      "size_bytes": 90123,
+      "quality_score": 230,
+      "corpus_filename": "crates__storage_impl__src__payments__payment_attempt.rs"
+    }
+  ]
+}

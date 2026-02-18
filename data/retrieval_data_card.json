@@ -1,33 +1,108 @@
 {
-  "name": "httpx Text\u2013Code Retrieval Pairs (AST-generated)",
+  "name": "Track C Retrieval Data (external-source aligned)",
   "version": "1.0",
-  "description": "Natural language query\u2013code pairs programmatically generated from encode/httpx using AST analysis. No external API calls used.",
-  "source_repo": "https://github.com/encode/httpx",
-  "generation_method": "Python ast module \u2014 deterministic, reproducible",
-  "total_pairs": 351,
+  "generated_at_utc": "2026-02-17T17:19:21.844837+00:00",
+  "total_pairs": 350,
   "train_pairs": 280,
-  "test_pairs": 71,
-  "queries_per_function": 3,
-  "unique_functions": 117,
-  "query_styles": [
-    "action",
-    "keyword",
-    "question",
-    "natural"
+  "test_pairs": 70,
+  "target_range_requirement": "200-400",
+  "query_construction": [
+    "raw query fields from source rows",
+    "filename-oriented retrieval queries",
+    "symbol-oriented implementation queries",
+    "issue/summary text previews"
   ],
-  "query_construction": {
-    "action": "Function name converted to action phrase (snake_case \u2192 natural language)",
-    "docstring": "First line of docstring used as natural query",
-    "keyword": "Keywords extracted from arg names, type annotations, return types",
-    "signature": "Queries based on parameter types and return types",
-    "context": "File path context added to queries"
-  },
-  "filtering_rules": [
-    "Functions between 5\u201360 lines only",
-    "Excluded dunder methods (__init__, __repr__, etc.)",
-    "Excluded setUp/tearDown test methods",
-    "Queries between 5\u2013120 chars only"
-  ],
-  "random_seed": 42,
-  "reproducible": true
+  "source_status": [
+    {
+      "alias": "deepwiki_scripts",
+      "kind": "repo",
+      "link": "https://github.com/archit-athena/deepwiki-scripts",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "commits_training",
+      "kind": "repo",
+      "link": "https://github.com/archit-athena/commits-training",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "gist_deepwiki_query",
+      "kind": "gist",
+      "link": "https://gist.github.com/archit-spec/572bf2ff4ce37cdf4c5606b0d3083ef5",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "gist_coding_agent_minimal",
+      "kind": "gist",
+      "link": "https://gist.github.com/archit-spec/b5cdcc71d8a2699b74e13481c924b783",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "gist_commit_breakdown",
+      "kind": "gist",
+      "link": "https://gist.github.com/archit-spec/00053c2a3693500028388ebe3014e68a",
+      "rows_loaded": 1,
+      "records_extracted": 1
+    },
+    {
+      "alias": "gist_patch_to_toolcall",
+      "kind": "gist",
+      "link": "https://gist.github.com/archit-spec/1983d1a2eddc130316d15bdc9d1bb13c",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "gist_toolcall_naturalizer",
+      "kind": "gist",
+      "link": "https://gist.github.com/archit-spec/8a59e09cfe2d6fff41c041ea7b78f292",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "cpt_hyperswitch_token_aware",
+      "kind": "hf",
+      "link": "https://huggingface.co/datasets/archit11/hyperswitch-token-aware-cpt-fixed",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "deepwiki_16k",
+      "kind": "hf",
+      "link": "https://huggingface.co/datasets/archit11/deepwiki-16k",
+      "rows_loaded": 0,
+      "records_extracted": 0
+    },
+    {
+      "alias": "issue_pr_new2",
+      "kind": "hf",
+      "link": "https://huggingface.co/datasets/archit11/new2",
+      "rows_loaded": 10,
+      "records_extracted": 10
+    },
+    {
+      "alias": "issue_pr_filenames",
+      "kind": "hf",
+      "link": "https://huggingface.co/datasets/archit11/hyperswitch-filenames",
+      "rows_loaded": 1,
+      "records_extracted": 1
+    },
+    {
+      "alias": "agent_data_collection_code_feedback",
+      "kind": "hf",
+      "link": "https://huggingface.co/datasets/neulab/agent-data-collection/viewer/code_feedback",
+      "rows_loaded": 1,
+      "records_extracted": 1
+    },
+    {
+      "alias": "local_corpus",
+      "kind": "local",
+      "link": "data/code_corpus_hyperswitch",
+      "rows_loaded": 300,
+      "records_extracted": 300
+    }
+  ]
 }

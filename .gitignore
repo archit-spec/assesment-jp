@@ -8,3 +8,9 @@ data/extracted_functions.json
 data/sft_*.json
 data/corpus_metadata.json
 results/
+__pycache__/
+.venv/
+.*/
+wandb/
+.vscode/
+.env

@@ -1,0 +1,2154 @@
+{
+  "repo_name": "verl",
+  "repo_url": "https://github.com/volcengine/verl.git",
+  "repo_dir": "data/verl_repo",
+  "corpus_dir": "data/code_corpus_verl",
+  "language": "python",
+  "extension": ".py",
+  "total_files": 214,
+  "total_lines": 74295,
+  "total_functions": 2335,
+  "total_types": 328,
+  "files": [
+    {
+      "rel_path": "verl/base_config.py",
+      "abs_path": "data/verl_repo/verl/base_config.py",
+      "num_lines": 86,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 3171,
+      "quality_score": 23,
+      "corpus_filename": "verl__base_config.py"
+    },
+    {
+      "rel_path": "verl/checkpoint_engine/base.py",
+      "abs_path": "data/verl_repo/verl/checkpoint_engine/base.py",
+      "num_lines": 410,
+      "num_functions": 27,
+      "num_types": 7,
+      "size_bytes": 16431,
+      "quality_score": 132,
+      "corpus_filename": "verl__checkpoint_engine__base.py"
+    },
+    {
+      "rel_path": "verl/checkpoint_engine/hccl_checkpoint_engine.py",
+      "abs_path": "data/verl_repo/verl/checkpoint_engine/hccl_checkpoint_engine.py",
+      "num_lines": 366,
+      "num_functions": 12,
+      "num_types": 3,
+      "size_bytes": 13657,
+      "quality_score": 68,
+      "corpus_filename": "verl__checkpoint_engine__hccl_checkpoint_engine.py"
+    },
+    {
+      "rel_path": "verl/checkpoint_engine/nccl_checkpoint_engine.py",
+      "abs_path": "data/verl_repo/verl/checkpoint_engine/nccl_checkpoint_engine.py",
+      "num_lines": 360,
+      "num_functions": 12,
+      "num_types": 3,
+      "size_bytes": 13676,
+      "quality_score": 68,
+      "corpus_filename": "verl__checkpoint_engine__nccl_checkpoint_engine.py"
+    },
+    {
+      "rel_path": "verl/checkpoint_engine/nixl_checkpoint_engine.py",
+      "abs_path": "data/verl_repo/verl/checkpoint_engine/nixl_checkpoint_engine.py",
+      "num_lines": 519,
+      "num_functions": 23,
+      "num_types": 5,
+      "size_bytes": 20771,
+      "quality_score": 118,
+      "corpus_filename": "verl__checkpoint_engine__nixl_checkpoint_engine.py"
+    },
+    {
+      "rel_path": "verl/interactions/base.py",
+      "abs_path": "data/verl_repo/verl/interactions/base.py",
+      "num_lines": 72,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 3003,
+      "quality_score": 22,
+      "corpus_filename": "verl__interactions__base.py"
+    },
+    {
+      "rel_path": "verl/interactions/gsm8k_interaction.py",
+      "abs_path": "data/verl_repo/verl/interactions/gsm8k_interaction.py",
+      "num_lines": 87,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 3110,
+      "quality_score": 23,
+      "corpus_filename": "verl__interactions__gsm8k_interaction.py"
+    },
+    {
+      "rel_path": "verl/interactions/utils/interaction_registry.py",
+      "abs_path": "data/verl_repo/verl/interactions/utils/interaction_registry.py",
+      "num_lines": 85,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 3119,
+      "quality_score": 10,
+      "corpus_filename": "verl__interactions__utils__interaction_registry.py"
+    },
+    {
+      "rel_path": "verl/interactions/weather_interaction.py",
+      "abs_path": "data/verl_repo/verl/interactions/weather_interaction.py",
+      "num_lines": 79,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 2986,
+      "quality_score": 22,
+      "corpus_filename": "verl__interactions__weather_interaction.py"
+    },
+    {
+      "rel_path": "verl/model_merger/base_model_merger.py",
+      "abs_path": "data/verl_repo/verl/model_merger/base_model_merger.py",
+      "num_lines": 374,
+      "num_functions": 11,
+      "num_types": 2,
+      "size_bytes": 16547,
+      "quality_score": 63,
+      "corpus_filename": "verl__model_merger__base_model_merger.py"
+    },
+    {
+      "rel_path": "verl/model_merger/fsdp_model_merger.py",
+      "abs_path": "data/verl_repo/verl/model_merger/fsdp_model_merger.py",
+      "num_lines": 265,
+      "num_functions": 10,
+      "num_types": 1,
+      "size_bytes": 10860,
+      "quality_score": 49,
+      "corpus_filename": "verl__model_merger__fsdp_model_merger.py"
+    },
+    {
+      "rel_path": "verl/model_merger/megatron_model_merger.py",
+      "abs_path": "data/verl_repo/verl/model_merger/megatron_model_merger.py",
+      "num_lines": 546,
+      "num_functions": 13,
+      "num_types": 1,
+      "size_bytes": 23895,
+      "quality_score": 75,
+      "corpus_filename": "verl__model_merger__megatron_model_merger.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "num_lines": 317,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 13900,
+      "quality_score": 45,
+      "corpus_filename": "verl__models__llama__megatron__checkpoint_utils__llama_loader.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/checkpoint_utils/llama_loader_depracated.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/checkpoint_utils/llama_loader_depracated.py",
+      "num_lines": 458,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 19445,
+      "quality_score": 54,
+      "corpus_filename": "verl__models__llama__megatron__checkpoint_utils__llama_loader_depracated.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "num_lines": 442,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 17997,
+      "quality_score": 52,
+      "corpus_filename": "verl__models__llama__megatron__checkpoint_utils__llama_saver.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/layers/parallel_attention.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/layers/parallel_attention.py",
+      "num_lines": 460,
+      "num_functions": 18,
+      "num_types": 6,
+      "size_bytes": 21339,
+      "quality_score": 106,
+      "corpus_filename": "verl__models__llama__megatron__layers__parallel_attention.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/layers/parallel_decoder.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/layers/parallel_decoder.py",
+      "num_lines": 150,
+      "num_functions": 4,
+      "num_types": 2,
+      "size_bytes": 6177,
+      "quality_score": 28,
+      "corpus_filename": "verl__models__llama__megatron__layers__parallel_decoder.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/layers/parallel_linear.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/layers/parallel_linear.py",
+      "num_lines": 106,
+      "num_functions": 4,
+      "num_types": 3,
+      "size_bytes": 3319,
+      "quality_score": 28,
+      "corpus_filename": "verl__models__llama__megatron__layers__parallel_linear.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/layers/parallel_mlp.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/layers/parallel_mlp.py",
+      "num_lines": 74,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 3156,
+      "quality_score": 13,
+      "corpus_filename": "verl__models__llama__megatron__layers__parallel_mlp.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "num_lines": 49,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 1793,
+      "quality_score": 12,
+      "corpus_filename": "verl__models__llama__megatron__layers__parallel_rmsnorm.py"
+    },
+    {
+      "rel_path": "verl/models/llama/megatron/modeling_llama_megatron.py",
+      "abs_path": "data/verl_repo/verl/models/llama/megatron/modeling_llama_megatron.py",
+      "num_lines": 688,
+      "num_functions": 27,
+      "num_types": 8,
+      "size_bytes": 28527,
+      "quality_score": 153,
+      "corpus_filename": "verl__models__llama__megatron__modeling_llama_megatron.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/bridge.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/bridge.py",
+      "num_lines": 178,
+      "num_functions": 6,
+      "num_types": 1,
+      "size_bytes": 6429,
+      "quality_score": 31,
+      "corpus_filename": "verl__models__mcore__bridge.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/config_converter.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/config_converter.py",
+      "num_lines": 399,
+      "num_functions": 11,
+      "num_types": 0,
+      "size_bytes": 15909,
+      "quality_score": 55,
+      "corpus_filename": "verl__models__mcore__config_converter.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/loader.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/loader.py",
+      "num_lines": 495,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 22451,
+      "quality_score": 57,
+      "corpus_filename": "verl__models__mcore__loader.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/model_forward.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/model_forward.py",
+      "num_lines": 284,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 12929,
+      "quality_score": 26,
+      "corpus_filename": "verl__models__mcore__model_forward.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/model_forward_1f1b_overlap.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/model_forward_1f1b_overlap.py",
+      "num_lines": 252,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 11723,
+      "quality_score": 24,
+      "corpus_filename": "verl__models__mcore__model_forward_1f1b_overlap.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/model_forward_fused.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/model_forward_fused.py",
+      "num_lines": 310,
+      "num_functions": 8,
+      "num_types": 0,
+      "size_bytes": 11987,
+      "quality_score": 40,
+      "corpus_filename": "verl__models__mcore__model_forward_fused.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/model_initializer.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/model_initializer.py",
+      "num_lines": 276,
+      "num_functions": 16,
+      "num_types": 7,
+      "size_bytes": 11896,
+      "quality_score": 91,
+      "corpus_filename": "verl__models__mcore__model_initializer.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/mtp_patch.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/mtp_patch.py",
+      "num_lines": 295,
+      "num_functions": 7,
+      "num_types": 0,
+      "size_bytes": 11356,
+      "quality_score": 37,
+      "corpus_filename": "verl__models__mcore__mtp_patch.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/patch.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/patch.py",
+      "num_lines": 364,
+      "num_functions": 6,
+      "num_types": 0,
+      "size_bytes": 16104,
+      "quality_score": 40,
+      "corpus_filename": "verl__models__mcore__patch.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/qwen2_5_vl/attention.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/qwen2_5_vl/attention.py",
+      "num_lines": 225,
+      "num_functions": 1,
+      "num_types": 1,
+      "size_bytes": 9856,
+      "quality_score": 20,
+      "corpus_filename": "verl__models__mcore__qwen2_5_vl__attention.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/qwen2_5_vl/model.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/qwen2_5_vl/model.py",
+      "num_lines": 372,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 18229,
+      "quality_score": 43,
+      "corpus_filename": "verl__models__mcore__qwen2_5_vl__model.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/qwen2_5_vl/rope_utils.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/qwen2_5_vl/rope_utils.py",
+      "num_lines": 266,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 12677,
+      "quality_score": 25,
+      "corpus_filename": "verl__models__mcore__qwen2_5_vl__rope_utils.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/qwen2_5_vl/vision_config.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/qwen2_5_vl/vision_config.py",
+      "num_lines": 85,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 3524,
+      "quality_score": 10,
+      "corpus_filename": "verl__models__mcore__qwen2_5_vl__vision_config.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/qwen2_5_vl/vision_model.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/qwen2_5_vl/vision_model.py",
+      "num_lines": 309,
+      "num_functions": 10,
+      "num_types": 3,
+      "size_bytes": 13189,
+      "quality_score": 59,
+      "corpus_filename": "verl__models__mcore__qwen2_5_vl__vision_model.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/qwen2_5_vl/vision_transformer_block.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/qwen2_5_vl/vision_transformer_block.py",
+      "num_lines": 265,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 12821,
+      "quality_score": 35,
+      "corpus_filename": "verl__models__mcore__qwen2_5_vl__vision_transformer_block.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/registry.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/registry.py",
+      "num_lines": 313,
+      "num_functions": 8,
+      "num_types": 2,
+      "size_bytes": 12330,
+      "quality_score": 49,
+      "corpus_filename": "verl__models__mcore__registry.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/saver.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/saver.py",
+      "num_lines": 497,
+      "num_functions": 13,
+      "num_types": 0,
+      "size_bytes": 21166,
+      "quality_score": 68,
+      "corpus_filename": "verl__models__mcore__saver.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/util.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/util.py",
+      "num_lines": 493,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 21180,
+      "quality_score": 56,
+      "corpus_filename": "verl__models__mcore__util.py"
+    },
+    {
+      "rel_path": "verl/models/mcore/weight_converter.py",
+      "abs_path": "data/verl_repo/verl/models/mcore/weight_converter.py",
+      "num_lines": 479,
+      "num_functions": 15,
+      "num_types": 7,
+      "size_bytes": 25740,
+      "quality_score": 105,
+      "corpus_filename": "verl__models__mcore__weight_converter.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader.py",
+      "num_lines": 337,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 14996,
+      "quality_score": 47,
+      "corpus_filename": "verl__models__qwen2__megatron__checkpoint_utils__qwen2_loader.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader_depracated.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader_depracated.py",
+      "num_lines": 475,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 20262,
+      "quality_score": 54,
+      "corpus_filename": "verl__models__qwen2__megatron__checkpoint_utils__qwen2_loader_depracated.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_saver.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/checkpoint_utils/qwen2_saver.py",
+      "num_lines": 448,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 18153,
+      "quality_score": 53,
+      "corpus_filename": "verl__models__qwen2__megatron__checkpoint_utils__qwen2_saver.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/layers/parallel_attention.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/layers/parallel_attention.py",
+      "num_lines": 400,
+      "num_functions": 17,
+      "num_types": 5,
+      "size_bytes": 18093,
+      "quality_score": 96,
+      "corpus_filename": "verl__models__qwen2__megatron__layers__parallel_attention.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/layers/parallel_decoder.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/layers/parallel_decoder.py",
+      "num_lines": 150,
+      "num_functions": 4,
+      "num_types": 2,
+      "size_bytes": 6177,
+      "quality_score": 28,
+      "corpus_filename": "verl__models__qwen2__megatron__layers__parallel_decoder.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/layers/parallel_linear.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/layers/parallel_linear.py",
+      "num_lines": 79,
+      "num_functions": 2,
+      "num_types": 2,
+      "size_bytes": 2543,
+      "quality_score": 17,
+      "corpus_filename": "verl__models__qwen2__megatron__layers__parallel_linear.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/layers/parallel_mlp.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/layers/parallel_mlp.py",
+      "num_lines": 74,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 3156,
+      "quality_score": 13,
+      "corpus_filename": "verl__models__qwen2__megatron__layers__parallel_mlp.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/layers/parallel_rmsnorm.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/layers/parallel_rmsnorm.py",
+      "num_lines": 48,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 1784,
+      "quality_score": 12,
+      "corpus_filename": "verl__models__qwen2__megatron__layers__parallel_rmsnorm.py"
+    },
+    {
+      "rel_path": "verl/models/qwen2/megatron/modeling_qwen2_megatron.py",
+      "abs_path": "data/verl_repo/verl/models/qwen2/megatron/modeling_qwen2_megatron.py",
+      "num_lines": 737,
+      "num_functions": 29,
+      "num_types": 8,
+      "size_bytes": 31004,
+      "quality_score": 162,
+      "corpus_filename": "verl__models__qwen2__megatron__modeling_qwen2_megatron.py"
+    },
+    {
+      "rel_path": "verl/models/registry.py",
+      "abs_path": "data/verl_repo/verl/models/registry.py",
+      "num_lines": 62,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 2139,
+      "quality_score": 12,
+      "corpus_filename": "verl__models__registry.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/dense_common.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/dense_common.py",
+      "num_lines": 193,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 6745,
+      "quality_score": 22,
+      "corpus_filename": "verl__models__transformers__dense_common.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/glm4v.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/glm4v.py",
+      "num_lines": 533,
+      "num_functions": 11,
+      "num_types": 1,
+      "size_bytes": 21847,
+      "quality_score": 68,
+      "corpus_filename": "verl__models__transformers__glm4v.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/kimi_vl.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/kimi_vl.py",
+      "num_lines": 192,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 8571,
+      "quality_score": 23,
+      "corpus_filename": "verl__models__transformers__kimi_vl.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/llama.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/llama.py",
+      "num_lines": 241,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 10498,
+      "quality_score": 20,
+      "corpus_filename": "verl__models__transformers__llama.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/monkey_patch.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/monkey_patch.py",
+      "num_lines": 493,
+      "num_functions": 12,
+      "num_types": 0,
+      "size_bytes": 23108,
+      "quality_score": 67,
+      "corpus_filename": "verl__models__transformers__monkey_patch.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/npu_patch.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/npu_patch.py",
+      "num_lines": 320,
+      "num_functions": 15,
+      "num_types": 3,
+      "size_bytes": 14592,
+      "quality_score": 77,
+      "corpus_filename": "verl__models__transformers__npu_patch.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/qwen2.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/qwen2.py",
+      "num_lines": 243,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 10429,
+      "quality_score": 20,
+      "corpus_filename": "verl__models__transformers__qwen2.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/qwen2_vl.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/qwen2_vl.py",
+      "num_lines": 548,
+      "num_functions": 11,
+      "num_types": 1,
+      "size_bytes": 23339,
+      "quality_score": 69,
+      "corpus_filename": "verl__models__transformers__qwen2_vl.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/qwen3_vl.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/qwen3_vl.py",
+      "num_lines": 375,
+      "num_functions": 8,
+      "num_types": 1,
+      "size_bytes": 16004,
+      "quality_score": 50,
+      "corpus_filename": "verl__models__transformers__qwen3_vl.py"
+    },
+    {
+      "rel_path": "verl/models/transformers/tiled_mlp.py",
+      "abs_path": "data/verl_repo/verl/models/transformers/tiled_mlp.py",
+      "num_lines": 236,
+      "num_functions": 12,
+      "num_types": 2,
+      "size_bytes": 8634,
+      "quality_score": 56,
+      "corpus_filename": "verl__models__transformers__tiled_mlp.py"
+    },
+    {
+      "rel_path": "verl/models/weight_loader_registry.py",
+      "abs_path": "data/verl_repo/verl/models/weight_loader_registry.py",
+      "num_lines": 58,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 2535,
+      "quality_score": 9,
+      "corpus_filename": "verl__models__weight_loader_registry.py"
+    },
+    {
+      "rel_path": "verl/protocol.py",
+      "abs_path": "data/verl_repo/verl/protocol.py",
+      "num_lines": 1253,
+      "num_functions": 55,
+      "num_types": 5,
+      "size_bytes": 48471,
+      "quality_score": 256,
+      "corpus_filename": "verl__protocol.py"
+    },
+    {
+      "rel_path": "verl/single_controller/base/decorator.py",
+      "abs_path": "data/verl_repo/verl/single_controller/base/decorator.py",
+      "num_lines": 475,
+      "num_functions": 34,
+      "num_types": 2,
+      "size_bytes": 17296,
+      "quality_score": 135,
+      "corpus_filename": "verl__single_controller__base__decorator.py"
+    },
+    {
+      "rel_path": "verl/single_controller/base/worker.py",
+      "abs_path": "data/verl_repo/verl/single_controller/base/worker.py",
+      "num_lines": 357,
+      "num_functions": 22,
+      "num_types": 4,
+      "size_bytes": 13397,
+      "quality_score": 101,
+      "corpus_filename": "verl__single_controller__base__worker.py"
+    },
+    {
+      "rel_path": "verl/single_controller/base/worker_group.py",
+      "abs_path": "data/verl_repo/verl/single_controller/base/worker_group.py",
+      "num_lines": 255,
+      "num_functions": 16,
+      "num_types": 3,
+      "size_bytes": 9818,
+      "quality_score": 74,
+      "corpus_filename": "verl__single_controller__base__worker_group.py"
+    },
+    {
+      "rel_path": "verl/single_controller/ray/base.py",
+      "abs_path": "data/verl_repo/verl/single_controller/ray/base.py",
+      "num_lines": 1120,
+      "num_functions": 56,
+      "num_types": 8,
+      "size_bytes": 46404,
+      "quality_score": 266,
+      "corpus_filename": "verl__single_controller__ray__base.py"
+    },
+    {
+      "rel_path": "verl/trainer/config/algorithm.py",
+      "abs_path": "data/verl_repo/verl/trainer/config/algorithm.py",
+      "num_lines": 614,
+      "num_functions": 17,
+      "num_types": 4,
+      "size_bytes": 26002,
+      "quality_score": 103,
+      "corpus_filename": "verl__trainer__config__algorithm.py"
+    },
+    {
+      "rel_path": "verl/trainer/config/config.py",
+      "abs_path": "data/verl_repo/verl/trainer/config/config.py",
+      "num_lines": 95,
+      "num_functions": 0,
+      "num_types": 4,
+      "size_bytes": 3753,
+      "quality_score": 21,
+      "corpus_filename": "verl__trainer__config__config.py"
+    },
+    {
+      "rel_path": "verl/trainer/fsdp_sft_trainer.py",
+      "abs_path": "data/verl_repo/verl/trainer/fsdp_sft_trainer.py",
+      "num_lines": 873,
+      "num_functions": 18,
+      "num_types": 1,
+      "size_bytes": 37337,
+      "quality_score": 110,
+      "corpus_filename": "verl__trainer__fsdp_sft_trainer.py"
+    },
+    {
+      "rel_path": "verl/trainer/main_eval.py",
+      "abs_path": "data/verl_repo/verl/trainer/main_eval.py",
+      "num_lines": 80,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 2796,
+      "quality_score": 10,
+      "corpus_filename": "verl__trainer__main_eval.py"
+    },
+    {
+      "rel_path": "verl/trainer/main_generation.py",
+      "abs_path": "data/verl_repo/verl/trainer/main_generation.py",
+      "num_lines": 154,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 6094,
+      "quality_score": 17,
+      "corpus_filename": "verl__trainer__main_generation.py"
+    },
+    {
+      "rel_path": "verl/trainer/main_generation_server.py",
+      "abs_path": "data/verl_repo/verl/trainer/main_generation_server.py",
+      "num_lines": 193,
+      "num_functions": 5,
+      "num_types": 0,
+      "size_bytes": 6672,
+      "quality_score": 24,
+      "corpus_filename": "verl__trainer__main_generation_server.py"
+    },
+    {
+      "rel_path": "verl/trainer/main_ppo.py",
+      "abs_path": "data/verl_repo/verl/trainer/main_ppo.py",
+      "num_lines": 433,
+      "num_functions": 11,
+      "num_types": 1,
+      "size_bytes": 17957,
+      "quality_score": 61,
+      "corpus_filename": "verl__trainer__main_ppo.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/core_algos.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/core_algos.py",
+      "num_lines": 2200,
+      "num_functions": 44,
+      "num_types": 3,
+      "size_bytes": 89039,
+      "quality_score": 224,
+      "corpus_filename": "verl__trainer__ppo__core_algos.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/metric_utils.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/metric_utils.py",
+      "num_lines": 659,
+      "num_functions": 10,
+      "num_types": 0,
+      "size_bytes": 28602,
+      "quality_score": 69,
+      "corpus_filename": "verl__trainer__ppo__metric_utils.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/prefix_grouper_utils.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/prefix_grouper_utils.py",
+      "num_lines": 235,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 7216,
+      "quality_score": 23,
+      "corpus_filename": "verl__trainer__ppo__prefix_grouper_utils.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/ray_trainer.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/ray_trainer.py",
+      "num_lines": 1603,
+      "num_functions": 26,
+      "num_types": 1,
+      "size_bytes": 79242,
+      "quality_score": 162,
+      "corpus_filename": "verl__trainer__ppo__ray_trainer.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/reward.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/reward.py",
+      "num_lines": 159,
+      "num_functions": 5,
+      "num_types": 0,
+      "size_bytes": 6537,
+      "quality_score": 23,
+      "corpus_filename": "verl__trainer__ppo__reward.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/rollout_corr_helper.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/rollout_corr_helper.py",
+      "num_lines": 1074,
+      "num_functions": 13,
+      "num_types": 0,
+      "size_bytes": 51735,
+      "quality_score": 105,
+      "corpus_filename": "verl__trainer__ppo__rollout_corr_helper.py"
+    },
+    {
+      "rel_path": "verl/trainer/ppo/utils.py",
+      "abs_path": "data/verl_repo/verl/trainer/ppo/utils.py",
+      "num_lines": 97,
+      "num_functions": 6,
+      "num_types": 1,
+      "size_bytes": 2889,
+      "quality_score": 26,
+      "corpus_filename": "verl__trainer__ppo__utils.py"
+    },
+    {
+      "rel_path": "verl/trainer/sft_trainer.py",
+      "abs_path": "data/verl_repo/verl/trainer/sft_trainer.py",
+      "num_lines": 432,
+      "num_functions": 13,
+      "num_types": 1,
+      "size_bytes": 16995,
+      "quality_score": 67,
+      "corpus_filename": "verl__trainer__sft_trainer.py"
+    },
+    {
+      "rel_path": "verl/trainer/sft_trainer_ray.py",
+      "abs_path": "data/verl_repo/verl/trainer/sft_trainer_ray.py",
+      "num_lines": 385,
+      "num_functions": 12,
+      "num_types": 1,
+      "size_bytes": 15137,
+      "quality_score": 61,
+      "corpus_filename": "verl__trainer__sft_trainer_ray.py"
+    },
+    {
+      "rel_path": "verl/utils/activation_offload.py",
+      "abs_path": "data/verl_repo/verl/utils/activation_offload.py",
+      "num_lines": 558,
+      "num_functions": 44,
+      "num_types": 7,
+      "size_bytes": 22610,
+      "quality_score": 191,
+      "corpus_filename": "verl__utils__activation_offload.py"
+    },
+    {
+      "rel_path": "verl/utils/attention_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/attention_utils.py",
+      "num_lines": 100,
+      "num_functions": 5,
+      "num_types": 0,
+      "size_bytes": 3986,
+      "quality_score": 20,
+      "corpus_filename": "verl__utils__attention_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/chat_template.py",
+      "abs_path": "data/verl_repo/verl/utils/chat_template.py",
+      "num_lines": 44,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 1645,
+      "quality_score": 8,
+      "corpus_filename": "verl__utils__chat_template.py"
+    },
+    {
+      "rel_path": "verl/utils/checkpoint/checkpoint_handler.py",
+      "abs_path": "data/verl_repo/verl/utils/checkpoint/checkpoint_handler.py",
+      "num_lines": 224,
+      "num_functions": 7,
+      "num_types": 2,
+      "size_bytes": 8569,
+      "quality_score": 41,
+      "corpus_filename": "verl__utils__checkpoint__checkpoint_handler.py"
+    },
+    {
+      "rel_path": "verl/utils/checkpoint/checkpoint_manager.py",
+      "abs_path": "data/verl_repo/verl/utils/checkpoint/checkpoint_manager.py",
+      "num_lines": 268,
+      "num_functions": 19,
+      "num_types": 1,
+      "size_bytes": 10410,
+      "quality_score": 75,
+      "corpus_filename": "verl__utils__checkpoint__checkpoint_manager.py"
+    },
+    {
+      "rel_path": "verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "abs_path": "data/verl_repo/verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "num_lines": 368,
+      "num_functions": 3,
+      "num_types": 2,
+      "size_bytes": 17067,
+      "quality_score": 40,
+      "corpus_filename": "verl__utils__checkpoint__fsdp_checkpoint_manager.py"
+    },
+    {
+      "rel_path": "verl/utils/checkpoint/megatron_checkpoint_manager.py",
+      "abs_path": "data/verl_repo/verl/utils/checkpoint/megatron_checkpoint_manager.py",
+      "num_lines": 758,
+      "num_functions": 9,
+      "num_types": 1,
+      "size_bytes": 34895,
+      "quality_score": 78,
+      "corpus_filename": "verl__utils__checkpoint__megatron_checkpoint_manager.py"
+    },
+    {
+      "rel_path": "verl/utils/config.py",
+      "abs_path": "data/verl_repo/verl/utils/config.py",
+      "num_lines": 202,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 8698,
+      "quality_score": 24,
+      "corpus_filename": "verl__utils__config.py"
+    },
+    {
+      "rel_path": "verl/utils/dataset/dataset_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/dataset/dataset_utils.py",
+      "num_lines": 75,
+      "num_functions": 3,
+      "num_types": 2,
+      "size_bytes": 2600,
+      "quality_score": 20,
+      "corpus_filename": "verl__utils__dataset__dataset_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/dataset/multiturn_sft_dataset.py",
+      "abs_path": "data/verl_repo/verl/utils/dataset/multiturn_sft_dataset.py",
+      "num_lines": 455,
+      "num_functions": 13,
+      "num_types": 1,
+      "size_bytes": 20176,
+      "quality_score": 70,
+      "corpus_filename": "verl__utils__dataset__multiturn_sft_dataset.py"
+    },
+    {
+      "rel_path": "verl/utils/dataset/rl_dataset.py",
+      "abs_path": "data/verl_repo/verl/utils/dataset/rl_dataset.py",
+      "num_lines": 476,
+      "num_functions": 15,
+      "num_types": 1,
+      "size_bytes": 20672,
+      "quality_score": 77,
+      "corpus_filename": "verl__utils__dataset__rl_dataset.py"
+    },
+    {
+      "rel_path": "verl/utils/dataset/rm_dataset.py",
+      "abs_path": "data/verl_repo/verl/utils/dataset/rm_dataset.py",
+      "num_lines": 166,
+      "num_functions": 8,
+      "num_types": 1,
+      "size_bytes": 6212,
+      "quality_score": 37,
+      "corpus_filename": "verl__utils__dataset__rm_dataset.py"
+    },
+    {
+      "rel_path": "verl/utils/dataset/sft_dataset.py",
+      "abs_path": "data/verl_repo/verl/utils/dataset/sft_dataset.py",
+      "num_lines": 204,
+      "num_functions": 6,
+      "num_types": 1,
+      "size_bytes": 8334,
+      "quality_score": 33,
+      "corpus_filename": "verl__utils__dataset__sft_dataset.py"
+    },
+    {
+      "rel_path": "verl/utils/dataset/vision_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/dataset/vision_utils.py",
+      "num_lines": 131,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 4390,
+      "quality_score": 15,
+      "corpus_filename": "verl__utils__dataset__vision_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/debug/metrics.py",
+      "abs_path": "data/verl_repo/verl/utils/debug/metrics.py",
+      "num_lines": 109,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 4858,
+      "quality_score": 18,
+      "corpus_filename": "verl__utils__debug__metrics.py"
+    },
+    {
+      "rel_path": "verl/utils/debug/trajectory_tracker.py",
+      "abs_path": "data/verl_repo/verl/utils/debug/trajectory_tracker.py",
+      "num_lines": 109,
+      "num_functions": 7,
+      "num_types": 1,
+      "size_bytes": 3146,
+      "quality_score": 29,
+      "corpus_filename": "verl__utils__debug__trajectory_tracker.py"
+    },
+    {
+      "rel_path": "verl/utils/device.py",
+      "abs_path": "data/verl_repo/verl/utils/device.py",
+      "num_lines": 324,
+      "num_functions": 13,
+      "num_types": 0,
+      "size_bytes": 11138,
+      "quality_score": 56,
+      "corpus_filename": "verl__utils__device.py"
+    },
+    {
+      "rel_path": "verl/utils/flops_counter.py",
+      "abs_path": "data/verl_repo/verl/utils/flops_counter.py",
+      "num_lines": 603,
+      "num_functions": 14,
+      "num_types": 1,
+      "size_bytes": 24262,
+      "quality_score": 81,
+      "corpus_filename": "verl__utils__flops_counter.py"
+    },
+    {
+      "rel_path": "verl/utils/fs.py",
+      "abs_path": "data/verl_repo/verl/utils/fs.py",
+      "num_lines": 305,
+      "num_functions": 10,
+      "num_types": 0,
+      "size_bytes": 10942,
+      "quality_score": 46,
+      "corpus_filename": "verl__utils__fs.py"
+    },
+    {
+      "rel_path": "verl/utils/fsdp_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/fsdp_utils.py",
+      "num_lines": 893,
+      "num_functions": 40,
+      "num_types": 1,
+      "size_bytes": 35887,
+      "quality_score": 175,
+      "corpus_filename": "verl__utils__fsdp_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/groupwise.py",
+      "abs_path": "data/verl_repo/verl/utils/groupwise.py",
+      "num_lines": 223,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 7698,
+      "quality_score": 23,
+      "corpus_filename": "verl__utils__groupwise.py"
+    },
+    {
+      "rel_path": "verl/utils/hdfs_io.py",
+      "abs_path": "data/verl_repo/verl/utils/hdfs_io.py",
+      "num_lines": 149,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 4645,
+      "quality_score": 33,
+      "corpus_filename": "verl__utils__hdfs_io.py"
+    },
+    {
+      "rel_path": "verl/utils/import_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/import_utils.py",
+      "num_lines": 236,
+      "num_functions": 15,
+      "num_types": 0,
+      "size_bytes": 7860,
+      "quality_score": 56,
+      "corpus_filename": "verl__utils__import_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/kernel/fp8_kernel.py",
+      "abs_path": "data/verl_repo/verl/utils/kernel/fp8_kernel.py",
+      "num_lines": 341,
+      "num_functions": 8,
+      "num_types": 0,
+      "size_bytes": 12526,
+      "quality_score": 42,
+      "corpus_filename": "verl__utils__kernel__fp8_kernel.py"
+    },
+    {
+      "rel_path": "verl/utils/kernel/kernels.py",
+      "abs_path": "data/verl_repo/verl/utils/kernel/kernels.py",
+      "num_lines": 1723,
+      "num_functions": 22,
+      "num_types": 3,
+      "size_bytes": 65119,
+      "quality_score": 158,
+      "corpus_filename": "verl__utils__kernel__kernels.py"
+    },
+    {
+      "rel_path": "verl/utils/kernel/linear_cross_entropy.py",
+      "abs_path": "data/verl_repo/verl/utils/kernel/linear_cross_entropy.py",
+      "num_lines": 119,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 4798,
+      "quality_score": 15,
+      "corpus_filename": "verl__utils__kernel__linear_cross_entropy.py"
+    },
+    {
+      "rel_path": "verl/utils/logger/aggregate_logger.py",
+      "abs_path": "data/verl_repo/verl/utils/logger/aggregate_logger.py",
+      "num_lines": 140,
+      "num_functions": 11,
+      "num_types": 2,
+      "size_bytes": 4808,
+      "quality_score": 48,
+      "corpus_filename": "verl__utils__logger__aggregate_logger.py"
+    },
+    {
+      "rel_path": "verl/utils/logging_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/logging_utils.py",
+      "num_lines": 32,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 1051,
+      "quality_score": 6,
+      "corpus_filename": "verl__utils__logging_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/memory.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/memory.py",
+      "num_lines": 38,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 1456,
+      "quality_score": 14,
+      "corpus_filename": "verl__utils__megatron__memory.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/optimizer.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/optimizer.py",
+      "num_lines": 120,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 4070,
+      "quality_score": 18,
+      "corpus_filename": "verl__utils__megatron__optimizer.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/pipeline_parallel.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/pipeline_parallel.py",
+      "num_lines": 71,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 2732,
+      "quality_score": 9,
+      "corpus_filename": "verl__utils__megatron__pipeline_parallel.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/router_replay_patch.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/router_replay_patch.py",
+      "num_lines": 388,
+      "num_functions": 21,
+      "num_types": 2,
+      "size_bytes": 17025,
+      "quality_score": 94,
+      "corpus_filename": "verl__utils__megatron__router_replay_patch.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/router_replay_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/router_replay_utils.py",
+      "num_lines": 464,
+      "num_functions": 10,
+      "num_types": 1,
+      "size_bytes": 22077,
+      "quality_score": 63,
+      "corpus_filename": "verl__utils__megatron__router_replay_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/sequence_parallel.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/sequence_parallel.py",
+      "num_lines": 52,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 1820,
+      "quality_score": 11,
+      "corpus_filename": "verl__utils__megatron__sequence_parallel.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron/tensor_parallel.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron/tensor_parallel.py",
+      "num_lines": 186,
+      "num_functions": 16,
+      "num_types": 1,
+      "size_bytes": 7148,
+      "quality_score": 61,
+      "corpus_filename": "verl__utils__megatron__tensor_parallel.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron_peft_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron_peft_utils.py",
+      "num_lines": 353,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 11141,
+      "quality_score": 44,
+      "corpus_filename": "verl__utils__megatron_peft_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/megatron_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/megatron_utils.py",
+      "num_lines": 1351,
+      "num_functions": 40,
+      "num_types": 1,
+      "size_bytes": 59536,
+      "quality_score": 197,
+      "corpus_filename": "verl__utils__megatron_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/memory_buffer.py",
+      "abs_path": "data/verl_repo/verl/utils/memory_buffer.py",
+      "num_lines": 218,
+      "num_functions": 17,
+      "num_types": 3,
+      "size_bytes": 8037,
+      "quality_score": 74,
+      "corpus_filename": "verl__utils__memory_buffer.py"
+    },
+    {
+      "rel_path": "verl/utils/memory_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/memory_utils.py",
+      "num_lines": 292,
+      "num_functions": 10,
+      "num_types": 1,
+      "size_bytes": 10672,
+      "quality_score": 49,
+      "corpus_filename": "verl__utils__memory_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/metric/utils.py",
+      "abs_path": "data/verl_repo/verl/utils/metric/utils.py",
+      "num_lines": 163,
+      "num_functions": 9,
+      "num_types": 2,
+      "size_bytes": 6168,
+      "quality_score": 44,
+      "corpus_filename": "verl__utils__metric__utils.py"
+    },
+    {
+      "rel_path": "verl/utils/model.py",
+      "abs_path": "data/verl_repo/verl/utils/model.py",
+      "num_lines": 779,
+      "num_functions": 35,
+      "num_types": 2,
+      "size_bytes": 29618,
+      "quality_score": 156,
+      "corpus_filename": "verl__utils__model.py"
+    },
+    {
+      "rel_path": "verl/utils/net_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/net_utils.py",
+      "num_lines": 84,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 2631,
+      "quality_score": 16,
+      "corpus_filename": "verl__utils__net_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/npu_flash_attn_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/npu_flash_attn_utils.py",
+      "num_lines": 129,
+      "num_functions": 6,
+      "num_types": 2,
+      "size_bytes": 6075,
+      "quality_score": 34,
+      "corpus_filename": "verl__utils__npu_flash_attn_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/config.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/config.py",
+      "num_lines": 235,
+      "num_functions": 9,
+      "num_types": 5,
+      "size_bytes": 9491,
+      "quality_score": 59,
+      "corpus_filename": "verl__utils__profiler__config.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/empty_annotations.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/empty_annotations.py",
+      "num_lines": 40,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 1116,
+      "quality_score": 13,
+      "corpus_filename": "verl__utils__profiler__empty_annotations.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/mstx_profile.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/mstx_profile.py",
+      "num_lines": 252,
+      "num_functions": 12,
+      "num_types": 1,
+      "size_bytes": 9250,
+      "quality_score": 53,
+      "corpus_filename": "verl__utils__profiler__mstx_profile.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/nvtx_profile.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/nvtx_profile.py",
+      "num_lines": 182,
+      "num_functions": 11,
+      "num_types": 1,
+      "size_bytes": 6323,
+      "quality_score": 46,
+      "corpus_filename": "verl__utils__profiler__nvtx_profile.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/performance.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/performance.py",
+      "num_lines": 262,
+      "num_functions": 13,
+      "num_types": 1,
+      "size_bytes": 9980,
+      "quality_score": 57,
+      "corpus_filename": "verl__utils__profiler__performance.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/profile.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/profile.py",
+      "num_lines": 300,
+      "num_functions": 23,
+      "num_types": 4,
+      "size_bytes": 10322,
+      "quality_score": 100,
+      "corpus_filename": "verl__utils__profiler__profile.py"
+    },
+    {
+      "rel_path": "verl/utils/profiler/torch_profile.py",
+      "abs_path": "data/verl_repo/verl/utils/profiler/torch_profile.py",
+      "num_lines": 169,
+      "num_functions": 10,
+      "num_types": 1,
+      "size_bytes": 5849,
+      "quality_score": 42,
+      "corpus_filename": "verl__utils__profiler__torch_profile.py"
+    },
+    {
+      "rel_path": "verl/utils/py_functional.py",
+      "abs_path": "data/verl_repo/verl/utils/py_functional.py",
+      "num_lines": 341,
+      "num_functions": 24,
+      "num_types": 3,
+      "size_bytes": 12649,
+      "quality_score": 102,
+      "corpus_filename": "verl__utils__py_functional.py"
+    },
+    {
+      "rel_path": "verl/utils/qat/core.py",
+      "abs_path": "data/verl_repo/verl/utils/qat/core.py",
+      "num_lines": 196,
+      "num_functions": 7,
+      "num_types": 1,
+      "size_bytes": 6565,
+      "quality_score": 34,
+      "corpus_filename": "verl__utils__qat__core.py"
+    },
+    {
+      "rel_path": "verl/utils/qat/linear.py",
+      "abs_path": "data/verl_repo/verl/utils/qat/linear.py",
+      "num_lines": 385,
+      "num_functions": 12,
+      "num_types": 3,
+      "size_bytes": 13658,
+      "quality_score": 68,
+      "corpus_filename": "verl__utils__qat__linear.py"
+    },
+    {
+      "rel_path": "verl/utils/qat/quantizer.py",
+      "abs_path": "data/verl_repo/verl/utils/qat/quantizer.py",
+      "num_lines": 308,
+      "num_functions": 7,
+      "num_types": 1,
+      "size_bytes": 11512,
+      "quality_score": 41,
+      "corpus_filename": "verl__utils__qat__quantizer.py"
+    },
+    {
+      "rel_path": "verl/utils/qat/vllm_patch.py",
+      "abs_path": "data/verl_repo/verl/utils/qat/vllm_patch.py",
+      "num_lines": 828,
+      "num_functions": 20,
+      "num_types": 1,
+      "size_bytes": 32531,
+      "quality_score": 111,
+      "corpus_filename": "verl__utils__qat__vllm_patch.py"
+    },
+    {
+      "rel_path": "verl/utils/ray_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/ray_utils.py",
+      "num_lines": 122,
+      "num_functions": 6,
+      "num_types": 0,
+      "size_bytes": 4770,
+      "quality_score": 24,
+      "corpus_filename": "verl__utils__ray_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/rendezvous/ray_backend.py",
+      "abs_path": "data/verl_repo/verl/utils/rendezvous/ray_backend.py",
+      "num_lines": 73,
+      "num_functions": 4,
+      "num_types": 1,
+      "size_bytes": 2591,
+      "quality_score": 19,
+      "corpus_filename": "verl__utils__rendezvous__ray_backend.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/__init__.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/__init__.py",
+      "num_lines": 135,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 4961,
+      "quality_score": 13,
+      "corpus_filename": "verl__utils__reward_score____init__.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/geo3k.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/geo3k.py",
+      "num_lines": 36,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 1411,
+      "quality_score": 10,
+      "corpus_filename": "verl__utils__reward_score__geo3k.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/gsm8k.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/gsm8k.py",
+      "num_lines": 72,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 2751,
+      "quality_score": 9,
+      "corpus_filename": "verl__utils__reward_score__gsm8k.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/math_dapo.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/math_dapo.py",
+      "num_lines": 272,
+      "num_functions": 7,
+      "num_types": 0,
+      "size_bytes": 7751,
+      "quality_score": 33,
+      "corpus_filename": "verl__utils__reward_score__math_dapo.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/math_reward.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/math_reward.py",
+      "num_lines": 224,
+      "num_functions": 9,
+      "num_types": 0,
+      "size_bytes": 6668,
+      "quality_score": 37,
+      "corpus_filename": "verl__utils__reward_score__math_reward.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/prime_code/utils.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/prime_code/utils.py",
+      "num_lines": 60,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 2213,
+      "quality_score": 8,
+      "corpus_filename": "verl__utils__reward_score__prime_code__utils.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/prime_math/__init__.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/prime_math/__init__.py",
+      "num_lines": 411,
+      "num_functions": 19,
+      "num_types": 0,
+      "size_bytes": 12523,
+      "quality_score": 77,
+      "corpus_filename": "verl__utils__reward_score__prime_math____init__.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/prime_math/grader.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/prime_math/grader.py",
+      "num_lines": 384,
+      "num_functions": 8,
+      "num_types": 0,
+      "size_bytes": 14568,
+      "quality_score": 45,
+      "corpus_filename": "verl__utils__reward_score__prime_math__grader.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/prime_math/math_normalize.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/prime_math/math_normalize.py",
+      "num_lines": 192,
+      "num_functions": 6,
+      "num_types": 0,
+      "size_bytes": 6299,
+      "quality_score": 27,
+      "corpus_filename": "verl__utils__reward_score__prime_math__math_normalize.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/sandbox_fusion/utils.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/sandbox_fusion/utils.py",
+      "num_lines": 578,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 24546,
+      "quality_score": 43,
+      "corpus_filename": "verl__utils__reward_score__sandbox_fusion__utils.py"
+    },
+    {
+      "rel_path": "verl/utils/reward_score/search_r1_like_qa_em.py",
+      "abs_path": "data/verl_repo/verl/utils/reward_score/search_r1_like_qa_em.py",
+      "num_lines": 156,
+      "num_functions": 11,
+      "num_types": 0,
+      "size_bytes": 5182,
+      "quality_score": 40,
+      "corpus_filename": "verl__utils__reward_score__search_r1_like_qa_em.py"
+    },
+    {
+      "rel_path": "verl/utils/rollout_skip.py",
+      "abs_path": "data/verl_repo/verl/utils/rollout_skip.py",
+      "num_lines": 132,
+      "num_functions": 7,
+      "num_types": 1,
+      "size_bytes": 4904,
+      "quality_score": 32,
+      "corpus_filename": "verl__utils__rollout_skip.py"
+    },
+    {
+      "rel_path": "verl/utils/rollout_trace.py",
+      "abs_path": "data/verl_repo/verl/utils/rollout_trace.py",
+      "num_lines": 291,
+      "num_functions": 12,
+      "num_types": 1,
+      "size_bytes": 10218,
+      "quality_score": 55,
+      "corpus_filename": "verl__utils__rollout_trace.py"
+    },
+    {
+      "rel_path": "verl/utils/seqlen_balancing.py",
+      "abs_path": "data/verl_repo/verl/utils/seqlen_balancing.py",
+      "num_lines": 582,
+      "num_functions": 23,
+      "num_types": 2,
+      "size_bytes": 22597,
+      "quality_score": 109,
+      "corpus_filename": "verl__utils__seqlen_balancing.py"
+    },
+    {
+      "rel_path": "verl/utils/sglang/sglang_fp8_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/sglang/sglang_fp8_utils.py",
+      "num_lines": 129,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 4160,
+      "quality_score": 12,
+      "corpus_filename": "verl__utils__sglang__sglang_fp8_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/tensordict_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/tensordict_utils.py",
+      "num_lines": 852,
+      "num_functions": 23,
+      "num_types": 0,
+      "size_bytes": 32350,
+      "quality_score": 116,
+      "corpus_filename": "verl__utils__tensordict_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/tokenizer.py",
+      "abs_path": "data/verl_repo/verl/utils/tokenizer.py",
+      "num_lines": 114,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 4740,
+      "quality_score": 14,
+      "corpus_filename": "verl__utils__tokenizer.py"
+    },
+    {
+      "rel_path": "verl/utils/torch_dtypes.py",
+      "abs_path": "data/verl_repo/verl/utils/torch_dtypes.py",
+      "num_lines": 80,
+      "num_functions": 7,
+      "num_types": 1,
+      "size_bytes": 2223,
+      "quality_score": 28,
+      "corpus_filename": "verl__utils__torch_dtypes.py"
+    },
+    {
+      "rel_path": "verl/utils/torch_functional.py",
+      "abs_path": "data/verl_repo/verl/utils/torch_functional.py",
+      "num_lines": 1022,
+      "num_functions": 44,
+      "num_types": 0,
+      "size_bytes": 39791,
+      "quality_score": 190,
+      "corpus_filename": "verl__utils__torch_functional.py"
+    },
+    {
+      "rel_path": "verl/utils/tracking.py",
+      "abs_path": "data/verl_repo/verl/utils/tracking.py",
+      "num_lines": 509,
+      "num_functions": 27,
+      "num_types": 6,
+      "size_bytes": 18573,
+      "quality_score": 132,
+      "corpus_filename": "verl__utils__tracking.py"
+    },
+    {
+      "rel_path": "verl/utils/transferqueue_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/transferqueue_utils.py",
+      "num_lines": 328,
+      "num_functions": 18,
+      "num_types": 1,
+      "size_bytes": 13299,
+      "quality_score": 77,
+      "corpus_filename": "verl__utils__transferqueue_utils.py"
+    },
+    {
+      "rel_path": "verl/utils/transformers_compat.py",
+      "abs_path": "data/verl_repo/verl/utils/transformers_compat.py",
+      "num_lines": 57,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 2224,
+      "quality_score": 8,
+      "corpus_filename": "verl__utils__transformers_compat.py"
+    },
+    {
+      "rel_path": "verl/utils/ulysses.py",
+      "abs_path": "data/verl_repo/verl/utils/ulysses.py",
+      "num_lines": 337,
+      "num_functions": 21,
+      "num_types": 2,
+      "size_bytes": 12350,
+      "quality_score": 89,
+      "corpus_filename": "verl__utils__ulysses.py"
+    },
+    {
+      "rel_path": "verl/utils/vllm/utils.py",
+      "abs_path": "data/verl_repo/verl/utils/vllm/utils.py",
+      "num_lines": 128,
+      "num_functions": 4,
+      "num_types": 2,
+      "size_bytes": 5723,
+      "quality_score": 27,
+      "corpus_filename": "verl__utils__vllm__utils.py"
+    },
+    {
+      "rel_path": "verl/utils/vllm/vllm_fp8_utils.py",
+      "abs_path": "data/verl_repo/verl/utils/vllm/vllm_fp8_utils.py",
+      "num_lines": 443,
+      "num_functions": 13,
+      "num_types": 1,
+      "size_bytes": 18169,
+      "quality_score": 69,
+      "corpus_filename": "verl__utils__vllm__vllm_fp8_utils.py"
+    },
+    {
+      "rel_path": "verl/workers/actor/base.py",
+      "abs_path": "data/verl_repo/verl/workers/actor/base.py",
+      "num_lines": 66,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 2038,
+      "quality_score": 15,
+      "corpus_filename": "verl__workers__actor__base.py"
+    },
+    {
+      "rel_path": "verl/workers/actor/dp_actor.py",
+      "abs_path": "data/verl_repo/verl/workers/actor/dp_actor.py",
+      "num_lines": 676,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 32659,
+      "quality_score": 62,
+      "corpus_filename": "verl__workers__actor__dp_actor.py"
+    },
+    {
+      "rel_path": "verl/workers/actor/megatron_actor.py",
+      "abs_path": "data/verl_repo/verl/workers/actor/megatron_actor.py",
+      "num_lines": 824,
+      "num_functions": 10,
+      "num_types": 1,
+      "size_bytes": 39720,
+      "quality_score": 87,
+      "corpus_filename": "verl__workers__actor__megatron_actor.py"
+    },
+    {
+      "rel_path": "verl/workers/config/actor.py",
+      "abs_path": "data/verl_repo/verl/workers/config/actor.py",
+      "num_lines": 341,
+      "num_functions": 8,
+      "num_types": 6,
+      "size_bytes": 15079,
+      "quality_score": 68,
+      "corpus_filename": "verl__workers__config__actor.py"
+    },
+    {
+      "rel_path": "verl/workers/config/critic.py",
+      "abs_path": "data/verl_repo/verl/workers/config/critic.py",
+      "num_lines": 252,
+      "num_functions": 6,
+      "num_types": 4,
+      "size_bytes": 10906,
+      "quality_score": 49,
+      "corpus_filename": "verl__workers__config__critic.py"
+    },
+    {
+      "rel_path": "verl/workers/config/engine.py",
+      "abs_path": "data/verl_repo/verl/workers/config/engine.py",
+      "num_lines": 323,
+      "num_functions": 5,
+      "num_types": 6,
+      "size_bytes": 14791,
+      "quality_score": 59,
+      "corpus_filename": "verl__workers__config__engine.py"
+    },
+    {
+      "rel_path": "verl/workers/config/model.py",
+      "abs_path": "data/verl_repo/verl/workers/config/model.py",
+      "num_lines": 222,
+      "num_functions": 2,
+      "num_types": 2,
+      "size_bytes": 8129,
+      "quality_score": 25,
+      "corpus_filename": "verl__workers__config__model.py"
+    },
+    {
+      "rel_path": "verl/workers/config/optimizer.py",
+      "abs_path": "data/verl_repo/verl/workers/config/optimizer.py",
+      "num_lines": 199,
+      "num_functions": 3,
+      "num_types": 4,
+      "size_bytes": 7502,
+      "quality_score": 35,
+      "corpus_filename": "verl__workers__config__optimizer.py"
+    },
+    {
+      "rel_path": "verl/workers/config/reward.py",
+      "abs_path": "data/verl_repo/verl/workers/config/reward.py",
+      "num_lines": 105,
+      "num_functions": 1,
+      "num_types": 4,
+      "size_bytes": 3842,
+      "quality_score": 24,
+      "corpus_filename": "verl__workers__config__reward.py"
+    },
+    {
+      "rel_path": "verl/workers/config/rollout.py",
+      "abs_path": "data/verl_repo/verl/workers/config/rollout.py",
+      "num_lines": 268,
+      "num_functions": 2,
+      "num_types": 9,
+      "size_bytes": 8637,
+      "quality_score": 55,
+      "corpus_filename": "verl__workers__config__rollout.py"
+    },
+    {
+      "rel_path": "verl/workers/critic/base.py",
+      "abs_path": "data/verl_repo/verl/workers/critic/base.py",
+      "num_lines": 40,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 1094,
+      "quality_score": 14,
+      "corpus_filename": "verl__workers__critic__base.py"
+    },
+    {
+      "rel_path": "verl/workers/critic/dp_critic.py",
+      "abs_path": "data/verl_repo/verl/workers/critic/dp_critic.py",
+      "num_lines": 263,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 12318,
+      "quality_score": 35,
+      "corpus_filename": "verl__workers__critic__dp_critic.py"
+    },
+    {
+      "rel_path": "verl/workers/critic/megatron_critic.py",
+      "abs_path": "data/verl_repo/verl/workers/critic/megatron_critic.py",
+      "num_lines": 339,
+      "num_functions": 8,
+      "num_types": 1,
+      "size_bytes": 14392,
+      "quality_score": 47,
+      "corpus_filename": "verl__workers__critic__megatron_critic.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/base.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/base.py",
+      "num_lines": 336,
+      "num_functions": 28,
+      "num_types": 3,
+      "size_bytes": 12304,
+      "quality_score": 114,
+      "corpus_filename": "verl__workers__engine__base.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/fsdp/transformer_impl.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/fsdp/transformer_impl.py",
+      "num_lines": 1091,
+      "num_functions": 37,
+      "num_types": 5,
+      "size_bytes": 46788,
+      "quality_score": 196,
+      "corpus_filename": "verl__workers__engine__fsdp__transformer_impl.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/fsdp/utils.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/fsdp/utils.py",
+      "num_lines": 80,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 2982,
+      "quality_score": 13,
+      "corpus_filename": "verl__workers__engine__fsdp__utils.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/megatron/transformer_impl.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/megatron/transformer_impl.py",
+      "num_lines": 865,
+      "num_functions": 40,
+      "num_types": 5,
+      "size_bytes": 36744,
+      "quality_score": 191,
+      "corpus_filename": "verl__workers__engine__megatron__transformer_impl.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/mindspeed/transformer_impl.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/mindspeed/transformer_impl.py",
+      "num_lines": 48,
+      "num_functions": 1,
+      "num_types": 1,
+      "size_bytes": 1724,
+      "quality_score": 9,
+      "corpus_filename": "verl__workers__engine__mindspeed__transformer_impl.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/utils.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/utils.py",
+      "num_lines": 154,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 5655,
+      "quality_score": 16,
+      "corpus_filename": "verl__workers__engine__utils.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/veomni/transformer_impl.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/veomni/transformer_impl.py",
+      "num_lines": 587,
+      "num_functions": 29,
+      "num_types": 5,
+      "size_bytes": 23989,
+      "quality_score": 140,
+      "corpus_filename": "verl__workers__engine__veomni__transformer_impl.py"
+    },
+    {
+      "rel_path": "verl/workers/engine/veomni/utils.py",
+      "abs_path": "data/verl_repo/verl/workers/engine/veomni/utils.py",
+      "num_lines": 111,
+      "num_functions": 5,
+      "num_types": 0,
+      "size_bytes": 3586,
+      "quality_score": 19,
+      "corpus_filename": "verl__workers__engine__veomni__utils.py"
+    },
+    {
+      "rel_path": "verl/workers/engine_workers.py",
+      "abs_path": "data/verl_repo/verl/workers/engine_workers.py",
+      "num_lines": 688,
+      "num_functions": 24,
+      "num_types": 2,
+      "size_bytes": 32037,
+      "quality_score": 123,
+      "corpus_filename": "verl__workers__engine_workers.py"
+    },
+    {
+      "rel_path": "verl/workers/fsdp_workers.py",
+      "abs_path": "data/verl_repo/verl/workers/fsdp_workers.py",
+      "num_lines": 1724,
+      "num_functions": 27,
+      "num_types": 3,
+      "size_bytes": 82570,
+      "quality_score": 173,
+      "corpus_filename": "verl__workers__fsdp_workers.py"
+    },
+    {
+      "rel_path": "verl/workers/megatron_workers.py",
+      "abs_path": "data/verl_repo/verl/workers/megatron_workers.py",
+      "num_lines": 1286,
+      "num_functions": 26,
+      "num_types": 4,
+      "size_bytes": 62471,
+      "quality_score": 166,
+      "corpus_filename": "verl__workers__megatron_workers.py"
+    },
+    {
+      "rel_path": "verl/workers/reward_manager/abstract.py",
+      "abs_path": "data/verl_repo/verl/workers/reward_manager/abstract.py",
+      "num_lines": 72,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 2395,
+      "quality_score": 15,
+      "corpus_filename": "verl__workers__reward_manager__abstract.py"
+    },
+    {
+      "rel_path": "verl/workers/reward_manager/batch.py",
+      "abs_path": "data/verl_repo/verl/workers/reward_manager/batch.py",
+      "num_lines": 128,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 5359,
+      "quality_score": 20,
+      "corpus_filename": "verl__workers__reward_manager__batch.py"
+    },
+    {
+      "rel_path": "verl/workers/reward_manager/dapo.py",
+      "abs_path": "data/verl_repo/verl/workers/reward_manager/dapo.py",
+      "num_lines": 154,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 6379,
+      "quality_score": 18,
+      "corpus_filename": "verl__workers__reward_manager__dapo.py"
+    },
+    {
+      "rel_path": "verl/workers/reward_manager/naive.py",
+      "abs_path": "data/verl_repo/verl/workers/reward_manager/naive.py",
+      "num_lines": 122,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 5315,
+      "quality_score": 17,
+      "corpus_filename": "verl__workers__reward_manager__naive.py"
+    },
+    {
+      "rel_path": "verl/workers/reward_manager/prime.py",
+      "abs_path": "data/verl_repo/verl/workers/reward_manager/prime.py",
+      "num_lines": 189,
+      "num_functions": 6,
+      "num_types": 1,
+      "size_bytes": 7734,
+      "quality_score": 32,
+      "corpus_filename": "verl__workers__reward_manager__prime.py"
+    },
+    {
+      "rel_path": "verl/workers/reward_manager/registry.py",
+      "abs_path": "data/verl_repo/verl/workers/reward_manager/registry.py",
+      "num_lines": 55,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 1901,
+      "quality_score": 11,
+      "corpus_filename": "verl__workers__reward_manager__registry.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/base.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/base.py",
+      "num_lines": 102,
+      "num_functions": 6,
+      "num_types": 1,
+      "size_bytes": 3158,
+      "quality_score": 26,
+      "corpus_filename": "verl__workers__rollout__base.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/hf_rollout.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/hf_rollout.py",
+      "num_lines": 177,
+      "num_functions": 3,
+      "num_types": 1,
+      "size_bytes": 7527,
+      "quality_score": 23,
+      "corpus_filename": "verl__workers__rollout__hf_rollout.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/naive/naive_rollout.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/naive/naive_rollout.py",
+      "num_lines": 120,
+      "num_functions": 2,
+      "num_types": 1,
+      "size_bytes": 4837,
+      "quality_score": 17,
+      "corpus_filename": "verl__workers__rollout__naive__naive_rollout.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/replica.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/replica.py",
+      "num_lines": 342,
+      "num_functions": 23,
+      "num_types": 6,
+      "size_bytes": 13525,
+      "quality_score": 112,
+      "corpus_filename": "verl__workers__rollout__replica.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/schemas.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/schemas.py",
+      "num_lines": 672,
+      "num_functions": 15,
+      "num_types": 5,
+      "size_bytes": 31032,
+      "quality_score": 106,
+      "corpus_filename": "verl__workers__rollout__schemas.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/sglang_rollout/async_sglang_server.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/sglang_rollout/async_sglang_server.py",
+      "num_lines": 528,
+      "num_functions": 13,
+      "num_types": 2,
+      "size_bytes": 23514,
+      "quality_score": 79,
+      "corpus_filename": "verl__workers__rollout__sglang_rollout__async_sglang_server.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/sglang_rollout/http_server_engine.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/sglang_rollout/http_server_engine.py",
+      "num_lines": 954,
+      "num_functions": 26,
+      "num_types": 2,
+      "size_bytes": 39642,
+      "quality_score": 142,
+      "corpus_filename": "verl__workers__rollout__sglang_rollout__http_server_engine.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/sglang_rollout/sglang_rollout.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/sglang_rollout/sglang_rollout.py",
+      "num_lines": 216,
+      "num_functions": 6,
+      "num_types": 1,
+      "size_bytes": 9254,
+      "quality_score": 34,
+      "corpus_filename": "verl__workers__rollout__sglang_rollout__sglang_rollout.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/sglang_rollout/utils.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/sglang_rollout/utils.py",
+      "num_lines": 109,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 4020,
+      "quality_score": 11,
+      "corpus_filename": "verl__workers__rollout__sglang_rollout__utils.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/tokenizer.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/tokenizer.py",
+      "num_lines": 163,
+      "num_functions": 11,
+      "num_types": 1,
+      "size_bytes": 5640,
+      "quality_score": 45,
+      "corpus_filename": "verl__workers__rollout__tokenizer.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/trtllm_rollout/trtllm_async_server.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/trtllm_rollout/trtllm_async_server.py",
+      "num_lines": 379,
+      "num_functions": 12,
+      "num_types": 2,
+      "size_bytes": 16207,
+      "quality_score": 66,
+      "corpus_filename": "verl__workers__rollout__trtllm_rollout__trtllm_async_server.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/trtllm_rollout/trtllm_rollout.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/trtllm_rollout/trtllm_rollout.py",
+      "num_lines": 442,
+      "num_functions": 18,
+      "num_types": 2,
+      "size_bytes": 17071,
+      "quality_score": 87,
+      "corpus_filename": "verl__workers__rollout__trtllm_rollout__trtllm_rollout.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/utils.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/utils.py",
+      "num_lines": 68,
+      "num_functions": 3,
+      "num_types": 0,
+      "size_bytes": 2447,
+      "quality_score": 12,
+      "corpus_filename": "verl__workers__rollout__utils.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/vllm_rollout/utils.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/vllm_rollout/utils.py",
+      "num_lines": 372,
+      "num_functions": 17,
+      "num_types": 3,
+      "size_bytes": 14834,
+      "quality_score": 84,
+      "corpus_filename": "verl__workers__rollout__vllm_rollout__utils.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/vllm_rollout/vllm_async_server.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/vllm_rollout/vllm_async_server.py",
+      "num_lines": 952,
+      "num_functions": 28,
+      "num_types": 2,
+      "size_bytes": 41475,
+      "quality_score": 149,
+      "corpus_filename": "verl__workers__rollout__vllm_rollout__vllm_async_server.py"
+    },
+    {
+      "rel_path": "verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "abs_path": "data/verl_repo/verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "num_lines": 264,
+      "num_functions": 7,
+      "num_types": 1,
+      "size_bytes": 10821,
+      "quality_score": 40,
+      "corpus_filename": "verl__workers__rollout__vllm_rollout__vllm_rollout.py"
+    },
+    {
+      "rel_path": "verl/workers/sharding_manager/base.py",
+      "abs_path": "data/verl_repo/verl/workers/sharding_manager/base.py",
+      "num_lines": 35,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 1031,
+      "quality_score": 19,
+      "corpus_filename": "verl__workers__sharding_manager__base.py"
+    },
+    {
+      "rel_path": "verl/workers/sharding_manager/fsdp_ulysses.py",
+      "abs_path": "data/verl_repo/verl/workers/sharding_manager/fsdp_ulysses.py",
+      "num_lines": 72,
+      "num_functions": 5,
+      "num_types": 1,
+      "size_bytes": 2793,
+      "quality_score": 22,
+      "corpus_filename": "verl__workers__sharding_manager__fsdp_ulysses.py"
+    },
+    {
+      "rel_path": "verl/workers/utils/losses.py",
+      "abs_path": "data/verl_repo/verl/workers/utils/losses.py",
+      "num_lines": 216,
+      "num_functions": 4,
+      "num_types": 0,
+      "size_bytes": 8421,
+      "quality_score": 24,
+      "corpus_filename": "verl__workers__utils__losses.py"
+    },
+    {
+      "rel_path": "verl/workers/utils/padding.py",
+      "abs_path": "data/verl_repo/verl/workers/utils/padding.py",
+      "num_lines": 126,
+      "num_functions": 2,
+      "num_types": 0,
+      "size_bytes": 5413,
+      "quality_score": 13,
+      "corpus_filename": "verl__workers__utils__padding.py"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "AI-Mined Text\u2013Code Retrieval Pairs",
+  "version": "1.0",
+  "description": "Natural language query\u2013code pairs where queries are hard developer questions mined by an LLM from real production code. Queries span architecture, implementation, and diagram tasks.",
+  "model": "qwen/qwen3.5-397b-a17b",
+  "repos": [
+    "verl"
+  ],
+  "total_pairs": 122,
+  "train_pairs": 97,
+  "test_pairs": 25,
+  "by_repo": {
+    "verl": 122
+  },
+  "generation_method": "LLM question mining; code snippet = file truncated to 2000 chars",
+  "random_seed": 42
+}
