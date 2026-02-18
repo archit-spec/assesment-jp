@@ -4,6 +4,9 @@
 This repository contains the solution for the 3 requested tracks.
 **Hardware Requirement**: T4 GPU (free Colab tier).
 
+# info
+
+each track has link to model with model card and dataset with dataset card
 ## Notebooks
 
 | Track | Description | Notebook |
@@ -26,7 +29,8 @@ Continue pre-training `Qwen/Qwen2.5-Coder-3B` on a curated Rust code corpus extr
 ### Artifacts
 | Type | Name | Link |
 |------|------|------|
-| **Model** | `archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged` | [Hugging Face](https://huggingface.co/archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged) |
+| **Model** | `archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged` | [Hugging Face](https://huggingface.co/archit11/qwen2.5-coder-3b
+-hyperswitch-track-a-merged) |
 | **Dataset** | `archit11/hyperswitch-code-corpus-track-a` | [Hugging Face](https://huggingface.co/datasets/archit11/hyperswitch-code-corpus-track-a) |
 
 ### Methodology
