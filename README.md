@@ -2,6 +2,12 @@
 
 Track-wise project layout.
 
+# please check
+
+./track_a_colab.ipynb
+./track_b_colab.ipynb
+./track_c_colab.ipynb
+
 ## Structure
 
 - `track1/`:
@@ -19,13 +25,6 @@ Track-wise project layout.
   - `docs/`: shared docs
 - `data/`, `results/`, `checkpoints/`, `wandb/`: artifacts and outputs
 
-## Main entrypoints
-
-- Track 1 pretraining: `track1/scripts/track_a_pretraining.py`
-- Track 1 notebook: `track1/notebooks/track1_dataset_training_perplexity.ipynb`
-- Track 2 training: `track2/scripts/track_b_sft.py`
-- Track 2 eval: `track2/scripts/eval_sft_trackb.py`
-- Track 3 embeddings: `track3/scripts/track_c_embeddings.py`
 
 ## Notes
 
