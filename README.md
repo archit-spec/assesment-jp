@@ -8,8 +8,8 @@ This repository contains the solution for the 3 requested tracks.
 
 | Track | Description | Notebook |
 |-------|-------------|----------|
-| **A** | Extended Pre-Training | [`track_a_colab.ipynb`](./track_a_colab.ipynb) |
-| **B** | Instruction Tuning (SFT) | [`track_b_colab.ipynb`](./track_b_colab.ipynb) |
+| **A** | Extended Pre-Training | [`track_a_colab.ipynb`](./track_a_colab.ipynb) <br> [`track_a_unsloth.ipynb`](./track_a_unsloth.ipynb) (Low Memory) |
+| **B** | Instruction Tuning (SFT) | [`track_b_colab.ipynb`](./track_b_colab.ipynb) <br> [`track_b_unsloth.ipynb`](./track_b_unsloth.ipynb) (Low Memory) |
 | **C** | Embedding Fine-Tuning | [`track_c_colab.ipynb`](./track_c_colab.ipynb) |
 
 ---
