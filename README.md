@@ -4,9 +4,9 @@ Track-wise project layout.
 
 # please check
 
-./track_a_colab.ipynb
-./track_b_colab.ipynb
-./track_c_colab.ipynb
+- ./track_a_colab.ipynb
+- ./track_b_colab.ipynb
+- ./track_c_colab.ipynb
 
 ## Structure
 
