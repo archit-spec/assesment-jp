@@ -23,9 +23,9 @@ def pip(*pkgs):
 
 # Pin versions verified to work together on T4
 pip(
-    "transformers==4.51.3",
-    "peft==0.14.0",
-    "trl==0.16.1",
+    "transformers==5.2.0",
+    "peft==0.18.1",
+    "trl==0.28.0",
     "datasets",
     "accelerate",
     "huggingface_hub",

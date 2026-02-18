@@ -1,0 +1,126 @@
+[
+    {
+        "category": "complete",
+        "source_file": "manual",
+        "func_name": "factorial",
+        "instruction": "Complete the following Python function. Only output the completed function body, no explanation.\n\n```python\ndef factorial(n: int) -> int:\n    \"\"\"Return the factorial of n. Assumes n >= 0.\"\"\"\n    # TODO: implement\n```",
+        "response": "```python\ndef factorial(n: int) -> int:\n    \"\"\"Return the factorial of n. Assumes n >= 0.\"\"\"\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)\n```",
+        "test_code": "assert factorial(0) == 1\nassert factorial(1) == 1\nassert factorial(5) == 120\nassert factorial(10) == 3628800"
+    },
+    {
+        "category": "complete",
+        "source_file": "manual",
+        "func_name": "is_palindrome",
+        "instruction": "Complete the following Python function. Only output the completed function body, no explanation.\n\n```python\ndef is_palindrome(s: str) -> bool:\n    \"\"\"Return True if s is a palindrome (case-insensitive, ignoring spaces).\"\"\"\n    # TODO: implement\n```",
+        "response": "```python\ndef is_palindrome(s: str) -> bool:\n    \"\"\"Return True if s is a palindrome (case-insensitive, ignoring spaces).\"\"\"\n    cleaned = s.lower().replace(' ', '')\n    return cleaned == cleaned[::-1]\n```",
+        "test_code": "assert is_palindrome('racecar') == True\nassert is_palindrome('hello') == False\nassert is_palindrome('A man a plan a canal Panama') == True\nassert is_palindrome('') == True"
+    },
+    {
+        "category": "complete",
+        "source_file": "manual",
+        "func_name": "flatten",
+        "instruction": "Complete the following Python function. Only output the completed function body, no explanation.\n\n```python\ndef flatten(lst: list) -> list:\n    \"\"\"Flatten a nested list of arbitrary depth into a single flat list.\"\"\"\n    # TODO: implement\n```",
+        "response": "```python\ndef flatten(lst: list) -> list:\n    \"\"\"Flatten a nested list of arbitrary depth into a single flat list.\"\"\"\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(flatten(item))\n        else:\n            result.append(item)\n    return result\n```",
+        "test_code": "assert flatten([1, [2, 3], [4, [5, 6]]]) == [1, 2, 3, 4, 5, 6]\nassert flatten([]) == []\nassert flatten([1, 2, 3]) == [1, 2, 3]\nassert flatten([[1, [2]], [3, [4, [5]]]]) == [1, 2, 3, 4, 5]"
+    },
+    {
+        "category": "complete",
+        "source_file": "manual",
+        "func_name": "count_words",
+        "instruction": "Complete the following Python function. Only output the completed function body, no explanation.\n\n```python\ndef count_words(text: str) -> dict:\n    \"\"\"Count the frequency of each word in text (case-insensitive).\n    \n    Returns a dict mapping word -> count.\n    \"\"\"\n    # TODO: implement\n```",
+        "response": "```python\ndef count_words(text: str) -> dict:\n    \"\"\"Count the frequency of each word in text (case-insensitive).\n    \n    Returns a dict mapping word -> count.\n    \"\"\"\n    counts = {}\n    for word in text.lower().split():\n        counts[word] = counts.get(word, 0) + 1\n    return counts\n```",
+        "test_code": "assert count_words('hello world hello') == {'hello': 2, 'world': 1}\nassert count_words('') == {}\nassert count_words('The the THE') == {'the': 3}"
+    },
+    {
+        "category": "complete",
+        "source_file": "manual",
+        "func_name": "binary_search",
+        "instruction": "Complete the following Python function. Only output the completed function body, no explanation.\n\n```python\ndef binary_search(arr: list, target: int) -> int:\n    \"\"\"Return the index of target in sorted arr, or -1 if not found.\"\"\"\n    # TODO: implement\n```",
+        "response": "```python\ndef binary_search(arr: list, target: int) -> int:\n    \"\"\"Return the index of target in sorted arr, or -1 if not found.\"\"\"\n    lo, hi = 0, len(arr) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            lo = mid + 1\n        else:\n            hi = mid - 1\n    return -1\n```",
+        "test_code": "assert binary_search([1, 3, 5, 7, 9], 5) == 2\nassert binary_search([1, 3, 5, 7, 9], 1) == 0\nassert binary_search([1, 3, 5, 7, 9], 9) == 4\nassert binary_search([1, 3, 5, 7, 9], 4) == -1\nassert binary_search([], 1) == -1"
+    },
+    {
+        "category": "bugfix",
+        "source_file": "manual",
+        "func_name": "sum_list",
+        "instruction": "The following Python function contains a bug. Identify the bug and provide the corrected code.\n\n```python\ndef sum_list(numbers: list) -> int:\n    \"\"\"Return the sum of all numbers in the list.\"\"\"\n    total = 1\n    for n in numbers:\n        total += n\n    return total\n```",
+        "response": "```python\ndef sum_list(numbers: list) -> int:\n    \"\"\"Return the sum of all numbers in the list.\"\"\"\n    total = 0  # Bug fix: was initialized to 1, should be 0\n    for n in numbers:\n        total += n\n    return total\n```",
+        "test_code": "assert sum_list([]) == 0\nassert sum_list([1, 2, 3]) == 6\nassert sum_list([10, -5, 3]) == 8"
+    },
+    {
+        "category": "bugfix",
+        "source_file": "manual",
+        "func_name": "find_max",
+        "instruction": "The following Python function contains a bug. Identify the bug and provide the corrected code.\n\n```python\ndef find_max(lst: list) -> int:\n    \"\"\"Return the maximum value in a non-empty list.\"\"\"\n    max_val = lst[0]\n    for i in range(len(lst)):\n        if lst[i] > max_val:\n            max_val = lst[i - 1]\n    return max_val\n```",
+        "response": "```python\ndef find_max(lst: list) -> int:\n    \"\"\"Return the maximum value in a non-empty list.\"\"\"\n    max_val = lst[0]\n    for i in range(len(lst)):\n        if lst[i] > max_val:\n            max_val = lst[i]  # Bug fix: was lst[i - 1], should be lst[i]\n    return max_val\n```",
+        "test_code": "assert find_max([1, 2, 3]) == 3\nassert find_max([5]) == 5\nassert find_max([-1, -5, -2]) == -1\nassert find_max([3, 1, 4, 1, 5, 9, 2, 6]) == 9"
+    },
+    {
+        "category": "bugfix",
+        "source_file": "manual",
+        "func_name": "is_even",
+        "instruction": "The following Python function contains a bug. Identify the bug and provide the corrected code.\n\n```python\ndef is_even(n: int) -> bool:\n    \"\"\"Return True if n is even, False if odd.\"\"\"\n    return n % 2 != 0\n```",
+        "response": "```python\ndef is_even(n: int) -> bool:\n    \"\"\"Return True if n is even, False if odd.\"\"\"\n    return n % 2 == 0  # Bug fix: was != 0, should be == 0\n```",
+        "test_code": "assert is_even(0) == True\nassert is_even(2) == True\nassert is_even(3) == False\nassert is_even(-4) == True\nassert is_even(7) == False"
+    },
+    {
+        "category": "bugfix",
+        "source_file": "manual",
+        "func_name": "reverse_string",
+        "instruction": "The following Python function contains a bug. Identify the bug and provide the corrected code.\n\n```python\ndef reverse_string(s: str) -> str:\n    \"\"\"Return the reverse of string s.\"\"\"\n    result = ''\n    for i in range(len(s)):\n        result += s[i]\n    return result\n```",
+        "response": "```python\ndef reverse_string(s: str) -> str:\n    \"\"\"Return the reverse of string s.\"\"\"\n    result = ''\n    for i in range(len(s) - 1, -1, -1):  # Bug fix: must iterate in reverse\n        result += s[i]\n    return result\n```",
+        "test_code": "assert reverse_string('') == ''\nassert reverse_string('a') == 'a'\nassert reverse_string('hello') == 'olleh'\nassert reverse_string('abcd') == 'dcba'"
+    },
+    {
+        "category": "bugfix",
+        "source_file": "manual",
+        "func_name": "count_vowels",
+        "instruction": "The following Python function contains a bug. Identify the bug and provide the corrected code.\n\n```python\ndef count_vowels(s: str) -> int:\n    \"\"\"Count the number of vowels (a, e, i, o, u) in string s.\"\"\"\n    count = 0\n    for ch in s:\n        if ch in 'aeiou':\n            count += 1\n    return count\n```\n\nNote: The function should be case-insensitive.",
+        "response": "```python\ndef count_vowels(s: str) -> int:\n    \"\"\"Count the number of vowels (a, e, i, o, u) in string s.\"\"\"\n    count = 0\n    for ch in s.lower():  # Bug fix: must lowercase to handle uppercase vowels\n        if ch in 'aeiou':\n            count += 1\n    return count\n```",
+        "test_code": "assert count_vowels('hello') == 2\nassert count_vowels('HELLO') == 2\nassert count_vowels('') == 0\nassert count_vowels('rhythm') == 0\nassert count_vowels('aeiou') == 5"
+    },
+    {
+        "category": "unit_test",
+        "source_file": "manual",
+        "func_name": "add",
+        "instruction": "Write pytest unit tests for the following Python function. Include at least 4 test cases covering normal cases and edge cases.\n\n```python\ndef add(a: int, b: int) -> int:\n    \"\"\"Return the sum of a and b.\"\"\"\n    return a + b\n```",
+        "response": "```python\ndef add(a: int, b: int) -> int:\n    return a + b\n\ndef test_add_positive():\n    assert add(2, 3) == 5\n\ndef test_add_negative():\n    assert add(-1, -2) == -3\n\ndef test_add_zero():\n    assert add(0, 0) == 0\n    assert add(5, 0) == 5\n\ndef test_add_mixed():\n    assert add(-1, 1) == 0\n    assert add(100, -50) == 50\n```",
+        "test_code": "def add(a, b):\n    return a + b\n\ndef test_add_positive():\n    assert add(2, 3) == 5\n\ndef test_add_negative():\n    assert add(-1, -2) == -3\n\ndef test_add_zero():\n    assert add(0, 0) == 0\n    assert add(5, 0) == 5\n\ndef test_add_mixed():\n    assert add(-1, 1) == 0\n    assert add(100, -50) == 50"
+    },
+    {
+        "category": "unit_test",
+        "source_file": "manual",
+        "func_name": "clamp",
+        "instruction": "Write pytest unit tests for the following Python function. Include at least 4 test cases covering normal cases and edge cases.\n\n```python\ndef clamp(value: float, min_val: float, max_val: float) -> float:\n    \"\"\"Clamp value to the range [min_val, max_val].\"\"\"\n    return max(min_val, min(max_val, value))\n```",
+        "response": "```python\ndef clamp(value, min_val, max_val):\n    return max(min_val, min(max_val, value))\n\ndef test_clamp_within_range():\n    assert clamp(5, 0, 10) == 5\n\ndef test_clamp_below_min():\n    assert clamp(-5, 0, 10) == 0\n\ndef test_clamp_above_max():\n    assert clamp(15, 0, 10) == 10\n\ndef test_clamp_at_boundaries():\n    assert clamp(0, 0, 10) == 0\n    assert clamp(10, 0, 10) == 10\n\ndef test_clamp_equal_bounds():\n    assert clamp(5, 3, 3) == 3\n```",
+        "test_code": "def clamp(value, min_val, max_val):\n    return max(min_val, min(max_val, value))\n\ndef test_clamp_within():\n    assert clamp(5, 0, 10) == 5\n\ndef test_clamp_below():\n    assert clamp(-5, 0, 10) == 0\n\ndef test_clamp_above():\n    assert clamp(15, 0, 10) == 10\n\ndef test_clamp_bounds():\n    assert clamp(0, 0, 10) == 0\n    assert clamp(10, 0, 10) == 10"
+    },
+    {
+        "category": "docstring",
+        "source_file": "manual",
+        "func_name": "merge_dicts",
+        "instruction": "Write a Google-style docstring for the following Python function:\n\n```python\ndef merge_dicts(base: dict, override: dict) -> dict:\n    merged = {**base, **override}\n    return merged\n```",
+        "response": "```python\ndef merge_dicts(base: dict, override: dict) -> dict:\n    \"\"\"Merge two dictionaries, with override values taking precedence.\n\n    Creates a new dictionary containing all key-value pairs from both\n    dictionaries. If a key exists in both, the value from override is used.\n\n    Args:\n        base: The base dictionary providing default values.\n        override: The dictionary whose values take precedence on conflicts.\n\n    Returns:\n        A new dictionary containing all keys from both inputs, with\n        override values winning on conflicts.\n\n    Example:\n        >>> merge_dicts({'a': 1, 'b': 2}, {'b': 3, 'c': 4})\n        {'a': 1, 'b': 3, 'c': 4}\n    \"\"\"\n    merged = {**base, **override}\n    return merged\n```"
+    },
+    {
+        "category": "docstring",
+        "source_file": "manual",
+        "func_name": "retry",
+        "instruction": "Write a Google-style docstring for the following Python function:\n\n```python\ndef retry(func, max_attempts: int = 3, exceptions=(Exception,)):\n    for attempt in range(max_attempts):\n        try:\n            return func()\n        except exceptions as e:\n            if attempt == max_attempts - 1:\n                raise\n            last_error = e\n```",
+        "response": "```python\ndef retry(func, max_attempts: int = 3, exceptions=(Exception,)):\n    \"\"\"Retry a callable up to max_attempts times on specified exceptions.\n\n    Calls func() repeatedly until it succeeds or max_attempts is exhausted.\n    On the final failed attempt, re-raises the last exception.\n\n    Args:\n        func: A zero-argument callable to retry.\n        max_attempts: Maximum number of attempts before giving up. Defaults to 3.\n        exceptions: A tuple of exception types to catch and retry on.\n            Defaults to (Exception,) which catches all exceptions.\n\n    Returns:\n        The return value of func() on success.\n\n    Raises:\n        The last exception raised by func() if all attempts fail.\n    \"\"\"\n    for attempt in range(max_attempts):\n        try:\n            return func()\n        except exceptions as e:\n            if attempt == max_attempts - 1:\n                raise\n            last_error = e\n```"
+    },
+    {
+        "category": "explain",
+        "source_file": "manual",
+        "func_name": "lru_cache_impl",
+        "instruction": "Explain what the following Python function does, including its purpose, parameters, and return value:\n\n```python\ndef memoize(func):\n    cache = {}\n    def wrapper(*args):\n        if args not in cache:\n            cache[args] = func(*args)\n        return cache[args]\n    return wrapper\n```",
+        "response": "This function implements a **memoization decorator** that caches the results of a function call.\n\n**Purpose:** Avoids redundant computation by storing previously computed results in a dictionary. When the same arguments are passed again, the cached result is returned immediately instead of re-executing the function.\n\n**Parameters:**\n- `func`: Any callable whose results should be cached. The function must have hashable arguments (since they're used as dictionary keys).\n\n**Return value:** Returns a new `wrapper` function that wraps `func` with caching behavior. The wrapper:\n1. Checks if `args` is already in `cache`\n2. If not, calls `func(*args)` and stores the result\n3. Returns the cached result\n\n**Example use case:** Ideal for expensive pure functions like Fibonacci, factorial, or API calls with repeated inputs."
+    },
+    {
+        "category": "explain",
+        "source_file": "manual",
+        "func_name": "sliding_window",
+        "instruction": "Explain what the following Python function does, including its purpose, parameters, and return value:\n\n```python\ndef max_subarray_sum(nums: list, k: int) -> int:\n    if len(nums) < k:\n        return 0\n    window_sum = sum(nums[:k])\n    max_sum = window_sum\n    for i in range(k, len(nums)):\n        window_sum += nums[i] - nums[i - k]\n        max_sum = max(max_sum, window_sum)\n    return max_sum\n```",
+        "response": "This function finds the **maximum sum of any contiguous subarray of length k** using the sliding window technique.\n\n**Purpose:** Efficiently computes the maximum sum over all windows of size `k` in O(n) time, avoiding the O(n*k) brute force approach.\n\n**Parameters:**\n- `nums`: A list of numbers to search through.\n- `k`: The fixed window size (number of consecutive elements to sum).\n\n**Return value:** The maximum sum found across all windows of size `k`. Returns `0` if the list has fewer than `k` elements.\n\n**How it works:**\n1. Initializes the window sum using the first `k` elements\n2. Slides the window one position at a time: adds the new right element and removes the leftmost element (`nums[i] - nums[i-k]`)\n3. Tracks the running maximum\n\n**Example:** `max_subarray_sum([1, 3, -1, -3, 5, 3], 3)` → `8` (window `[5, 3]` is not valid; window `[-1, -3, 5, 3]` — actually `[5, 3, ?]`)"
+    }
+]
