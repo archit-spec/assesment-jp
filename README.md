@@ -14,16 +14,16 @@ This repository contains the solution for the 3 requested tracks.
 
 ---
 
-## \ud83d\ude80 Track A: Extended Pre-Training
+## Track A: Extended Pre-Training
 
 Continue pre-training `Qwen/Qwen2.5-Coder-3B` on a curated Rust code corpus extracted from `juspay/hyperswitch`.
 
-### \ud83d\udcca Results
+### Results
 | Metric | Baseline | Post-Training | \u0394 |
 |--------|----------|---------------|---|
 | **Perplexity** | 2.2832 | **1.5429** | **\u221232.42%** \u2713 |
 
-### \ud83d\udce6 Artifacts
+### Artifacts
 | Type | Name | Link |
 |------|------|------|
 | **Model** | `archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged` | [Hugging Face](https://huggingface.co/archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged) |
@@ -46,7 +46,7 @@ Fine-tune `Qwen/Qwen2.5-Coder-1.5B` on synthetic Python instructions (Docstring,
 | **pass@1** | 0.565 | **0.804** | **+23.9%** \u2713 |
 | **pass@3** | 0.783 | 0.848 | +6.5% |
 
-### \ud83d\ud Artifacts
+### \ Artifacts
 | Type | Name | Link |
 |------|------|------|
 | **Model** | `archit11/track_b_sft_merged` | [Hugging Face](https://huggingface.co/archit11/track_b_sft_merged) |
@@ -59,17 +59,17 @@ Fine-tune `Qwen/Qwen2.5-Coder-1.5B` on synthetic Python instructions (Docstring,
 
 ---
 
-## \ud83d\udd0d Track C: Embedding Fine-Tuning
+## Track C: Embedding Fine-Tuning
 
 Fine-tune `Qwen/Qwen3-Embedding-0.6B` on text\u2192code retrieval pairs.
 
-### \ud83d\udcca Results (Training)
+### Results (Training)
 | Metric | Value |
 |--------|-------|
 | **Final Loss** | 0.0380 |
 | **Eval Metrics** | MRR@10, nDCG@10 (Computed in notebook) |
 
-### \ud83d\udce6 Artifacts
+### Artifacts
 | Type | Name | Link |
 |------|------|------|
 | **Model** | `archit11/assesment_qwen3_embedding_06b_e3` | [Hugging Face](https://huggingface.co/archit11/assesment_qwen3_embedding_06b_e3) |
