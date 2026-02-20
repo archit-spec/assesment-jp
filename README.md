@@ -3,6 +3,7 @@
 
 > **To verify results, run the eval notebooks on Colab:**
 > - 📊 [Track A – Perplexity Eval](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_a.ipynb) — baseline vs fine-tuned perplexity
+> - 💬 [Track B – SFT Output Comparison](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_b.ipynb) — side-by-side outputs on 5 samples
 > - 🔍 [Track C – Embedding Eval](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_c.ipynb) — MRR@10, nDCG@10, Recall@10
 
 This repository contains the solution for the 3 requested tracks.
@@ -11,7 +12,9 @@ This repository contains the solution for the 3 requested tracks.
 # note
 
 there different note books to show training (trac_x_unsloth.ipynb) since gpu memory cannot be freed from the repl/notebook itself unless the kernel is restarted. since  weights are allocated directly in a C++ CUDA context outside PyTorch's allocator, making empty_cache() ineffective.
-# info
+
+also pls read the model cards and dataset cards for more on huggingface for more details on the approach 
+
 
 each track has link to model with model card and dataset with dataset card.
 ## Notebooks
