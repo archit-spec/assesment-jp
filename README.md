@@ -1,6 +1,10 @@
 
 # ML Assignment Part 2 - Track A, B, C
 
+> **To verify results, run the eval notebooks on Colab:**
+> - 📊 [Track A – Perplexity Eval](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_a.ipynb) — baseline vs fine-tuned perplexity
+> - 🔍 [Track C – Embedding Eval](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_c.ipynb) — MRR@10, nDCG@10, Recall@10
+
 This repository contains the solution for the 3 requested tracks.
 **Hardware Requirement**: T4 GPU (free Colab tier).
 
