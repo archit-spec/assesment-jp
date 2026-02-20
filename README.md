@@ -4,6 +4,9 @@
 This repository contains the solution for the 3 requested tracks.
 **Hardware Requirement**: T4 GPU (free Colab tier).
 
+# note
+
+there different note books to show training (trac_x_unsloth.ipynb) since gpu memory cannot be freed from the repl/notebook itself unless the kernel is restarted. since  weights are allocated directly in a C++ CUDA context outside PyTorch's allocator, making empty_cache() ineffective.
 # info
 
 each track has link to model with model card and dataset with dataset card.
