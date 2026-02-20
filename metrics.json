@@ -1,0 +1,36 @@
+{
+  "track_a": {
+    "track": "A - Extended Pre-Training",
+    "base_model": "Qwen/Qwen2.5-Coder-3B",
+    "finetuned_model": "archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged",
+    "dataset": "archit11/hyperswitch-code-corpus-track-a",
+    "base_perplexity": 2.0576,
+    "finetuned_perplexity": 1.3954,
+    "delta": -0.6622,
+    "delta_pct": -32.19
+  },
+  "track_c": {
+    "track": "C - Embedding Fine-Tuning",
+    "base_model": "Qwen/Qwen3-Embedding-0.6B",
+    "finetuned_model": "archit11/assesment_qwen3_embedding_06b_e3",
+    "dataset": "archit11/assesment_embeddings_new",
+    "split": "test",
+    "corpus_size": 77,
+    "num_queries": 308,
+    "baseline": {
+      "MRR@10": 0.8875,
+      "nDCG@10": 0.9126,
+      "Recall@10": 0.9903
+    },
+    "finetuned": {
+      "MRR@10": 0.9617,
+      "nDCG@10": 0.9710,
+      "Recall@10": 1.0000
+    },
+    "delta": {
+      "MRR@10": 0.0742,
+      "nDCG@10": 0.0584,
+      "Recall@10": 0.0097
+    }
+  }
+}

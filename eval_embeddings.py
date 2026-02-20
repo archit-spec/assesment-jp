@@ -1,8 +1,13 @@
 import gc
+import json
+import datetime
 import torch
 import numpy as np
+from pathlib import Path
 from datasets import load_dataset
 from sentence_transformers import SentenceTransformer
+
+OUTPUT_DIR = Path("results/track_c")
 
 
 def compute_metrics(query_embeddings, corpus_embeddings, relevant_indices, k=10):
@@ -83,15 +88,17 @@ def main():
     print(f"Using device: {device}")
 
     print(f"Loading dataset {dataset_id}...")
-    dataset = load_dataset(dataset_id, data_files="train_hard_negatives.json", split="train")
+    dataset = load_dataset(dataset_id, split="test")
     print(f"Loaded {len(dataset)} examples | Columns: {dataset.column_names}")
 
-    # corpus = unique positives; each query maps to its positive
-    corpus_list = list(dataset["positive"])
-    corpus_unique = list(dict.fromkeys(corpus_list))
-    positive_to_idx = {p: i for i, p in enumerate(corpus_unique)}
-    all_queries = list(dataset["query"])
-    relevant_indices = [positive_to_idx[p] for p in corpus_list]
+    # corpus = anchors (code); queries come from the queries list field
+    corpus_unique = list(dataset["anchor"])
+    all_queries = []
+    relevant_indices = []
+    for i, row in enumerate(dataset):
+        for q in row["queries"]:
+            all_queries.append(q)
+            relevant_indices.append(i)
     print(f"Corpus size: {len(corpus_unique)}, Total queries: {len(all_queries)}")
 
     # Baseline

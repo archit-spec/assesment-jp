@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ML Assessment – Evaluation Report</title>
+<style>
+  body { font-family: 'Segoe UI', sans-serif; max-width: 900px; margin: 40px auto; color: #222; }
+  h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+  h2 { color: #2c3e50; margin-top: 40px; border-left: 4px solid #3498db; padding-left: 12px; }
+  h3 { color: #34495e; margin-top: 24px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th { color: white; padding: 10px 16px; text-align: left; }
+  .blue th { background: #3498db; }
+  .purple th { background: #9b59b6; }
+  td { padding: 10px 16px; border-bottom: 1px solid #ddd; }
+  tr:hover { background: #f5f9ff; }
+  .up { color: #2ecc71; font-weight: bold; }
+  .down { color: #2ecc71; font-weight: bold; }
+  .card { background: #f8f9fa; border-left: 4px solid #bdc3c7; padding: 14px 18px; margin: 16px 0; border-radius: 4px; line-height: 1.8; }
+  code { background: #eee; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  a { color: #3498db; }
+</style>
+</head>
+<body>
+
+<h1>ML Assessment – Evaluation Report</h1>
+<p>Results for Track A (Extended Pre-Training) and Track C (Embedding Fine-Tuning).</p>
+
+<!-- ── TRACK A ─────────────────────────────────────────────────── -->
+<h2>Track A – Extended Pre-Training</h2>
+
+<h3>Data Card</h3>
+<div class="card">
+  <strong>Base Model:</strong> <code>Qwen/Qwen2.5-Coder-3B</code><br>
+  <strong>Fine-Tuned Model:</strong> <code>archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged</code><br>
+  <strong>Dataset:</strong> <code>archit11/hyperswitch-code-corpus-track-a</code><br>
+  <strong>Eval metric:</strong> Sliding-window perplexity (chunk=1024, stride=512, 20 samples)
+</div>
+
+<h3>Results</h3>
+<table class="blue">
+  <tr><th>Model</th><th>Perplexity</th><th>Δ</th></tr>
+  <tr><td>Base (<code>Qwen2.5-Coder-3B</code>)</td><td>2.0576</td><td>–</td></tr>
+  <tr><td>Fine-Tuned</td><td><strong>1.3954</strong></td><td class="down">-0.6622 (-32.19%) ↓</td></tr>
+</table>
+
+<h3>Methodology</h3>
+<div class="card">
+  <ol>
+    <li><strong>Data:</strong> Top 300 Rust files from <code>juspay/hyperswitch</code> selected by structural richness.</li>
+    <li><strong>Training:</strong> LoRA (r=16, alpha=32), curriculum chunking 768→1024→1536 tokens, LR=1e-3, cosine schedule.</li>
+    <li><strong>Eval:</strong> Sliding-window perplexity on held-out corpus samples.</li>
+  </ol>
+</div>
+
+<h3>Links</h3>
+<ul>
+  <li><a href="https://huggingface.co/archit11/qwen2.5-coder-3b-hyperswitch-track-a-merged">Fine-Tuned Model</a></li>
+  <li><a href="https://huggingface.co/datasets/archit11/hyperswitch-code-corpus-track-a">Dataset</a></li>
+</ul>
+
+<!-- ── TRACK C ─────────────────────────────────────────────────── -->
+<h2>Track C – Embedding Fine-Tuning</h2>
+
+<h3>Data Card</h3>
+<div class="card">
+  <strong>Base Model:</strong> <code>Qwen/Qwen3-Embedding-0.6B</code><br>
+  <strong>Fine-Tuned Model:</strong> <code>archit11/assesment_qwen3_embedding_06b_e3</code><br>
+  <strong>Dataset:</strong> <code>archit11/assesment_embeddings_new</code> (split: test)<br>
+  <strong>Corpus size:</strong> 77 code anchors &nbsp;|&nbsp; <strong>Total queries:</strong> 308 (4 per anchor)<br>
+  <strong>Eval metric:</strong> MRR@10, nDCG@10, Recall@10
+</div>
+
+<h3>Results</h3>
+<table class="purple">
+  <tr><th>Metric</th><th>Baseline</th><th>Fine-Tuned</th><th>Δ</th></tr>
+  <tr><td>MRR@10</td><td>0.8875</td><td><strong>0.9617</strong></td><td class="up">+0.0742 ↑</td></tr>
+  <tr><td>nDCG@10</td><td>0.9126</td><td><strong>0.9710</strong></td><td class="up">+0.0584 ↑</td></tr>
+  <tr><td>Recall@10</td><td>0.9903</td><td><strong>1.0000</strong></td><td class="up">+0.0097 ↑</td></tr>
+</table>
+
+<h3>Methodology</h3>
+<div class="card">
+  <ol>
+    <li><strong>Data:</strong> AI-generated query/anchor pairs from the <code>juspay/hyperswitch</code> Rust codebase.</li>
+    <li><strong>Training:</strong> <code>MultipleNegativesRankingLoss</code> with <code>NO_DUPLICATES</code> batch sampler, 3 epochs, LR=2e-5.</li>
+    <li><strong>Eval:</strong> Cosine-similarity retrieval over 77 test corpus anchors.</li>
+  </ol>
+</div>
+
+<h3>Links</h3>
+<ul>
+  <li><a href="https://huggingface.co/archit11/assesment_qwen3_embedding_06b_e3">Fine-Tuned Model</a></li>
+  <li><a href="https://huggingface.co/datasets/archit11/assesment_embeddings_new">Dataset</a></li>
+</ul>
+
+</body>
+</html>

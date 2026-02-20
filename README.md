@@ -25,9 +25,9 @@ each track has link to model with model card and dataset with dataset card.
 Continue pre-training `Qwen/Qwen2.5-Coder-3B` on a curated Rust code corpus extracted from `juspay/hyperswitch`.
 
 ### Results
-| Metric | Baseline | Post-Training |  ^^ |
-|--------|----------|---------------|---| 
-| **Perplexity** | 2.2832 | **1.5429** | **32.42%**  |
+| Metric | Baseline | Post-Training | Δ |
+|--------|----------|---------------|---|
+| **Perplexity** | 2.0576 | **1.3954** | **-32.19% ↓** |
 
 ### Artifacts
 | Type | Name | Link |
@@ -38,8 +38,33 @@ Continue pre-training `Qwen/Qwen2.5-Coder-3B` on a curated Rust code corpus extr
 
 ### Methodology
 1.  **Data Selection**: Top 300 Rust files from `crates/` selected by structural richness (func/type count) and line count (25-4000).
-2.  **Curriculum Training**: Trained on chunks of increasing size: 768 \u2192 1024 \u2192 1536 tokens.
+2.  **Curriculum Training**: Trained on chunks of increasing size: 768 → 1024 → 1536 tokens.
 3.  **Method**: LoRA (r=16, alpha=32), LR=1e-3, Cosine Schedule.
+
+### Reproducing Results
+
+Install dependencies:
+```bash
+pip install transformers datasets torch tqdm
+```
+
+Run the evaluation (compares base `Qwen2.5-Coder-3B` vs fine-tuned, outputs JSON + HTML report):
+```bash
+python eval_perplexity.py
+```
+
+Expected output:
+```
+Model             Perplexity
+----------------------------
+Base                  2.0576
+Fine-Tuned            1.3954
+Δ                    -0.6623  (-32.19%)
+```
+
+Reports saved to `results/track_a/`:
+- `perplexity_metrics.json` — machine-readable summary
+- `perplexity_report.html` — human-readable report with data card
 
 ---
 
@@ -87,6 +112,27 @@ Fine-tune `Qwen/Qwen3-Embedding-0.6B` on text\u2192code retrieval pairs.
 1.  **Data Generation**: Synthesized natural language queries for Rust files using `Qwen-3.5-Instruct`.
 2.  **Training**: `MultipleNegativesRankingLoss` with `sentence-transformers`.
 3.  **Eval**: Retrieval on held-out query-code pairs.
+
+### Reproducing Results
+
+Install dependencies:
+```bash
+pip install sentence-transformers datasets torch
+```
+
+Run the evaluation (compares base Qwen3-Embedding-0.6B vs fine-tuned):
+```bash
+python eval_embeddings.py
+```
+
+Expected output:
+```
+Metric            Baseline   Fine-Tuned        Δ
+-----------------------------------------------
+MRR@10              0.8875       0.9617  +0.0742
+nDCG@10             0.9126       0.9710  +0.0584
+Recall@10           0.9903       1.0000  +0.0097
+```
 
 ---
 
