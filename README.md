@@ -105,6 +105,12 @@ Fine-tune `Qwen/Qwen2.5-Coder-1.5B` on synthetic Python instructions (Docstring,
 ## Track C: Embedding Fine-Tuning
 
 Fine-tune `Qwen/Qwen3-Embedding-0.6B` on text\u2192code retrieval pairs.
+ code↔query retrieval as a form of intermediate pre-training:           
+                                                                         
+  Stage 1: (anchor, positive)  → teaches domain vocabulary, Rust         
+  concepts, Hyperswitch-specific terminology                             
+  Stage 2: (query, anchor)     → fine-tunes specifically for the         
+  retrieval direction                                                  
 
 ### \ud83d\udcca Results (Best Run - 3 Epochs)
 | Metric | Baseline | Fine-Tuned | \u0394 |
