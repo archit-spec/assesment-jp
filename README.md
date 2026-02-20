@@ -81,7 +81,7 @@ Fine-tune `Qwen/Qwen3-Embedding-0.6B` on text\u2192code retrieval pairs.
 | Type | Name | Link |
 |------|------|------|
 | **Model** | `archit11/assesment_qwen3_embedding_06b_e3` | [Hugging Face](https://huggingface.co/archit11/assesment_qwen3_embedding_06b_e3) |
-| **Dataset** | `archit11/code-embedding-dataset` | [Hugging Face](https://huggingface.co/datasets/archit11/code-embedding-dataset) |
+| **Dataset** | `archit11/assesment_embeddings_new` | [Hugging Face](https://huggingface.co/datasets/archit11/assesment_embeddings_new) |
 
 ### Methodology
 1.  **Data Generation**: Synthesized natural language queries for Rust files using `Qwen-3.5-Instruct`.
