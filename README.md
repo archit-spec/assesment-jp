@@ -3,8 +3,12 @@
 
 > **To verify results, run the eval notebooks on Colab:**
 > - 📊 [Track A – Perplexity Eval](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_a.ipynb) — baseline vs fine-tuned perplexity
-> - 💬 [Track B – SFT Output Comparison](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_b.ipynb) — side-by-side outputs on 5 samples
+
 > - 🔍 [Track C – Embedding Eval](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_c.ipynb) — MRR@10, nDCG@10, Recall@10
+
+
+
+> - 💬 [Track B – SFT Output Comparison](https://colab.research.google.com/github/archit-spec/assesment-jp/blob/main/eval_track_b.ipynb) 
 
 This repository contains the solution for the 3 requested tracks.
 **Hardware Requirement**: T4 GPU (free Colab tier).
